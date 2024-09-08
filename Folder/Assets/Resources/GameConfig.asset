@@ -1,0 +1,128 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19ee31f600210ed41b000d72fdc1d892, type: 3}
+  m_Name: GameConfig
+  m_EditorClassIdentifier: 
+  cars:
+  - id: DefaultCar
+    carModel: {fileID: -927199367670048503, guid: 6aefcc9737d9afc42955a9700d11dbc1, type: 3}
+    carReferene: {fileID: 7253550693859379765, guid: 1ca3bc2ac38ef0040a424bcb1976e4f1, type: 3}
+  - id: Furururi
+    carModel: {fileID: 919132149155446097, guid: 65dd5e2569b252046b65dfcd5f89862c, type: 3}
+    carReferene: {fileID: 7797624757300474547, guid: f905951e3c6ff08428807257f8dfc3eb, type: 3}
+  - id: Rarity Car
+    carModel: {fileID: 919132149155446097, guid: 2c403376ef1fe604d8de45d141d39b07, type: 3}
+    carReferene: {fileID: 627556911, guid: 79d0ca8b77e301442afdb49f102e8aed, type: 3}
+  - id: RedBullba
+    carModel: {fileID: 919132149155446097, guid: 9ec6a8fc6925acb4abc5500eeecb8270, type: 3}
+    carReferene: {fileID: 6906603838843547860, guid: 382e8b80ec2ddd04c932f2c67eb72f3c, type: 3}
+  - id: RealSportCar
+    carModel: {fileID: 5103918236300298587, guid: 92b813314d435f04f8d158a696952177, type: 3}
+    carReferene: {fileID: 6913686840104296857, guid: 4ffee0f57f3ae6848b0a69c6e2cc62af, type: 3}
+  tracksList:
+  - trackData: {fileID: 4900000, guid: 6a2e001ebc86ba5469d91f977344d6d4, type: 3}
+    spriteOfmap: {fileID: 0}
+    isCircle: 1
+    laps: 2
+  - trackData: {fileID: 4900000, guid: c52934974f90a3c4cbc4a17d962dca65, type: 3}
+    spriteOfmap: {fileID: 0}
+    isCircle: 1
+    laps: 3
+  - trackData: {fileID: 4900000, guid: b60ad20609a025741bc1a16b3aeb8943, type: 3}
+    spriteOfmap: {fileID: 0}
+    isCircle: 1
+    laps: 2
+  - trackData: {fileID: 4900000, guid: 87e7e90e4ec9c8f478a8850a89b3a149, type: 3}
+    spriteOfmap: {fileID: 0}
+    isCircle: 1
+    laps: 3
+  - trackData: {fileID: 4900000, guid: 38a4c7df71a26cc45994ac3e83b93f52, type: 3}
+    spriteOfmap: {fileID: 0}
+    isCircle: 1
+    laps: 3
+  - trackData: {fileID: 4900000, guid: ae7d0cdec9917d946a07c4907b189015, type: 3}
+    spriteOfmap: {fileID: 0}
+    isCircle: 1
+    laps: 3
+  - trackData: {fileID: 4900000, guid: 3761593067a0ec441bebcc4d828617ab, type: 3}
+    spriteOfmap: {fileID: 0}
+    isCircle: 1
+    laps: 3
+  - trackData: {fileID: 4900000, guid: d21a572e3d0cec84b8867a164371a9e7, type: 3}
+    spriteOfmap: {fileID: 0}
+    isCircle: 1
+    laps: 3
+  - trackData: {fileID: 4900000, guid: 6e2171952a80a7f4ca4af6d9f1cb581b, type: 3}
+    spriteOfmap: {fileID: 0}
+    isCircle: 1
+    laps: 0
+  skyBoxes:
+  - id: Day
+    skyBox: {fileID: 2100000, guid: 2fdc1726342f4a749a190a0a8677a1a2, type: 2}
+  - id: Night
+    skyBox: {fileID: 2100000, guid: 102c3f2cfdcb3d64199f97f4f9aa3d46, type: 2}
+  icons:
+    iconsCharacteristics:
+    - icon: {fileID: 21300000, guid: b8555a694a3429c42b092d6968563773, type: 3}
+      type: 0
+    - icon: {fileID: 21300000, guid: 92e786c62ded69f4799c810bcd65dec6, type: 3}
+      type: 1
+    - icon: {fileID: 21300000, guid: c92d433da6f2b434f8c1b76689a703ef, type: 3}
+      type: 2
+    upgradedSprite:
+    - isUpgraded: 1
+      sprite: {fileID: 21300000, guid: 56301e84653e52b46aa1bfa365052199, type: 3}
+    - isUpgraded: 0
+      sprite: {fileID: 21300000, guid: 4597cffb65352064eb21df92378f2a61, type: 3}
+  views:
+    carUpgradeView: {fileID: 214796489213997323, guid: 687370c4c0f884b4f84e2ca0a3f3ad29, type: 3}
+    selectCarView: {fileID: 8248627709446021612, guid: 3f102e791021f974898d5e269d8b7340, type: 3}
+    touchInputView: {fileID: 3633293278728464353, guid: 48e8e20a810c2924f810d3a211afee09, type: 3}
+    chooseMapSelectView: {fileID: 6575272692931635863, guid: a9491caab39c9d640b66d953ec8af4d4, type: 3}
+    finishCanvas: {fileID: 2955690936779175351, guid: 6cda0dee1d9aca644ac3bc06fbfe798d, type: 3}
+  raceUI:
+  - id: 1
+    components:
+    - {fileID: 7310723109501460994, guid: d2e8d72869cb7e349a4ced2b37373042, type: 3}
+    - {fileID: 3561089507989204864, guid: f653056a8abe01144a76cd378de1d892, type: 3}
+    - {fileID: 3865441312311346175, guid: 2ec9de4db24825e479a698f677e912ab, type: 3}
+    - {fileID: 6585794998650239280, guid: f312323bfd5f7904b9f544cf6afaaa5c, type: 3}
+    - {fileID: 6997744360399367530, guid: ccefba7d340cf2a45852c00a77f37fc1, type: 3}
+  - id: 2
+    components:
+    - {fileID: 7310723109501460994, guid: d2e8d72869cb7e349a4ced2b37373042, type: 3}
+    - {fileID: 3865441312311346175, guid: 2ec9de4db24825e479a698f677e912ab, type: 3}
+    - {fileID: 6585794998650239280, guid: f312323bfd5f7904b9f544cf6afaaa5c, type: 3}
+    - {fileID: 8401175077691980706, guid: 96927cc92172c0c4dafcb01113e951e7, type: 3}
+    - {fileID: 6997744360399367530, guid: ccefba7d340cf2a45852c00a77f37fc1, type: 3}
+  trackParts:
+  - {fileID: 3825274973899890916, guid: d9ab2401bf6839744952d1947386d8b3, type: 3}
+  - {fileID: 5216754720833665095, guid: dd0831f60632baf4492b92858d493b29, type: 3}
+  - {fileID: -8049331624181910598, guid: e5ade76ec6dcf6140937231635f92c06, type: 3}
+  - {fileID: 2169333952374742144, guid: 233c6ac239f5f764f802f62bea56397e, type: 3}
+  - {fileID: -8209195318514318752, guid: ac0f6076afd4dde4f82fd5097f69adc9, type: 3}
+  - {fileID: -6206346135019315262, guid: 87e0acbd6ddf7814097e377d5a5c716d, type: 3}
+  - {fileID: 1351446612527627419, guid: f5d3c5e0f5f32c141911c08deee9e94d, type: 3}
+  - {fileID: 4938275814417066654, guid: 484e95a1def424c4b9f1ad821e0c226a, type: 3}
+  - {fileID: 3030153868180285376, guid: 1060f28bab45ab94eb490830df68466e, type: 3}
+  - {fileID: 4759454770403539499, guid: 18ab59e03c7a63c4dbfb26d2ca862d41, type: 3}
+  - {fileID: -7302208631723439532, guid: 419b5557461398443a4b99d9496015fc, type: 3}
+  - {fileID: -4953503968397835960, guid: a44cccc20f3187546becc81725456fb2, type: 3}
+  - {fileID: -4070879156929803820, guid: 320e1716c0bedb84a91c9707981bd279, type: 3}
+  - {fileID: -4911440633925548027, guid: 30de34a35a4305c4498f476c8678d541, type: 3}
+  - {fileID: 1262227149109445659, guid: 92b9500dcd2ea724780127ee172ee9a7, type: 3}
+  - {fileID: 4641261881944477019, guid: 19682540d8a014522a319b1cf788aee2, type: 3}
+  - {fileID: -7770306468378072777, guid: c44bd9bdc114d4a60932c0087d9d1732, type: 3}
+  - {fileID: -7874467363475250475, guid: c6b7fb383a3534b039692b5485b6e739, type: 3}
+  - {fileID: -2487651090662050853, guid: 826b6a0b570e8460990010fa615b5a2a, type: 3}
+  colliderExample: {fileID: 4638569914639234111, guid: 04f7e158de75f084c9a249c1c95238e9, type: 3}
+  statsConfig: {fileID: 11400000, guid: 33d31eee3051b6d4a90b2230ee14c3ce, type: 2}

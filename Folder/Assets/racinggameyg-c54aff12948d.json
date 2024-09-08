@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "racinggameyg",
+  "private_key_id": "c54aff12948d39137d48e6fb321cc46aa7a019ec",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDCK8xWYr/7ZMYw\nL3orBBAZYIDY9AWTH8+jvqlvLficX3wfddy0ErxOpXpmLE4fXxcrPfw66knT8+Wa\n7co6juVQONkm9gRgdrkD2GMyN0zSoqEs9wMdlJdfpdyERs+6DLbdisvdaBDrew/q\nC3UNyPab9t+d96uapPzz+jL61HEEhaN9h1e0U6/K522V7n0fp5xmKW69WjHzrM9i\n+kIJK03r3FkNKBluyGjMVRJyl/pyGGOd3zElO4qj1tNRbJH+a44SNmLsvEePD46q\nKPmGDMXMx4UHu34r3E/XsRc5jajZ4HVKkMgI7C6WH/i4cs+rdo9w9TtPvhbDUIpu\n0iYTi/HvAgMBAAECggEAExRqW1C6dwb+LIz1xGqn9FPAcCZ7smsipFSfYe6SqoxS\nw4/5fx5aL6DgvU/Ri2affbR1EmBO9ItXqVjVZtn/cYRsiNYNibcQ025nbO9J1rwm\npKb5wOXcLAi9zv0FpiK1Xgv99VnSU86qD9WkC8COxGDxX0c6LxN9obHDtv8PbfdR\nxJxLsTlFMkNi9oCt6QBvV8zPoCys9p7FrgHLS4Py8VI0hvswR0ulgMNGpCVEo25D\nuDyKznZNUQbJ7Dpqyorpkr7HmzL6RFb+lJua+kht3jwMvPvl6W0tB7Nl3DgRSSS5\n26ohQwFyo3Sui07yo+HxDVzXjVt2UPtWTRg5AwRFpQKBgQD11q/6U2a0YsA+p/Ux\npyB9Q2sqn7SME1x3TeiuA2A2/YLydsBxGvrV9dDPDr8L4WPDHL5K2gfq9+puCIeY\ncvBQa3n1MPc4ajIn8jyP+bZIm0vq4zCc9C6BnYR8MvY34XqJWlDZKiJ8z6IpC9zm\nRB6cF9p13Usbkz10CdbIgmMgNQKBgQDKMmWUsY1TyDmh/b/7TyUZEht2W2W4ZwT0\nYo3aR5ZfaL3VxKDq3E2ZIQxcKmbiOjiXyru23LR9khfjEV+BNXEtxvK3ebDmOdm2\ny8QREDo0qH+qIpvsrFe3agalY9ByQP4UyeHho/jjZaQ0ogMAYXvByn8TuaighWCj\n4GmnoTwWEwKBgQCISGK4CAIYn+HpGh0gUID/UB+Zun1RZe5NqSADT5XIBlPQbCqU\nyRsi/6mpD4izYlh2snl/b00SYitQomPhDF7ShjJOzb1PRffWE0ClpA38RDMa3KV3\nbRpW+maWn33FTrcqa6oEKYqC3GwOCyiDcmHxsHuH+YyIleBscoPiFf4zvQKBgClZ\n8zJcuXWH/lllxsyDnCerb1heSshSsU21liMs/tDWX/SG+Q3vLiOCAcAbn9zmYUqR\n2KAGNRd1OFNk6y5GmrXs+RiS153N+PuMYrXGptC8IRfPaioV+P52vZM3fZrQNeZU\nf1ChMzZ2RAXLmGeMiD3SxvhmwNjLTj9VluYEcIBnAoGBAOkUXGukehyZw3edWOes\nslHMZAKGhoCLzpVAAnh0xUX1AsQx95/WjyhNvuvWkTH6eg9NIaqzfSwz5HEwkeNS\nXSKGIW2pRiWAM4DwOEJp/E0wM+DvWg4Eetj/bFSGS1SvZduK09rhDLy8xXNykfhz\n7xhFmQ1d7uAPMK/35txbX+7I\n-----END PRIVATE KEY-----\n",
+  "client_email": "sheets-manager@racinggameyg.iam.gserviceaccount.com",
+  "client_id": "100212841375917390160",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/sheets-manager%40racinggameyg.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

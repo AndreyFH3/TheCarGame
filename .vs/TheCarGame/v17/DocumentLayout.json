@@ -1,0 +1,87 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\GameDevelopment\\RacingGame\\TheCarGame\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F042A011-9F66-F2EC-E628-63A42DB25E10}|Assembly-CSharp.csproj|c:\\gamedevelopment\\racinggame\\thecargame\\assets\\data\\scripts\\tracksinfo\\tracksaveandload.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F042A011-9F66-F2EC-E628-63A42DB25E10}|Assembly-CSharp.csproj|solutionrelative:assets\\data\\scripts\\tracksinfo\\tracksaveandload.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2712EBBD-849D-C813-A72F-A44AAD20D3BD}|PathCreator.csproj|c:\\gamedevelopment\\racinggame\\thecargame\\assets\\pathcreator\\core\\runtime\\objects\\pathcreator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2712EBBD-849D-C813-A72F-A44AAD20D3BD}|PathCreator.csproj|solutionrelative:assets\\pathcreator\\core\\runtime\\objects\\pathcreator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2712EBBD-849D-C813-A72F-A44AAD20D3BD}|PathCreator.csproj|c:\\gamedevelopment\\racinggame\\thecargame\\assets\\pathcreator\\core\\runtime\\objects\\bezierpath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2712EBBD-849D-C813-A72F-A44AAD20D3BD}|PathCreator.csproj|solutionrelative:assets\\pathcreator\\core\\runtime\\objects\\bezierpath.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F042A011-9F66-F2EC-E628-63A42DB25E10}|Assembly-CSharp.csproj|C:\\GameDevelopment\\RacingGame\\TheCarGame\\Assets\\PathCreator\\Examples\\Scripts\\PathSceneTool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F042A011-9F66-F2EC-E628-63A42DB25E10}|Assembly-CSharp.csproj|solutionrelative:Assets\\PathCreator\\Examples\\Scripts\\PathSceneTool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TrackSaveAndLoad.cs",
+              "DocumentMoniker": "C:\\GameDevelopment\\RacingGame\\TheCarGame\\Assets\\Data\\Scripts\\TracksInfo\\TrackSaveAndLoad.cs",
+              "RelativeDocumentMoniker": "Assets\\Data\\Scripts\\TracksInfo\\TrackSaveAndLoad.cs",
+              "ToolTip": "C:\\GameDevelopment\\RacingGame\\TheCarGame\\Assets\\Data\\Scripts\\TracksInfo\\TrackSaveAndLoad.cs",
+              "RelativeToolTip": "Assets\\Data\\Scripts\\TracksInfo\\TrackSaveAndLoad.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-08T09:24:51.929Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PathCreator.cs",
+              "DocumentMoniker": "C:\\GameDevelopment\\RacingGame\\TheCarGame\\Assets\\PathCreator\\Core\\Runtime\\Objects\\PathCreator.cs",
+              "RelativeDocumentMoniker": "Assets\\PathCreator\\Core\\Runtime\\Objects\\PathCreator.cs",
+              "ToolTip": "C:\\GameDevelopment\\RacingGame\\TheCarGame\\Assets\\PathCreator\\Core\\Runtime\\Objects\\PathCreator.cs",
+              "RelativeToolTip": "Assets\\PathCreator\\Core\\Runtime\\Objects\\PathCreator.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-08T09:12:20.54Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BezierPath.cs",
+              "DocumentMoniker": "C:\\GameDevelopment\\RacingGame\\TheCarGame\\Assets\\PathCreator\\Core\\Runtime\\Objects\\BezierPath.cs",
+              "RelativeDocumentMoniker": "Assets\\PathCreator\\Core\\Runtime\\Objects\\BezierPath.cs",
+              "ToolTip": "C:\\GameDevelopment\\RacingGame\\TheCarGame\\Assets\\PathCreator\\Core\\Runtime\\Objects\\BezierPath.cs",
+              "RelativeToolTip": "Assets\\PathCreator\\Core\\Runtime\\Objects\\BezierPath.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-08T07:11:48.576Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PathSceneTool.cs",
+              "DocumentMoniker": "C:\\GameDevelopment\\RacingGame\\TheCarGame\\Assets\\PathCreator\\Examples\\Scripts\\PathSceneTool.cs",
+              "RelativeDocumentMoniker": "Assets\\PathCreator\\Examples\\Scripts\\PathSceneTool.cs",
+              "ToolTip": "C:\\GameDevelopment\\RacingGame\\TheCarGame\\Assets\\PathCreator\\Examples\\Scripts\\PathSceneTool.cs",
+              "RelativeToolTip": "Assets\\PathCreator\\Examples\\Scripts\\PathSceneTool.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-08T07:10:46.397Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
