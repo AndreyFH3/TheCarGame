@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{0573EC2D-A4E8-978A-1D96-9AF8527A2E96}</ProjectGuid>
+    <ProjectGuid>{D88ED817-991A-F630-4189-88B2696539F6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -1123,35 +1123,35 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{E1EE35B0-6D25-EEB5-D07F-DD96B56626E6}</Project>
+      <Project>{665E8E74-7612-29C1-CB78-13789555B1E6}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{F042A011-9F66-F2EC-E628-63A42DB25E10}</Project>
+      <Project>{7AC65C07-A5F3-9B73-58CB-422339A544C8}</Project>
       <Name>Assembly-CSharp</Name>
     </ProjectReference>
     <ProjectReference Include="Assembly-CSharp-Editor-firstpass.csproj">
-      <Project>{5DB1B22B-73D2-8DDD-8CB2-EE57ED525DFE}</Project>
+      <Project>{0C1F36E2-E533-54DD-BE41-A4E93433A1CD}</Project>
       <Name>Assembly-CSharp-Editor-firstpass</Name>
     </ProjectReference>
     <ProjectReference Include="NaughtyAttributes.Core.csproj">
-      <Project>{FA3E40AF-3759-E88E-A4A2-89EA8849F0E2}</Project>
+      <Project>{FE7D56E3-16F3-BB8F-A7DB-9C9773330734}</Project>
       <Name>NaughtyAttributes.Core</Name>
     </ProjectReference>
     <ProjectReference Include="NaughtyAttributes.Editor.csproj">
-      <Project>{009DBBF0-5D5A-3D75-A29B-E84F0B69643D}</Project>
+      <Project>{0EA18153-73EC-E851-BDC7-83237258C0BA}</Project>
       <Name>NaughtyAttributes.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="NaughtyAttributes.Test.csproj">
-      <Project>{5BD7BA6A-AD0C-60DB-D10E-475E7A899F67}</Project>
+      <Project>{6D5C2F43-999C-03D5-AF29-1AA6A0F1A16A}</Project>
       <Name>NaughtyAttributes.Test</Name>
     </ProjectReference>
     <ProjectReference Include="PathCreatorEditor.csproj">
-      <Project>{7C3BBA02-C940-C08F-9CE3-3BDC36408199}</Project>
+      <Project>{7EC59599-1E61-F573-F0B6-29505B3C2DC4}</Project>
       <Name>PathCreatorEditor</Name>
     </ProjectReference>
     <ProjectReference Include="PathCreator.csproj">
-      <Project>{2712EBBD-849D-C813-A72F-A44AAD20D3BD}</Project>
+      <Project>{F3C94308-B711-2C8F-6A1B-5AB8016D4F50}</Project>
       <Name>PathCreator</Name>
     </ProjectReference>
   </ItemGroup>

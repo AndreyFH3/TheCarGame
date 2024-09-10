@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 158
+  controlID: 142
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -465,7 +465,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 14fbffff
+      m_ExpandedIDs: 80e7ffff2cfbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -832,9 +832,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -404.24835, y: 13.269055, z: 15.352564}
+    m_Target: {x: -454.82608, y: 1.4151828, z: -30.764591}
     speed: 2
-    m_Value: {x: -404.24835, y: 13.269055, z: 15.352564}
+    m_Value: {x: -454.82608, y: 1.4151828, z: -30.764591}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -880,13 +880,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.022745593, y: 0.97713774, z: -0.15708615, w: 0.1414847}
+    m_Target: {x: 0.33426347, y: 0.49812302, z: -0.2161432, w: 0.77034104}
     speed: 2
-    m_Value: {x: 0.022886954, y: 0.9769756, z: -0.15806246, w: 0.14146122}
+    m_Value: {x: 0.33799475, y: 0.49494478, z: -0.21712077, w: 0.77048546}
   m_Size:
-    m_Target: 15.709799
+    m_Target: 11.914467
     speed: 2
-    m_Value: 15.709799
+    m_Value: 11.401403
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -956,24 +956,24 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Data/FBXs/Modular_Track_Free/Models
+    - Assets/Data/FBXs/Modular_Track_Free/Prefabs_Obs
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
     m_FilterByTypeIntersection: 0
   m_ViewMode: 1
-  m_StartGridSize: 46
+  m_StartGridSize: 96
   m_LastFolders:
-  - Assets/Data/FBXs/Modular_Track_Free/Models
-  m_LastFoldersGridSize: 46
-  m_LastProjectPath: C:\GameDevelopment\RacingGame\TheCarGame
+  - Assets/Data/FBXs/Modular_Track_Free/Prefabs_Obs
+  m_LastFoldersGridSize: 96
+  m_LastProjectPath: C:\GameDevelopment\RacingGame\TheCarGame\Folder
   m_LockTracker:
     m_IsLocked: 1
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 223}
-    m_SelectedIDs: f6670000
-    m_LastClickedID: 26614
-    m_ExpandedIDs: 000000009a6700009c6700009e670000a0670000a2670000a4670000a6670000a8670000aa670000ac670000ae670000b0670000c0670000f867000000ca9a3b
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: 22680000
+    m_LastClickedID: 26658
+    m_ExpandedIDs: 0000000096670000986700009a6700009c6700009e670000a0670000a2670000a4670000a6670000a8670000aa670000ac670000bc6700000c68000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1001,7 +1001,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000009a6700009c6700009e670000a0670000a2670000a4670000a6670000a8670000aa670000ac670000ae670000b0670000
+    m_ExpandedIDs: 0000000096670000986700009a6700009c6700009e670000a0670000a2670000a4670000a6670000a8670000aa670000ac670000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1028,7 +1028,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000b6670000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1054,7 +1054,7 @@ MonoBehaviour:
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
     m_ScrollPosition: {x: 0, y: 0}
-    m_GridSize: 46
+    m_GridSize: 96
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
 --- !u!114 &18
@@ -1136,7 +1136,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/PathCreator/Examples/Materials
+    - Assets
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -1144,16 +1144,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/PathCreator/Examples/Materials
+  - Assets
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\GameDevelopment\RacingGame\TheCarGame
+  m_LastProjectPath: C:\GameDevelopment\RacingGame\TheCarGame\Folder
   m_LockTracker:
     m_IsLocked: 1
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 487}
-    m_SelectedIDs: 20680000
-    m_LastClickedID: 26656
-    m_ExpandedIDs: 000000009a6700009c6700009e670000a0670000a2670000a4670000a6670000a8670000aa670000ac670000ae670000b0670000ec67000000ca9a3b
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: 96670000
+    m_LastClickedID: 26518
+    m_ExpandedIDs: 0000000096670000986700009a6700009c6700009e670000a0670000a2670000a4670000a6670000a8670000aa670000ac67000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1181,7 +1181,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000009a6700009c6700009e670000a0670000a2670000a4670000a6670000a8670000aa670000ac670000ae670000b0670000
+    m_ExpandedIDs: 0000000096670000986700009a6700009c6700009e670000a0670000a2670000a4670000a6670000a8670000aa670000ac670000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
