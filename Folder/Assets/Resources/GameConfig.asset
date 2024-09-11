@@ -33,11 +33,11 @@ MonoBehaviour:
     spriteOfmap: {fileID: 0}
     isCircle: 1
     laps: 2
-  - trackData: {fileID: 4900000, guid: c52934974f90a3c4cbc4a17d962dca65, type: 3}
+  - trackData: {fileID: 4900000, guid: 68d77b39e11619148bc27c922946f4b6, type: 3}
     spriteOfmap: {fileID: 0}
     isCircle: 1
-    laps: 3
-  - trackData: {fileID: 4900000, guid: b60ad20609a025741bc1a16b3aeb8943, type: 3}
+    laps: 2
+  - trackData: {fileID: 4900000, guid: b6b884e1df9d7e141b977c83c514c431, type: 3}
     spriteOfmap: {fileID: 0}
     isCircle: 1
     laps: 2

@@ -162,7 +162,7 @@ public class PrometeoCarController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isDrifting)
+        if (isDrifting)
         {
             OnDrift?.Invoke();
         }
@@ -187,79 +187,100 @@ public class PrometeoCarController : MonoBehaviour
         In this part of the code we specify what the car needs to do if the user presses W (throttle), S (reverse),
         A (turn left), D (turn right) or Space bar (handbrake).
         */
-        if (useTouchControls && touchControlsSetup) {
+        if (useTouchControls && touchControlsSetup)
+        {
 
-            if (throttlePTI.buttonPressed) {
+            if (throttlePTI.buttonPressed)
+            {
                 CancelInvoke("DecelerateCar");
                 deceleratingCar = false;
                 GoForward();
             }
-            if (reversePTI.buttonPressed) {
+            if (reversePTI.buttonPressed)
+            {
                 CancelInvoke("DecelerateCar");
                 deceleratingCar = false;
                 GoReverse();
             }
 
-            if (turnLeftPTI.buttonPressed) {
+            if (turnLeftPTI.buttonPressed)
+            {
                 TurnLeft();
             }
-            if (turnRightPTI.buttonPressed) {
+            if (turnRightPTI.buttonPressed)
+            {
                 TurnRight();
             }
-            if (handbrakePTI.buttonPressed) {
+            if (handbrakePTI.buttonPressed)
+            {
                 CancelInvoke("DecelerateCar");
                 deceleratingCar = false;
                 Handbrake();
             }
-            if (!handbrakePTI.buttonPressed) {
+            if (!handbrakePTI.buttonPressed)
+            {
                 RecoverTraction();
             }
-            if ((!throttlePTI.buttonPressed && !reversePTI.buttonPressed)) {
+            if ((!throttlePTI.buttonPressed && !reversePTI.buttonPressed))
+            {
                 ThrottleOff();
             }
-            if ((!reversePTI.buttonPressed && !throttlePTI.buttonPressed) && !handbrakePTI.buttonPressed && !deceleratingCar) {
+            if ((!reversePTI.buttonPressed && !throttlePTI.buttonPressed) && !handbrakePTI.buttonPressed && !deceleratingCar)
+            {
                 InvokeRepeating("DecelerateCar", 0f, 0.1f);
                 deceleratingCar = true;
             }
-            if (!turnLeftPTI.buttonPressed && !turnRightPTI.buttonPressed && steeringAxis != 0f) {
+            if (!turnLeftPTI.buttonPressed && !turnRightPTI.buttonPressed && steeringAxis != 0f)
+            {
                 ResetSteeringAngle();
             }
 
-        } else {
+        }
+        else
+        {
 
-            if (Input.GetKey(KeyCode.W)) {
+            if (Input.GetKey(KeyCode.W))
+            {
                 CancelInvoke("DecelerateCar");
                 deceleratingCar = false;
                 GoForward();
             }
-            if (Input.GetKey(KeyCode.S)) {
+            if (Input.GetKey(KeyCode.S))
+            {
                 CancelInvoke("DecelerateCar");
                 deceleratingCar = false;
                 GoReverse();
             }
 
-            if (Input.GetKey(KeyCode.A)) {
+            if (Input.GetKey(KeyCode.A))
+            {
                 TurnLeft();
             }
-            if (Input.GetKey(KeyCode.D)) {
+            if (Input.GetKey(KeyCode.D))
+            {
                 TurnRight();
             }
-            if (!handbrakePTI.buttonPressed || !Input.GetKey(KeyCode.Space)) {
+            if (Input.GetKey(KeyCode.Space))
+            {
                 CancelInvoke("DecelerateCar");
                 deceleratingCar = false;
                 Handbrake();
             }
-            if (!handbrakePTI.buttonPressed || Input.GetKeyUp(KeyCode.Space)) {
+            if (Input.GetKeyUp(KeyCode.Space))
+            {
                 RecoverTraction();
             }
-            if ((!Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.W))) {
+            if ((!Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.W)))
+            {
                 ThrottleOff();
             }
-            if ((!Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.W)) && !Input.GetKey(KeyCode.Space) && !deceleratingCar) {
+            if ((!Input.GetKey(KeyCode.S) && !Input.GetKey(KeyCode.W)) && !Input.GetKey(KeyCode.Space) && !deceleratingCar)
+            {
                 InvokeRepeating("DecelerateCar", 0f, 0.1f);
                 deceleratingCar = true;
             }
-            if (!Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D) && steeringAxis != 0f) {
+            if (!Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D) && steeringAxis != 0f)
+            {
                 ResetSteeringAngle();
             }
 
@@ -412,32 +433,46 @@ public class PrometeoCarController : MonoBehaviour
         handbrakeButton = input.Brakes;
     }
 
-    public void CarSounds(){
+    public void CarSounds()
+    {
 
-      if(useSounds){
-        try{
-          if(carEngineSound != null){
-            float engineSoundPitch = initialCarEngineSoundPitch + (Mathf.Abs(carRigidbody.velocity.magnitude) / 25f);
-            carEngineSound.pitch = engineSoundPitch;
-          }
-          if((isDrifting) || (isTractionLocked && Mathf.Abs(carSpeed) > 12f)){
-            if(!tireScreechSound.isPlaying){
-              tireScreechSound.Play();
+        if (useSounds)
+        {
+            try
+            {
+                if (carEngineSound != null)
+                {
+                    float engineSoundPitch = initialCarEngineSoundPitch + (Mathf.Abs(carRigidbody.velocity.magnitude) / 25f);
+                    carEngineSound.pitch = engineSoundPitch;
+                }
+                if ((isDrifting) || (isTractionLocked && Mathf.Abs(carSpeed) > 12f))
+                {
+                    if (!tireScreechSound.isPlaying)
+                    {
+                        tireScreechSound.Play();
+                    }
+                }
+                else if ((!isDrifting) && (!isTractionLocked || Mathf.Abs(carSpeed) < 12f))
+                {
+                    tireScreechSound.Stop();
+                }
             }
-          }else if((!isDrifting) && (!isTractionLocked || Mathf.Abs(carSpeed) < 12f)){
-            tireScreechSound.Stop();
-          }
-        }catch(Exception ex){
-          Debug.LogWarning(ex);
+            catch (Exception ex)
+            {
+                Debug.LogWarning(ex);
+            }
         }
-      }else if(!useSounds){
-        if(carEngineSound != null && carEngineSound.isPlaying){
-          carEngineSound.Stop();
+        else if (!useSounds)
+        {
+            if (carEngineSound != null && carEngineSound.isPlaying)
+            {
+                carEngineSound.Stop();
+            }
+            if (tireScreechSound != null && tireScreechSound.isPlaying)
+            {
+                tireScreechSound.Stop();
+            }
         }
-        if(tireScreechSound != null && tireScreechSound.isPlaying){
-          tireScreechSound.Stop();
-        }
-      }
 
     }
 
@@ -446,72 +481,85 @@ public class PrometeoCarController : MonoBehaviour
     //
 
     //The following method turns the front car wheels to the left. The speed of this movement will depend on the steeringSpeed variable.
-    public void TurnLeft(){
-      steeringAxis = steeringAxis - (Time.deltaTime * 10f * steeringSpeed);
-      if(steeringAxis < -1f){
-        steeringAxis = -1f;
-      }
-      var steeringAngle = steeringAxis * maxSteeringAngle;
-      frontLeftCollider.steerAngle = Mathf.Lerp(frontLeftCollider.steerAngle, steeringAngle, steeringSpeed);
-      frontRightCollider.steerAngle = Mathf.Lerp(frontRightCollider.steerAngle, steeringAngle, steeringSpeed);
+    public void TurnLeft()
+    {
+        steeringAxis = steeringAxis - (Time.deltaTime * 10f * steeringSpeed);
+        if (steeringAxis < -1f)
+        {
+            steeringAxis = -1f;
+        }
+        var steeringAngle = steeringAxis * maxSteeringAngle;
+        frontLeftCollider.steerAngle = Mathf.Lerp(frontLeftCollider.steerAngle, steeringAngle, steeringSpeed);
+        frontRightCollider.steerAngle = Mathf.Lerp(frontRightCollider.steerAngle, steeringAngle, steeringSpeed);
     }
 
     //The following method turns the front car wheels to the right. The speed of this movement will depend on the steeringSpeed variable.
-    public void TurnRight(){
-      steeringAxis = steeringAxis + (Time.deltaTime * 10f * steeringSpeed);
-      if(steeringAxis > 1f){
-        steeringAxis = 1f;
-      }
-      var steeringAngle = steeringAxis * maxSteeringAngle;
-      frontLeftCollider.steerAngle = Mathf.Lerp(frontLeftCollider.steerAngle, steeringAngle, steeringSpeed);
-      frontRightCollider.steerAngle = Mathf.Lerp(frontRightCollider.steerAngle, steeringAngle, steeringSpeed);
+    public void TurnRight()
+    {
+        steeringAxis = steeringAxis + (Time.deltaTime * 10f * steeringSpeed);
+        if (steeringAxis > 1f)
+        {
+            steeringAxis = 1f;
+        }
+        var steeringAngle = steeringAxis * maxSteeringAngle;
+        frontLeftCollider.steerAngle = Mathf.Lerp(frontLeftCollider.steerAngle, steeringAngle, steeringSpeed);
+        frontRightCollider.steerAngle = Mathf.Lerp(frontRightCollider.steerAngle, steeringAngle, steeringSpeed);
     }
 
     //The following method takes the front car wheels to their default position (rotation = 0). The speed of this movement will depend
     // on the steeringSpeed variable.
-    public void ResetSteeringAngle(){
-      if(steeringAxis < 0f){
-        steeringAxis = steeringAxis + (Time.deltaTime * 10f * steeringSpeed);
-      }else if(steeringAxis > 0f){
-        steeringAxis = steeringAxis - (Time.deltaTime * 10f * steeringSpeed);
-      }
-      if(Mathf.Abs(frontLeftCollider.steerAngle) < 1f){
-        steeringAxis = 0f;
-      }
-      var steeringAngle = steeringAxis * maxSteeringAngle;
-      frontLeftCollider.steerAngle = Mathf.Lerp(frontLeftCollider.steerAngle, steeringAngle, steeringSpeed);
-      frontRightCollider.steerAngle = Mathf.Lerp(frontRightCollider.steerAngle, steeringAngle, steeringSpeed);
+    public void ResetSteeringAngle()
+    {
+        if (steeringAxis < 0f)
+        {
+            steeringAxis = steeringAxis + (Time.deltaTime * 10f * steeringSpeed);
+        }
+        else if (steeringAxis > 0f)
+        {
+            steeringAxis = steeringAxis - (Time.deltaTime * 10f * steeringSpeed);
+        }
+        if (Mathf.Abs(frontLeftCollider.steerAngle) < 1f)
+        {
+            steeringAxis = 0f;
+        }
+        var steeringAngle = steeringAxis * maxSteeringAngle;
+        frontLeftCollider.steerAngle = Mathf.Lerp(frontLeftCollider.steerAngle, steeringAngle, steeringSpeed);
+        frontRightCollider.steerAngle = Mathf.Lerp(frontRightCollider.steerAngle, steeringAngle, steeringSpeed);
     }
 
     // This method matches both the position and rotation of the WheelColliders with the WheelMeshes.
-    void AnimateWheelMeshes(){
-      try{
-        Quaternion FLWRotation;
-        Vector3 FLWPosition;
-        frontLeftCollider.GetWorldPose(out FLWPosition, out FLWRotation);
-        frontLeftMesh.transform.position = FLWPosition;
-        frontLeftMesh.transform.rotation = FLWRotation;
+    void AnimateWheelMeshes()
+    {
+        try
+        {
+            Quaternion FLWRotation;
+            Vector3 FLWPosition;
+            frontLeftCollider.GetWorldPose(out FLWPosition, out FLWRotation);
+            frontLeftMesh.transform.position = FLWPosition;
+            frontLeftMesh.transform.rotation = FLWRotation;
 
-        Quaternion FRWRotation;
-        Vector3 FRWPosition;
-        frontRightCollider.GetWorldPose(out FRWPosition, out FRWRotation);
-        frontRightMesh.transform.position = FRWPosition;
-        frontRightMesh.transform.rotation = FRWRotation;
+            Quaternion FRWRotation;
+            Vector3 FRWPosition;
+            frontRightCollider.GetWorldPose(out FRWPosition, out FRWRotation);
+            frontRightMesh.transform.position = FRWPosition;
+            frontRightMesh.transform.rotation = FRWRotation;
 
-        Quaternion RLWRotation;
-        Vector3 RLWPosition;
-        rearLeftCollider.GetWorldPose(out RLWPosition, out RLWRotation);
-        rearLeftMesh.transform.position = RLWPosition;
-        rearLeftMesh.transform.rotation = RLWRotation;
+            Quaternion RLWRotation;
+            Vector3 RLWPosition;
+            rearLeftCollider.GetWorldPose(out RLWPosition, out RLWRotation);
+            rearLeftMesh.transform.position = RLWPosition;
+            rearLeftMesh.transform.rotation = RLWRotation;
 
-        Quaternion RRWRotation;
-        Vector3 RRWPosition;
-        rearRightCollider.GetWorldPose(out RRWPosition, out RRWRotation);
-        rearRightMesh.transform.position = RRWPosition;
-        rearRightMesh.transform.rotation = RRWRotation;
-      }catch(Exception ex){
-        Debug.LogWarning(ex);
-      }
+            Quaternion RRWRotation;
+            Vector3 RRWPosition;
+            rearRightCollider.GetWorldPose(out RRWPosition, out RRWRotation);
+            rearRightMesh.transform.position = RRWPosition;
+            rearRightMesh.transform.rotation = RRWRotation;
+        }
+        catch (Exception ex)
+        {
+            Debug.LogWarning(ex);
+        }
     }
 
     //
@@ -519,279 +567,345 @@ public class PrometeoCarController : MonoBehaviour
     //
 
     // This method apply positive torque to the wheels in order to go forward.
-    public void GoForward(){
-      //If the forces aplied to the rigidbody in the 'x' asis are greater than
-      //3f, it means that the car is losing traction, then the car will start emitting particle systems.
-      if(Mathf.Abs(localVelocityX) > 2.5f){
-        isDrifting = true;
-        DriftCarPS();
-      }else{
-        isDrifting = false;
-        DriftCarPS();
-      }
-      // The following part sets the throttle power to 1 smoothly.
-      throttleAxis = throttleAxis + (Time.deltaTime * 3f);
-      if(throttleAxis > 1f){
-        throttleAxis = 1f;
-      }
-      //If the car is going backwards, then apply brakes in order to avoid strange
-      //behaviours. If the local velocity in the 'z' axis is less than -1f, then it
-      //is safe to apply positive torque to go forward.
-      if(localVelocityZ < -1f){
-        Brakes();
-      }else{
-        if(Mathf.RoundToInt(carSpeed) < maxSpeed){
-          //Apply positive torque in all wheels to go forward if maxSpeed has not been reached.
-          frontLeftCollider.brakeTorque = 0;
-          frontLeftCollider.motorTorque = (accelerationMultiplier * 50f) * throttleAxis;
-          frontRightCollider.brakeTorque = 0;
-          frontRightCollider.motorTorque = (accelerationMultiplier * 50f) * throttleAxis;
-          rearLeftCollider.brakeTorque = 0;
-          rearLeftCollider.motorTorque = (accelerationMultiplier * 50f) * throttleAxis;
-          rearRightCollider.brakeTorque = 0;
-          rearRightCollider.motorTorque = (accelerationMultiplier * 50f) * throttleAxis;
-        }else {
-          // If the maxSpeed has been reached, then stop applying torque to the wheels.
-          // IMPORTANT: The maxSpeed variable should be considered as an approximation; the speed of the car
-          // could be a bit higher than expected.
-    			frontLeftCollider.motorTorque = 0;
-    			frontRightCollider.motorTorque = 0;
-          rearLeftCollider.motorTorque = 0;
-    			rearRightCollider.motorTorque = 0;
-    		}
-      }
+    public void GoForward()
+    {
+        //If the forces aplied to the rigidbody in the 'x' asis are greater than
+        //3f, it means that the car is losing traction, then the car will start emitting particle systems.
+        if (Mathf.Abs(localVelocityX) > 2.5f)
+        {
+            isDrifting = true;
+            DriftCarPS();
+        }
+        else
+        {
+            isDrifting = false;
+            DriftCarPS();
+        }
+        // The following part sets the throttle power to 1 smoothly.
+        throttleAxis = throttleAxis + (Time.deltaTime * 3f);
+        if (throttleAxis > 1f)
+        {
+            throttleAxis = 1f;
+        }
+        //If the car is going backwards, then apply brakes in order to avoid strange
+        //behaviours. If the local velocity in the 'z' axis is less than -1f, then it
+        //is safe to apply positive torque to go forward.
+        if (localVelocityZ < -1f)
+        {
+            Brakes();
+        }
+        else
+        {
+            if (Mathf.RoundToInt(carSpeed) < maxSpeed)
+            {
+                //Apply positive torque in all wheels to go forward if maxSpeed has not been reached.
+                frontLeftCollider.brakeTorque = 0;
+                frontLeftCollider.motorTorque = (accelerationMultiplier * 50f) * throttleAxis;
+                frontRightCollider.brakeTorque = 0;
+                frontRightCollider.motorTorque = (accelerationMultiplier * 50f) * throttleAxis;
+                rearLeftCollider.brakeTorque = 0;
+                rearLeftCollider.motorTorque = (accelerationMultiplier * 50f) * throttleAxis;
+                rearRightCollider.brakeTorque = 0;
+                rearRightCollider.motorTorque = (accelerationMultiplier * 50f) * throttleAxis;
+            }
+            else
+            {
+                // If the maxSpeed has been reached, then stop applying torque to the wheels.
+                // IMPORTANT: The maxSpeed variable should be considered as an approximation; the speed of the car
+                // could be a bit higher than expected.
+                frontLeftCollider.motorTorque = 0;
+                frontRightCollider.motorTorque = 0;
+                rearLeftCollider.motorTorque = 0;
+                rearRightCollider.motorTorque = 0;
+            }
+        }
     }
 
     // This method apply negative torque to the wheels in order to go backwards.
-    public void GoReverse(){
-      //If the forces aplied to the rigidbody in the 'x' asis are greater than
-      //3f, it means that the car is losing traction, then the car will start emitting particle systems.
-      if(Mathf.Abs(localVelocityX) > 2.5f){
-        isDrifting = true;
-        DriftCarPS();
-      }else{
-        isDrifting = false;
-        DriftCarPS();
-      }
-      // The following part sets the throttle power to -1 smoothly.
-      throttleAxis = throttleAxis - (Time.deltaTime * 3f);
-      if(throttleAxis < -1f){
-        throttleAxis = -1f;
-      }
-      //If the car is still going forward, then apply brakes in order to avoid strange
-      //behaviours. If the local velocity in the 'z' axis is greater than 1f, then it
-      //is safe to apply negative torque to go reverse.
-      if(localVelocityZ > 1f){
-        Brakes();
-      }else{
-        if(Mathf.Abs(Mathf.RoundToInt(carSpeed)) < maxReverseSpeed){
-          //Apply negative torque in all wheels to go in reverse if maxReverseSpeed has not been reached.
-          frontLeftCollider.brakeTorque = 0;
-          frontLeftCollider.motorTorque = (accelerationMultiplier * 50f) * throttleAxis;
-          frontRightCollider.brakeTorque = 0;
-          frontRightCollider.motorTorque = (accelerationMultiplier * 50f) * throttleAxis;
-          rearLeftCollider.brakeTorque = 0;
-          rearLeftCollider.motorTorque = (accelerationMultiplier * 50f) * throttleAxis;
-          rearRightCollider.brakeTorque = 0;
-          rearRightCollider.motorTorque = (accelerationMultiplier * 50f) * throttleAxis;
-        }else {
-          //If the maxReverseSpeed has been reached, then stop applying torque to the wheels.
-          // IMPORTANT: The maxReverseSpeed variable should be considered as an approximation; the speed of the car
-          // could be a bit higher than expected.
-    			frontLeftCollider.motorTorque = 0;
-    			frontRightCollider.motorTorque = 0;
-          rearLeftCollider.motorTorque = 0;
-    			rearRightCollider.motorTorque = 0;
-    		}
-      }
+    public void GoReverse()
+    {
+        //If the forces aplied to the rigidbody in the 'x' asis are greater than
+        //3f, it means that the car is losing traction, then the car will start emitting particle systems.
+        if (Mathf.Abs(localVelocityX) > 2.5f)
+        {
+            isDrifting = true;
+            DriftCarPS();
+        }
+        else
+        {
+            isDrifting = false;
+            DriftCarPS();
+        }
+        // The following part sets the throttle power to -1 smoothly.
+        throttleAxis = throttleAxis - (Time.deltaTime * 3f);
+        if (throttleAxis < -1f)
+        {
+            throttleAxis = -1f;
+        }
+        //If the car is still going forward, then apply brakes in order to avoid strange
+        //behaviours. If the local velocity in the 'z' axis is greater than 1f, then it
+        //is safe to apply negative torque to go reverse.
+        if (localVelocityZ > 1f)
+        {
+            Brakes();
+        }
+        else
+        {
+            if (Mathf.Abs(Mathf.RoundToInt(carSpeed)) < maxReverseSpeed)
+            {
+                //Apply negative torque in all wheels to go in reverse if maxReverseSpeed has not been reached.
+                frontLeftCollider.brakeTorque = 0;
+                frontLeftCollider.motorTorque = (accelerationMultiplier * 50f) * throttleAxis;
+                frontRightCollider.brakeTorque = 0;
+                frontRightCollider.motorTorque = (accelerationMultiplier * 50f) * throttleAxis;
+                rearLeftCollider.brakeTorque = 0;
+                rearLeftCollider.motorTorque = (accelerationMultiplier * 50f) * throttleAxis;
+                rearRightCollider.brakeTorque = 0;
+                rearRightCollider.motorTorque = (accelerationMultiplier * 50f) * throttleAxis;
+            }
+            else
+            {
+                //If the maxReverseSpeed has been reached, then stop applying torque to the wheels.
+                // IMPORTANT: The maxReverseSpeed variable should be considered as an approximation; the speed of the car
+                // could be a bit higher than expected.
+                frontLeftCollider.motorTorque = 0;
+                frontRightCollider.motorTorque = 0;
+                rearLeftCollider.motorTorque = 0;
+                rearRightCollider.motorTorque = 0;
+            }
+        }
     }
 
     //The following function set the motor torque to 0 (in case the user is not pressing either W or S).
-    public void ThrottleOff(){
-      frontLeftCollider.motorTorque = 0;
-      frontRightCollider.motorTorque = 0;
-      rearLeftCollider.motorTorque = 0;
-      rearRightCollider.motorTorque = 0;
+    public void ThrottleOff()
+    {
+        frontLeftCollider.motorTorque = 0;
+        frontRightCollider.motorTorque = 0;
+        rearLeftCollider.motorTorque = 0;
+        rearRightCollider.motorTorque = 0;
     }
 
     // The following method decelerates the speed of the car according to the decelerationMultiplier variable, where
     // 1 is the slowest and 10 is the fastest deceleration. This method is called by the function InvokeRepeating,
     // usually every 0.1f when the user is not pressing W (throttle), S (reverse) or Space bar (handbrake).
-    public void DecelerateCar(){
-      if(Mathf.Abs(localVelocityX) > 2.5f){
-        isDrifting = true;
-        DriftCarPS();
-      }else{
-        isDrifting = false;
-        DriftCarPS();
-      }
-      // The following part resets the throttle power to 0 smoothly.
-      if(throttleAxis != 0f){
-        if(throttleAxis > 0f){
-          throttleAxis = throttleAxis - (Time.deltaTime * 10f);
-        }else if(throttleAxis < 0f){
-            throttleAxis = throttleAxis + (Time.deltaTime * 10f);
+    public void DecelerateCar()
+    {
+        if (Mathf.Abs(localVelocityX) > 2.5f)
+        {
+            isDrifting = true;
+            DriftCarPS();
         }
-        if(Mathf.Abs(throttleAxis) < 0.15f){
-          throttleAxis = 0f;
+        else
+        {
+            isDrifting = false;
+            DriftCarPS();
         }
-      }
-      carRigidbody.velocity = carRigidbody.velocity * (1f / (1f + (0.025f * decelerationMultiplier)));
-      // Since we want to decelerate the car, we are going to remove the torque from the wheels of the car.
-      frontLeftCollider.motorTorque = 0;
-      frontRightCollider.motorTorque = 0;
-      rearLeftCollider.motorTorque = 0;
-      rearRightCollider.motorTorque = 0;
-      // If the magnitude of the car's velocity is less than 0.25f (very slow velocity), then stop the car completely and
-      // also cancel the invoke of this method.
-      if(carRigidbody.velocity.magnitude < 0.25f){
-        carRigidbody.velocity = Vector3.zero;
-        CancelInvoke("DecelerateCar");
-      }
+        // The following part resets the throttle power to 0 smoothly.
+        if (throttleAxis != 0f)
+        {
+            if (throttleAxis > 0f)
+            {
+                throttleAxis = throttleAxis - (Time.deltaTime * 10f);
+            }
+            else if (throttleAxis < 0f)
+            {
+                throttleAxis = throttleAxis + (Time.deltaTime * 10f);
+            }
+            if (Mathf.Abs(throttleAxis) < 0.15f)
+            {
+                throttleAxis = 0f;
+            }
+        }
+        carRigidbody.velocity = carRigidbody.velocity * (1f / (1f + (0.025f * decelerationMultiplier)));
+        // Since we want to decelerate the car, we are going to remove the torque from the wheels of the car.
+        frontLeftCollider.motorTorque = 0;
+        frontRightCollider.motorTorque = 0;
+        rearLeftCollider.motorTorque = 0;
+        rearRightCollider.motorTorque = 0;
+        // If the magnitude of the car's velocity is less than 0.25f (very slow velocity), then stop the car completely and
+        // also cancel the invoke of this method.
+        if (carRigidbody.velocity.magnitude < 0.25f)
+        {
+            carRigidbody.velocity = Vector3.zero;
+            CancelInvoke("DecelerateCar");
+        }
     }
 
     // This function applies brake torque to the wheels according to the brake force given by the user.
-    public void Brakes(){
-      frontLeftCollider.brakeTorque = brakeForce;
-      frontRightCollider.brakeTorque = brakeForce;
-      rearLeftCollider.brakeTorque = brakeForce;
-      rearRightCollider.brakeTorque = brakeForce;
+    public void Brakes()
+    {
+        frontLeftCollider.brakeTorque = brakeForce;
+        frontRightCollider.brakeTorque = brakeForce;
+        rearLeftCollider.brakeTorque = brakeForce;
+        rearRightCollider.brakeTorque = brakeForce;
     }
 
     // This function is used to make the car lose traction. By using this, the car will start drifting. The amount of traction lost
     // will depend on the handbrakeDriftMultiplier variable. If this value is small, then the car will not drift too much, but if
     // it is high, then you could make the car to feel like going on ice.
-    public void Handbrake(){
-      CancelInvoke("RecoverTraction");
-      // We are going to start losing traction smoothly, there is were our 'driftingAxis' variable takes
-      // place. This variable will start from 0 and will reach a top value of 1, which means that the maximum
-      // drifting value has been reached. It will increase smoothly by using the variable Time.deltaTime.
-      driftingAxis = driftingAxis + (Time.deltaTime);
-      float secureStartingPoint = driftingAxis * FLWextremumSlip * handbrakeDriftMultiplier;
+    public void Handbrake()
+    {
+        CancelInvoke("RecoverTraction");
+        // We are going to start losing traction smoothly, there is were our 'driftingAxis' variable takes
+        // place. This variable will start from 0 and will reach a top value of 1, which means that the maximum
+        // drifting value has been reached. It will increase smoothly by using the variable Time.deltaTime.
+        driftingAxis = driftingAxis + (Time.deltaTime);
+        float secureStartingPoint = driftingAxis * FLWextremumSlip * handbrakeDriftMultiplier;
 
-      if(secureStartingPoint < FLWextremumSlip){
-        driftingAxis = FLWextremumSlip / (FLWextremumSlip * handbrakeDriftMultiplier);
-      }
-      if(driftingAxis > 1f){
-        driftingAxis = 1f;
-      }
-      //If the forces aplied to the rigidbody in the 'x' asis are greater than
-      //3f, it means that the car lost its traction, then the car will start emitting particle systems.
-      if(Mathf.Abs(localVelocityX) > 2.5f){
-        isDrifting = true;
-      }else{
-        isDrifting = false;
-      }
-      //If the 'driftingAxis' value is not 1f, it means that the wheels have not reach their maximum drifting
-      //value, so, we are going to continue increasing the sideways friction of the wheels until driftingAxis
-      // = 1f.
-      if(driftingAxis < 1f){
-        FLwheelFriction.extremumSlip = FLWextremumSlip * handbrakeDriftMultiplier * driftingAxis;
-        frontLeftCollider.sidewaysFriction = FLwheelFriction;
+        if (secureStartingPoint < FLWextremumSlip)
+        {
+            driftingAxis = FLWextremumSlip / (FLWextremumSlip * handbrakeDriftMultiplier);
+        }
+        if (driftingAxis > 1f)
+        {
+            driftingAxis = 1f;
+        }
+        //If the forces aplied to the rigidbody in the 'x' asis are greater than
+        //3f, it means that the car lost its traction, then the car will start emitting particle systems.
+        if (Mathf.Abs(localVelocityX) > 2.5f)
+        {
+            isDrifting = true;
+        }
+        else
+        {
+            isDrifting = false;
+        }
+        //If the 'driftingAxis' value is not 1f, it means that the wheels have not reach their maximum drifting
+        //value, so, we are going to continue increasing the sideways friction of the wheels until driftingAxis
+        // = 1f.
+        if (driftingAxis < 1f)
+        {
+            FLwheelFriction.extremumSlip = FLWextremumSlip * handbrakeDriftMultiplier * driftingAxis;
+            frontLeftCollider.sidewaysFriction = FLwheelFriction;
 
-        FRwheelFriction.extremumSlip = FRWextremumSlip * handbrakeDriftMultiplier * driftingAxis;
-        frontRightCollider.sidewaysFriction = FRwheelFriction;
+            FRwheelFriction.extremumSlip = FRWextremumSlip * handbrakeDriftMultiplier * driftingAxis;
+            frontRightCollider.sidewaysFriction = FRwheelFriction;
 
-        RLwheelFriction.extremumSlip = RLWextremumSlip * handbrakeDriftMultiplier * driftingAxis;
-        rearLeftCollider.sidewaysFriction = RLwheelFriction;
+            RLwheelFriction.extremumSlip = RLWextremumSlip * handbrakeDriftMultiplier * driftingAxis;
+            rearLeftCollider.sidewaysFriction = RLwheelFriction;
 
-        RRwheelFriction.extremumSlip = RRWextremumSlip * handbrakeDriftMultiplier * driftingAxis;
-        rearRightCollider.sidewaysFriction = RRwheelFriction;
-      }
+            RRwheelFriction.extremumSlip = RRWextremumSlip * handbrakeDriftMultiplier * driftingAxis;
+            rearRightCollider.sidewaysFriction = RRwheelFriction;
+        }
 
-      // Whenever the player uses the handbrake, it means that the wheels are locked, so we set 'isTractionLocked = true'
-      // and, as a consequense, the car starts to emit trails to simulate the wheel skids.
-      isTractionLocked = true;
-      DriftCarPS();
+        // Whenever the player uses the handbrake, it means that the wheels are locked, so we set 'isTractionLocked = true'
+        // and, as a consequense, the car starts to emit trails to simulate the wheel skids.
+        isTractionLocked = true;
+        DriftCarPS();
 
     }
 
     // This function is used to emit both the particle systems of the tires' smoke and the trail renderers of the tire skids
     // depending on the value of the bool variables 'isDrifting' and 'isTractionLocked'.
-    public void DriftCarPS(){
+    public void DriftCarPS()
+    {
 
-      if(useEffects){
-        try{
-          if(isDrifting){
-            RLWParticleSystem.Play();
-            RRWParticleSystem.Play();
-          }else if(!isDrifting){
-            RLWParticleSystem.Stop();
-            RRWParticleSystem.Stop();
-          }
-        }catch(Exception ex){
-          Debug.LogWarning(ex);
-        }
+        if (useEffects)
+        {
+            try
+            {
+                if (isDrifting)
+                {
+                    RLWParticleSystem.Play();
+                    RRWParticleSystem.Play();
+                }
+                else if (!isDrifting)
+                {
+                    RLWParticleSystem.Stop();
+                    RRWParticleSystem.Stop();
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.LogWarning(ex);
+            }
 
-        try{
-          if((isTractionLocked || Mathf.Abs(localVelocityX) > 5f) && Mathf.Abs(carSpeed) > 12f){
-            RLWTireSkid.emitting = true;
-            RRWTireSkid.emitting = true;
-          }else {
-            RLWTireSkid.emitting = false;
-            RRWTireSkid.emitting = false;
-          }
-        }catch(Exception ex){
-          Debug.LogWarning(ex);
+            try
+            {
+                if ((isTractionLocked || Mathf.Abs(localVelocityX) > 5f) && Mathf.Abs(carSpeed) > 12f)
+                {
+                    RLWTireSkid.emitting = true;
+                    RRWTireSkid.emitting = true;
+                }
+                else
+                {
+                    RLWTireSkid.emitting = false;
+                    RRWTireSkid.emitting = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.LogWarning(ex);
+            }
         }
-      }else if(!useEffects){
-        if(RLWParticleSystem != null){
-          RLWParticleSystem.Stop();
+        else if (!useEffects)
+        {
+            if (RLWParticleSystem != null)
+            {
+                RLWParticleSystem.Stop();
+            }
+            if (RRWParticleSystem != null)
+            {
+                RRWParticleSystem.Stop();
+            }
+            if (RLWTireSkid != null)
+            {
+                RLWTireSkid.emitting = false;
+            }
+            if (RRWTireSkid != null)
+            {
+                RRWTireSkid.emitting = false;
+            }
         }
-        if(RRWParticleSystem != null){
-          RRWParticleSystem.Stop();
-        }
-        if(RLWTireSkid != null){
-          RLWTireSkid.emitting = false;
-        }
-        if(RRWTireSkid != null){
-          RRWTireSkid.emitting = false;
-        }
-      }
 
     }
 
     // This function is used to recover the traction of the car when the user has stopped using the car's handbrake.
-    public void RecoverTraction(){
-      isTractionLocked = false;
-      driftingAxis = driftingAxis - (Time.deltaTime / 1.5f);
-      if(driftingAxis < 0f){
-        driftingAxis = 0f;
-      }
+    public void RecoverTraction()
+    {
+        isTractionLocked = false;
+        driftingAxis = driftingAxis - (Time.deltaTime / 1.5f);
+        if (driftingAxis < 0f)
+        {
+            driftingAxis = 0f;
+        }
 
-      //If the 'driftingAxis' value is not 0f, it means that the wheels have not recovered their traction.
-      //We are going to continue decreasing the sideways friction of the wheels until we reach the initial
-      // car's grip.
-      if(FLwheelFriction.extremumSlip > FLWextremumSlip){
-        FLwheelFriction.extremumSlip = FLWextremumSlip * handbrakeDriftMultiplier * driftingAxis;
-        frontLeftCollider.sidewaysFriction = FLwheelFriction;
+        //If the 'driftingAxis' value is not 0f, it means that the wheels have not recovered their traction.
+        //We are going to continue decreasing the sideways friction of the wheels until we reach the initial
+        // car's grip.
+        if (FLwheelFriction.extremumSlip > FLWextremumSlip)
+        {
+            FLwheelFriction.extremumSlip = FLWextremumSlip * handbrakeDriftMultiplier * driftingAxis;
+            frontLeftCollider.sidewaysFriction = FLwheelFriction;
 
-        FRwheelFriction.extremumSlip = FRWextremumSlip * handbrakeDriftMultiplier * driftingAxis;
-        frontRightCollider.sidewaysFriction = FRwheelFriction;
+            FRwheelFriction.extremumSlip = FRWextremumSlip * handbrakeDriftMultiplier * driftingAxis;
+            frontRightCollider.sidewaysFriction = FRwheelFriction;
 
-        RLwheelFriction.extremumSlip = RLWextremumSlip * handbrakeDriftMultiplier * driftingAxis;
-        rearLeftCollider.sidewaysFriction = RLwheelFriction;
+            RLwheelFriction.extremumSlip = RLWextremumSlip * handbrakeDriftMultiplier * driftingAxis;
+            rearLeftCollider.sidewaysFriction = RLwheelFriction;
 
-        RRwheelFriction.extremumSlip = RRWextremumSlip * handbrakeDriftMultiplier * driftingAxis;
-        rearRightCollider.sidewaysFriction = RRwheelFriction;
+            RRwheelFriction.extremumSlip = RRWextremumSlip * handbrakeDriftMultiplier * driftingAxis;
+            rearRightCollider.sidewaysFriction = RRwheelFriction;
 
-        Invoke("RecoverTraction", Time.deltaTime);
+            Invoke("RecoverTraction", Time.deltaTime);
 
-      }else if (FLwheelFriction.extremumSlip < FLWextremumSlip){
-        FLwheelFriction.extremumSlip = FLWextremumSlip;
-        frontLeftCollider.sidewaysFriction = FLwheelFriction;
+        }
+        else if (FLwheelFriction.extremumSlip < FLWextremumSlip)
+        {
+            FLwheelFriction.extremumSlip = FLWextremumSlip;
+            frontLeftCollider.sidewaysFriction = FLwheelFriction;
 
-        FRwheelFriction.extremumSlip = FRWextremumSlip;
-        frontRightCollider.sidewaysFriction = FRwheelFriction;
+            FRwheelFriction.extremumSlip = FRWextremumSlip;
+            frontRightCollider.sidewaysFriction = FRwheelFriction;
 
-        RLwheelFriction.extremumSlip = RLWextremumSlip;
-        rearLeftCollider.sidewaysFriction = RLwheelFriction;
+            RLwheelFriction.extremumSlip = RLWextremumSlip;
+            rearLeftCollider.sidewaysFriction = RLwheelFriction;
 
-        RRwheelFriction.extremumSlip = RRWextremumSlip;
-        rearRightCollider.sidewaysFriction = RRwheelFriction;
+            RRwheelFriction.extremumSlip = RRWextremumSlip;
+            rearRightCollider.sidewaysFriction = RRwheelFriction;
 
-        driftingAxis = 0f;
-      }
+            driftingAxis = 0f;
+        }
     }
 
 }
