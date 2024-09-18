@@ -16,7 +16,7 @@ public class WalletView : MonoBehaviour
         Game.Player.wallet.OnCurrencyChanged -= UpdateValue;
     }
 
-    private void UpdateValue(int value) => moneyValue.text = value.ToString();
+    private void UpdateValue() => moneyValue.text = Game.Player.wallet.SoftCurrency.ToString();
 
     public void AddMoney()
     {

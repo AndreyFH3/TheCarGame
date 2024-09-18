@@ -22,7 +22,7 @@ public class Game : MonoBehaviour
         }
     }
 
-    public static PlayerProfile playerContainer; 
+    private static PlayerProfile playerContainer; 
     public static PlayerProfile Player {
         get 
         {
@@ -31,13 +31,12 @@ public class Game : MonoBehaviour
             else
             {
                 string data = "";
-                //data = GP_Player.GetString(PLAYER_DATA);
                 if (!string.IsNullOrEmpty(data))
                 {
                     playerContainer = JsonUtility.FromJson<PlayerProfile>(data);
                 }
                 else
-                    playerContainer = new PlayerProfile();
+                    playerContainer = new();
                 if(!playerContainer.IsInited)
                     playerContainer.Init();
                 return playerContainer;

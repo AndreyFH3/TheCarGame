@@ -6,17 +6,29 @@ using TMPro;
 public class UpgradeCardView : MonoBehaviour
 {
     [SerializeField] private Image icon;
+    [SerializeField] private RewardView price;
     [SerializeField] private List<Image> upgradeShower;
     [SerializeField] private TextMeshProUGUI cardName;
-    [SerializeField] private TextMeshProUGUI priceShower;
-    [SerializeField] private Image buttonUpgade;
+    [SerializeField] private Button buttonUpgade;
     private CarCharacteristic characteristic;
     public void Init(CarCharacteristic carIdType)
     {
         characteristic = carIdType;
+        if(characteristic is null)
+        {
+            buttonUpgade.gameObject.SetActive(false);
+            price.gameObject.SetActive(false);  
+            return;
+        }
         icon.sprite = Game.Config.icons.GetSpriteCharacteristic(carIdType.Type);
         cardName.text = carIdType.Type.ToString();
         SetUpgrades();
+        Game.Player.wallet.OnCurrencyChanged += CheckBuyAvailibleByMoney;
+    }
+
+    private void CheckBuyAvailibleByMoney()
+    {
+        buttonUpgade.interactable = characteristic.CanUpgrade;
     }
 
     private void SetUpgrades()
@@ -27,15 +39,17 @@ public class UpgradeCardView : MonoBehaviour
         {
             upgradeShower[i].sprite = Game.Config.icons.GetUpgraded(characteristic.Level - 1 >= i);
         }
-        priceShower.text = characteristic.Cost.ToString();
+        price.SetValues(null, characteristic.Cost.ToString());
     }
 
-    public void UpgradeCharacteristic() 
+    private void OnDestroy()
     {
-        if (Game.Player.wallet.CheckSoftEnough(0))
-        {
-            characteristic.Upgrade();
-            SetUpgrades();
-        }
+        Game.Player.wallet.OnCurrencyChanged -= CheckBuyAvailibleByMoney;
+    }
+
+    public void UpgradeCharacteristic()
+    {
+        characteristic.Upgrade();
+        SetUpgrades();
     }
 }

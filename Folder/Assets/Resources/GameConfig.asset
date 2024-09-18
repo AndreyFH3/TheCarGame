@@ -32,39 +32,35 @@ MonoBehaviour:
   - trackData: {fileID: 4900000, guid: 6a2e001ebc86ba5469d91f977344d6d4, type: 3}
     spriteOfmap: {fileID: 0}
     isCircle: 1
-    laps: 2
+    laps: 4
   - trackData: {fileID: 4900000, guid: 68d77b39e11619148bc27c922946f4b6, type: 3}
     spriteOfmap: {fileID: 0}
     isCircle: 1
-    laps: 2
+    laps: 3
   - trackData: {fileID: 4900000, guid: b6b884e1df9d7e141b977c83c514c431, type: 3}
     spriteOfmap: {fileID: 0}
     isCircle: 1
+    laps: 3
+  - trackData: {fileID: 4900000, guid: 266a097fa415608488fff874b9319858, type: 3}
+    spriteOfmap: {fileID: 0}
+    isCircle: 1
+    laps: 3
+  - trackData: {fileID: 4900000, guid: 28bb036c42873e14db31fc249675ff5c, type: 3}
+    spriteOfmap: {fileID: 0}
+    isCircle: 1
     laps: 2
-  - trackData: {fileID: 4900000, guid: 87e7e90e4ec9c8f478a8850a89b3a149, type: 3}
+  - trackData: {fileID: 4900000, guid: 87b88eb8be2132a4a92f3a218679b265, type: 3}
     spriteOfmap: {fileID: 0}
     isCircle: 1
-    laps: 3
-  - trackData: {fileID: 4900000, guid: 38a4c7df71a26cc45994ac3e83b93f52, type: 3}
+    laps: 2
+  - trackData: {fileID: 4900000, guid: eb4e715becfa32e4f9a0f06fee9a6760, type: 3}
     spriteOfmap: {fileID: 0}
     isCircle: 1
-    laps: 3
-  - trackData: {fileID: 4900000, guid: ae7d0cdec9917d946a07c4907b189015, type: 3}
+    laps: 2
+  - trackData: {fileID: 4900000, guid: 525de850d74145b4ab0348aa748e8c66, type: 3}
     spriteOfmap: {fileID: 0}
     isCircle: 1
-    laps: 3
-  - trackData: {fileID: 4900000, guid: 3761593067a0ec441bebcc4d828617ab, type: 3}
-    spriteOfmap: {fileID: 0}
-    isCircle: 1
-    laps: 3
-  - trackData: {fileID: 4900000, guid: d21a572e3d0cec84b8867a164371a9e7, type: 3}
-    spriteOfmap: {fileID: 0}
-    isCircle: 1
-    laps: 3
-  - trackData: {fileID: 4900000, guid: 6e2171952a80a7f4ca4af6d9f1cb581b, type: 3}
-    spriteOfmap: {fileID: 0}
-    isCircle: 1
-    laps: 0
+    laps: 2
   skyBoxes:
   - id: Day
     skyBox: {fileID: 2100000, guid: 2fdc1726342f4a749a190a0a8677a1a2, type: 2}

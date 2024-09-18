@@ -9,7 +9,8 @@ public class RewardView : MonoBehaviour
 
     public void SetValues(Sprite icon, string text)
     {
-        this.icon.sprite = icon;
+        if(icon is not null)
+            this.icon.sprite = icon;
         amountText.text = text;
     }
 }

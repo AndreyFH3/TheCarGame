@@ -1,15 +1,29 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using static GameConfig;
 
+//[CreateAssetMenu(fileName = "PlayerProfile", menuName = "ScriptableObjects/PlayerProfile", order = 2)]
 [Serializable]
 public class PlayerProfile
 {
     [SerializeField] private List<CarCharacteristics> characteristicsCar = new List<CarCharacteristics>();
+    [SerializeField] public CarShop carShop = new CarShop()
+    {
+       carIds = new List<string>()
+       {
+           "DefaultCar"
+       }
+    };
+    [SerializeField] public MapShop mapShop = new MapShop()
+    {
+        mapsIds = new List<string>()
+       {
+           "FirstRace"
+       }
+    };
     public Wallet wallet = new Wallet();
 
-    [SerializeField, HideInInspector] private bool isInited = false;
+    [SerializeField] private bool isInited = false;
     public bool IsInited => isInited;
     public CarCharacteristics GetCarCharacteristics(string carId) => characteristicsCar.Find(x => x.Id == carId);
     public void Init()
@@ -30,15 +44,15 @@ public class PlayerProfile
 [System.Serializable]
 public class Wallet
 {
-    [SerializeField] private int softCurrency = 50000;
+    [SerializeField] private int softCurrency = 500000;
     public int SoftCurrency => softCurrency;
-    public System.Action<int> OnCurrencyChanged;
+    public System.Action OnCurrencyChanged;
     public bool SpendSoft(int value)
     {
         if (CheckSoftEnough(value))
         { 
             softCurrency -= value;
-            OnCurrencyChanged?.Invoke(softCurrency);
+            OnCurrencyChanged?.Invoke();
             return true;
         }
         else
@@ -55,7 +69,7 @@ public class Wallet
     public void EarnSoft(int value)
     {
         softCurrency += value;
-        OnCurrencyChanged?.Invoke(softCurrency);
+        OnCurrencyChanged?.Invoke();
     }
 }
 
@@ -82,21 +96,6 @@ public class CarCharacteristics
             }
         }
     }
-
-    public void UpgradeChraracteristic(CharacteristicType type, string carId)
-    {
-        var info = Game.Config.statsConfig.upgradeCosts.Find(x => x.Type == type && x.CarId == carId);
-        if (!Game.Player.wallet.SpendSoft((int)info.Price))
-            return;
-
-        var characteristic = characteristics.Find(x => x.Type == type);
-        if(characteristic is null)
-        {
-            characteristic = new CarCharacteristic(type, carId);
-            characteristics.Add(characteristic);
-        }
-        characteristic.Upgrade();
-    }
 }
 
 [System.Serializable]
@@ -105,9 +104,11 @@ public class CarCharacteristic
     [SerializeField] private int level = 1;
     [SerializeField] private CharacteristicType type;
     [SerializeField] private float calculatedPower;
+
     private string carId;
     private UpgradeCosts info;
 
+    public bool CanUpgrade => Game.Player.wallet.CheckSoftEnough(Cost);
     
     public int Cost 
     { 
@@ -115,6 +116,8 @@ public class CarCharacteristic
         { 
             if(info is null)
                 info = Game.Config.statsConfig.upgradeCosts.Find(x => x.Type == type && x.CarId == carId && x.Level == level + 1);
+            if(info is null)
+                return int.MaxValue;
             return (int)info.Price; 
         } 
     }
@@ -123,6 +126,7 @@ public class CarCharacteristic
     public bool IsMaxUpgrade => level >= MAX_LEVEL;
     public int Level => level;
     public CharacteristicType Type => type;
+    public string CarId => carId;
     public float CalculatedPower => calculatedPower;
 
     public CarCharacteristic(CharacteristicType type, string carId)
@@ -139,7 +143,8 @@ public class CarCharacteristic
         if(MAX_LEVEL < level)
             level = MAX_LEVEL;
         info = Game.Config.statsConfig.upgradeCosts.Find(x => x.Type == type && x.CarId == carId && x.Level == level+1);
-        calculatedPower = info.Bonus; //тут надо конфиг сделать будет
+        if(info is not null)
+            calculatedPower = info.Bonus; //тут надо конфиг сделать будет
 
     }
 }

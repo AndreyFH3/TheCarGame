@@ -17,6 +17,8 @@ MonoBehaviour:
   rewardsURL: https://docs.google.com/spreadsheets/d/1kDILXONgiSxVUsi-7Eiov_oXmqhYSGRG7yREmgXjvx8/edit?usp=sharing&gid=1360542760
   tracksTimesURL: https://docs.google.com/spreadsheets/d/1kDILXONgiSxVUsi-7Eiov_oXmqhYSGRG7yREmgXjvx8/edit?usp=sharing&gid=450273189
   tracksPointsURL: https://docs.google.com/spreadsheets/d/1kDILXONgiSxVUsi-7Eiov_oXmqhYSGRG7yREmgXjvx8/edit?usp=sharing&gid=1671523395
+  carPriceURL: https://docs.google.com/spreadsheets/d/1kDILXONgiSxVUsi-7Eiov_oXmqhYSGRG7yREmgXjvx8/edit?usp=sharing&gid=178837950
+  mapPriceURL: https://docs.google.com/spreadsheets/d/1kDILXONgiSxVUsi-7Eiov_oXmqhYSGRG7yREmgXjvx8/edit?usp=sharing&gid=819380149
   upgradeCosts:
   - CAR_ID: DefaultCar
     LEVEL: 2
@@ -744,72 +746,64 @@ MonoBehaviour:
     AMOUNT_1: 350
     AMOUNT_2: 750
     AMOUNT_3: 1000
-  - TRACK_ID: FirstRace 1
+  - TRACK_ID: secondRace
     AMOUNT_1: 700
     AMOUNT_2: 1500
     AMOUNT_3: 2000
-  - TRACK_ID: FirstRace 2
+  - TRACK_ID: thirdRace
     AMOUNT_1: 1050
     AMOUNT_2: 2250
     AMOUNT_3: 3000
-  - TRACK_ID: FirstRace 3
+  - TRACK_ID: fourthRace
     AMOUNT_1: 1400
     AMOUNT_2: 3000
     AMOUNT_3: 4000
-  - TRACK_ID: FirstRace 4
+  - TRACK_ID: fifthRace
     AMOUNT_1: 1750
     AMOUNT_2: 3750
     AMOUNT_3: 5000
-  - TRACK_ID: FirstRace 5
+  - TRACK_ID: sixRace
     AMOUNT_1: 2100
     AMOUNT_2: 4500
     AMOUNT_3: 6000
-  - TRACK_ID: FirstRace 6
+  - TRACK_ID: seventhRace
     AMOUNT_1: 2450
     AMOUNT_2: 5250
     AMOUNT_3: 7000
-  - TRACK_ID: FirstRace 7
+  - TRACK_ID: eighthRace
     AMOUNT_1: 2800
     AMOUNT_2: 6000
     AMOUNT_3: 8000
-  - TRACK_ID: FirstRace 8
-    AMOUNT_1: 3150
-    AMOUNT_2: 6750
-    AMOUNT_3: 9000
   times:
   - TRACK_ID: FirstRace
     ONE_STAR: 300
     TWO_STAR: 240
     THREE_STAR: 180
-  - TRACK_ID: FirstRace 1
+  - TRACK_ID: secondRace
     ONE_STAR: 300
     TWO_STAR: 240
     THREE_STAR: 180
-  - TRACK_ID: FirstRace 2
+  - TRACK_ID: thirdRace
     ONE_STAR: 300
     TWO_STAR: 240
     THREE_STAR: 180
-  - TRACK_ID: FirstRace 3
+  - TRACK_ID: fourthRace
     ONE_STAR: 300
     TWO_STAR: 240
     THREE_STAR: 180
-  - TRACK_ID: FirstRace 4
+  - TRACK_ID: fifthRace
     ONE_STAR: 300
     TWO_STAR: 240
     THREE_STAR: 180
-  - TRACK_ID: FirstRace 5
+  - TRACK_ID: sixRace
     ONE_STAR: 300
     TWO_STAR: 240
     THREE_STAR: 180
-  - TRACK_ID: FirstRace 6
+  - TRACK_ID: seventhRace
     ONE_STAR: 300
     TWO_STAR: 240
     THREE_STAR: 180
-  - TRACK_ID: FirstRace 7
-    ONE_STAR: 300
-    TWO_STAR: 240
-    THREE_STAR: 180
-  - TRACK_ID: FirstRace 8
+  - TRACK_ID: eighthRace
     ONE_STAR: 300
     TWO_STAR: 240
     THREE_STAR: 180
@@ -818,35 +812,57 @@ MonoBehaviour:
     ONE_STAR: 180
     TWO_STAR: 240
     THREE_STAR: 300
-  - TRACK_ID: FirstRace 1
+  - TRACK_ID: secondRace
     ONE_STAR: 180
     TWO_STAR: 240
     THREE_STAR: 300
-  - TRACK_ID: FirstRace 2
+  - TRACK_ID: thirdRace
     ONE_STAR: 180
     TWO_STAR: 240
     THREE_STAR: 300
-  - TRACK_ID: FirstRace 3
+  - TRACK_ID: fourthRace
     ONE_STAR: 180
     TWO_STAR: 240
     THREE_STAR: 300
-  - TRACK_ID: FirstRace 4
+  - TRACK_ID: fifthRace
     ONE_STAR: 180
     TWO_STAR: 240
     THREE_STAR: 300
-  - TRACK_ID: FirstRace 5
+  - TRACK_ID: sixRace
     ONE_STAR: 180
     TWO_STAR: 240
     THREE_STAR: 300
-  - TRACK_ID: FirstRace 6
+  - TRACK_ID: seventhRace
     ONE_STAR: 180
     TWO_STAR: 240
     THREE_STAR: 300
-  - TRACK_ID: FirstRace 7
+  - TRACK_ID: eighthRace
     ONE_STAR: 180
     TWO_STAR: 240
     THREE_STAR: 300
-  - TRACK_ID: FirstRace 8
-    ONE_STAR: 180
-    TWO_STAR: 240
-    THREE_STAR: 300
+  carPrices:
+  - Id: Furururi
+    Price: 5000
+  - Id: Rarity Car
+    Price: 10000
+  - Id: RedBullba
+    Price: 15000
+  - Id: RealSportCar
+    Price: 25000
+  mapPrices:
+  - Id: FirstRace
+    Price: 100
+  - Id: secondRace
+    Price: 100
+  - Id: thirdRace
+    Price: 100
+  - Id: fourthRace
+    Price: 100
+  - Id: fifthRace
+    Price: 100
+  - Id: sixRace
+    Price: 100
+  - Id: seventhRace
+    Price: 100
+  - Id: eighthRace
+    Price: 100

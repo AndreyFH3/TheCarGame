@@ -1,13 +1,16 @@
 using UnityEngine;
 
-public class SelectCarView : MonoBehaviour, ILookable
+public class SelectCarView : MonoBehaviour
 {
+    [SerializeField] private RectTransform boughtUI;
+    [SerializeField] private RectTransform toBuyUI;
+    [SerializeField] private RewardView priceShower;
+
+
     public System.Action OnNextCar;
     public System.Action OnPreviousCar;
     private CarShower showerCars;
-    private TrackLoader trackLoader;
-
-    public Vector3 LookPosition => new Vector3();
+    private CarShop shop => Game.Player.carShop;
 
     public void Init(CarShower shower)
     {
@@ -17,11 +20,36 @@ public class SelectCarView : MonoBehaviour, ILookable
     public void NextCarChoose()
     {
         OnNextCar?.Invoke();
+        SetUICondition();
     }
 
     public void PreviousCarChoose()
     {
         OnPreviousCar?.Invoke();
+        SetUICondition();
+    }
+
+    private void SetUICondition()
+    {
+        if (shop.Check(showerCars.SelectedCarId))
+        {
+            boughtUI.gameObject.SetActive(true);
+            toBuyUI.gameObject.SetActive(false);
+        }
+        else
+        {
+            priceShower.SetValues(null, Game.Config.statsConfig.GetCarPrice(showerCars.SelectedCarId).ToString());
+            boughtUI.gameObject.SetActive(false);
+            toBuyUI.gameObject.SetActive(true);
+        }
+    }
+
+    public void BuyCar()
+    {
+        if (shop.TryBuy(showerCars.SelectedCarId))
+        {
+            SetUICondition();
+        }
     }
 
     public void OpenCarUpgradeView()
@@ -40,16 +68,4 @@ public class SelectCarView : MonoBehaviour, ILookable
         instance.Init(item);
         gameObject.SetActive(false);
     }
-
-    public void LookAtTarget()
-    {
-        throw new System.NotImplementedException();
-    }
-}
-
-public interface ILookable
-{
-    public Vector3 LookPosition { get; }
-
-    public void LookAtTarget();
 }

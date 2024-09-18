@@ -105,7 +105,7 @@ public class TrackSaveAndLoad : MonoBehaviour
         carData.transform.LookAt(new Vector3(lookPos.x, carData.transform.position.y, lookPos.z));
 
         Camera.main.transform.position = carData.transform.position + new Vector3(15, 10, 10);
-        Camera.main.gameObject.AddComponent<CameraFollow>().Init(carData, 2, 5);
+        Camera.main.gameObject.AddComponent<CameraFollow>().Init(carData, 2, 5, .5f);
 
         isCarSet = true;
         return carData;

@@ -2,14 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CarUpgradeView : MonoBehaviour, ILookable
+public class CarUpgradeView : MonoBehaviour
 {
     [SerializeField] private UpgradeCardView card;
     [SerializeField] private Transform cardsParent;
     [SerializeField] private Transform targetLook;
     public System.Action OnClose;
-
-    public Vector3 LookPosition => targetLook.position;
 
     public void Init(string carId)
     {
@@ -28,8 +26,5 @@ public class CarUpgradeView : MonoBehaviour, ILookable
         Destroy(gameObject);
     }
 
-    public void LookAtTarget()
-    {
-        throw new System.NotImplementedException();
-    }
+
 }

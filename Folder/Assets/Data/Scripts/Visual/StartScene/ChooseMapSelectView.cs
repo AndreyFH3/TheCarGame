@@ -1,19 +1,23 @@
-using Unity.VisualScripting.Dependencies.NCalc;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ChooseMapSelectView : MonoBehaviour
 {
+    [Header("Scroll")]
     [SerializeField] private MapRaceView mapSpriteReference;
     [SerializeField] private RectTransform contentPanel;
     [SerializeField] private HorizontalLayoutGroup hlg;
     [SerializeField] private ScrollRect scrollRect;
 
-    //=====================================================================================================================================================================
     [Range(0, 100)]
     [SerializeField] private float snapForce = 10;
     [SerializeField] private float space = 10;
+    [Header("Buy Map")]
+    [SerializeField] private RectTransform buttonsToRace;
+    [SerializeField] private RewardView priceShower;
+
+
     private float snapSpeed;
     private float width;
     public int CurrentItem { 
@@ -27,6 +31,31 @@ public class ChooseMapSelectView : MonoBehaviour
             }
         }
     }
+
+    private MapShop mapShop => Game.Player.mapShop;
+
+    private void CheckMap()
+    {
+        if (CurrentItem - 1 < 0 && Game.Config.GetTrackIds().Count >= CurrentItem)
+            return;
+        if (mapShop.Check(Game.Config.GetTrackIds()[CurrentItem - 1]))
+        {
+            buttonsToRace.gameObject.SetActive(true);
+            priceShower.gameObject.SetActive(false); 
+        }
+        else
+        {
+            priceShower.SetValues(null, Game.Config.statsConfig.GetMapPrice(Game.Config.GetTrackIds()[CurrentItem - 1]).ToString());
+            buttonsToRace.gameObject.SetActive(false);
+            priceShower.gameObject.SetActive(true);
+        }
+    }
+
+    public void BuyMap()
+    {
+        mapShop.TryBuy(Game.Config.GetTrackIds()[CurrentItem - 1]);
+    }
+
     private int currentItem;
     public bool IsSnapped { get; private set; }
 
@@ -79,6 +108,7 @@ public class ChooseMapSelectView : MonoBehaviour
             IsSnapped = false;
             snapSpeed = 0;
         }
+        CheckMap();
     }
 
     public void StartCircleRace()
@@ -88,11 +118,6 @@ public class ChooseMapSelectView : MonoBehaviour
     public void StartDriftRace()
     {
         trackLoader.StartDriftRace(Game.Config.GetTrackIds()[CurrentItem - 1]);
-    }
-
-    private void CreateRaceSettings()
-    {
-
     }
 
     public void Close()

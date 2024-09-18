@@ -11,12 +11,16 @@ public class StatsConfig : ScriptableObject
     [SerializeField] private string rewardsURL;
     [SerializeField] private string tracksTimesURL;
     [SerializeField] private string tracksPointsURL;
+    [SerializeField] private string carPriceURL;
+    [SerializeField] private string mapPriceURL;
 
     public List<UpgradeCosts> upgradeCosts;
     [SerializeField] private List<CarSettings> carsSettings;
     [SerializeField] private List<Reward> rewards;
     [SerializeField] private List<TrackInfo> times;
     [SerializeField] private List<TrackInfo> points;
+    [SerializeField] private List<CarPrice> carPrices;
+    [SerializeField] private List<CarPrice> mapPrices;
 
     [Button]
     private void Download()
@@ -26,6 +30,8 @@ public class StatsConfig : ScriptableObject
         rewards = FromJson<Reward>(GoogleDocsDownloader.Download(rewardsURL, GoogleDocsDownloader.JsonMode.Array));
         times = FromJson<TrackInfo>(GoogleDocsDownloader.Download(tracksTimesURL, GoogleDocsDownloader.JsonMode.Array));
         points = FromJson<TrackInfo>(GoogleDocsDownloader.Download(tracksPointsURL, GoogleDocsDownloader.JsonMode.Array));
+        carPrices = FromJson<CarPrice>(GoogleDocsDownloader.Download(carPriceURL, GoogleDocsDownloader.JsonMode.Array));
+        mapPrices = FromJson<CarPrice>(GoogleDocsDownloader.Download(mapPriceURL, GoogleDocsDownloader.JsonMode.Array));
     }
 
     public CarSettings GetCarSettings(string id) => carsSettings.Find(x => x.CarId == id);
@@ -40,9 +46,35 @@ public class StatsConfig : ScriptableObject
         var wrapper = JsonUtility.FromJson<Wrapper<T>>("{\"Items\":" + json + "}");
         return wrapper.Items.ToList();
     }
+    
     public TrackInfo GetTrackTimes(string id) => times.Find(x => x.Id == id);
+    
     public TrackInfo GetTrackPoints(string id) => times.Find(x => x.Id == id);
+    
     public Reward GetReward(string id) => rewards.Find(x => x.Id == id);
+    
+    public int GetCarPrice(string id)
+    {
+        if (!string.IsNullOrEmpty(id))
+            if (carPrices is not null)
+            {
+                var result = carPrices.Find(x => x.ID == id);
+                if (result is not null)
+                    return result.PriceOfObject;
+            }
+        return int.MaxValue;
+    }
+    public int GetMapPrice(string id)
+    {
+        if (!string.IsNullOrEmpty(id))
+            if (mapPrices is not null)
+            {
+                var result = mapPrices.Find(x => x.ID == id);
+                if (result is not null)
+                    return result.PriceOfObject;
+            }
+        return int.MaxValue;
+    }
 }
 
 [System.Serializable]
@@ -100,6 +132,7 @@ public class Reward
 
 [System.Serializable]
 public class TrackInfo
+
 {
     [SerializeField] private string TRACK_ID;
     [SerializeField] private int ONE_STAR;
@@ -110,4 +143,13 @@ public class TrackInfo
     public int TwoStar => TWO_STAR;
     public int ThreeStar => THREE_STAR;
 
+}
+[System.Serializable]
+public class CarPrice
+{
+    [SerializeField] private string Id;
+    [SerializeField] private int Price;
+
+    public string ID => Id;
+    public int PriceOfObject => Price;
 }

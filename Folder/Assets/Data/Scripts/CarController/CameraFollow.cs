@@ -27,17 +27,18 @@ public class CameraFollow : MonoBehaviour {
 		if (carTransform is null) 
 			return;
 
-		transform.position = target.position * (1- smoothTime)+ transform.position * smoothTime;
+		transform.position = target.position * ( 1- smoothTime) + transform.position * smoothTime;
 		transform.LookAt(carTransform.transform.position + Vector3.up);
-		smoothTime = Mathf.Abs(carTransform.carSpeed) >= 150 ? Mathf.Abs(Mathf.Abs(carTransform.carSpeed)/150 - .85f) : .45f;
+		smoothTime = Mathf.Abs(carTransform.carSpeed) >= 350 ? Mathf.Abs(Mathf.Abs(carTransform.carSpeed)/150 - .85f) : .45f;
     }
 
-	public void Init(PrometeoCarController carTransform, float followSpeed = 2, float lookSpeed = 5)
+	public void Init(PrometeoCarController carTransform, float followSpeed = 2, float lookSpeed = 5, float smoothTime = 0.5f)
 	{
 		this.carTransform = carTransform;
 		target = Instantiate(new GameObject(), carTransform.transform).transform;
 		target.localPosition = new Vector3(0, 3.5f, -6.5f);
 		this.followSpeed = followSpeed;
 		this.lookSpeed = lookSpeed;
+		this.smoothTime = smoothTime;
 	}
 }
