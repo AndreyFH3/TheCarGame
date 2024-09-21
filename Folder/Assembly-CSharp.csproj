@@ -62,12 +62,15 @@
   <ItemGroup>
     <Compile Include="Assets\Data\Scripts\Visual\RaceUIComponents\FinishCanvas.cs" />
     <Compile Include="Assets\Data\Scripts\CarController\CameraFollow.cs" />
+    <Compile Include="Assets\Data\Scripts\Localization\Localization.cs" />
     <Compile Include="Assets\Data\Scripts\CarController\PrometeoCarController.cs" />
     <Compile Include="Assets\Data\Scripts\Race\CarSettings.cs" />
+    <Compile Include="Assets\Data\Scripts\Localization\LocalizationCollector.cs" />
     <Compile Include="Assets\Data\Scripts\Shops\Shop.cs" />
     <Compile Include="Assets\Data\Scripts\Visual\RaceUIComponents\RaceUIComponent.cs" />
     <Compile Include="Assets\PathCreator\Examples\Scripts\PathPlacer.cs" />
     <Compile Include="Assets\PathCreator\Examples\Scripts\PathSceneTool.cs" />
+    <Compile Include="Assets\Data\Scripts\Localization\LocalizationTMProTextUI.cs" />
     <Compile Include="Assets\Data\Scripts\PlayerProfile.cs" />
     <Compile Include="Assets\Data\Scripts\Visual\StartScene\CarShower.cs" />
     <Compile Include="Assets\Data\Scripts\ScriptableObjects\StatsConfig.cs" />
@@ -87,6 +90,7 @@
     <Compile Include="Assets\Data\Scripts\ScriptableObjects\StatsSettings.cs" />
     <Compile Include="Assets\Data\Scripts\Visual\StartScene\MapRaceView.cs" />
     <Compile Include="Assets\Data\Scripts\Visual\RaceUIComponents\TimerRaceComponent.cs" />
+    <Compile Include="Assets\Data\Scripts\Localization\LocalizationConfig.cs" />
     <Compile Include="Assets\Data\Scripts\CarController\PrometeoTouchInput.cs" />
     <Compile Include="Assets\Data\Scripts\TracksInfo\TrackWay.cs" />
     <Compile Include="Assets\Data\Scripts\Visual\StartScene\UpgradeCardView.cs" />
@@ -97,6 +101,7 @@
     <Compile Include="Assets\Data\Scripts\Visual\RaceUIComponents\LapsUIComponent.cs" />
     <Compile Include="Assets\Data\Scripts\Visual\RaceUIComponents\RewardView.cs" />
     <Compile Include="Assets\Data\Scripts\Race\Race.cs" />
+    <Compile Include="Assets\Data\Scripts\SaveAndLoad.cs" />
     <Compile Include="Assets\Data\Scripts\DOWNLOADER\GoogleDocsDownloader.cs" />
     <Compile Include="Assets\PathCreator\Examples\Scripts\PathSpawner.cs" />
     <Compile Include="Assets\Data\Scripts\ApplicationSettings.cs" />

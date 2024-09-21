@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 
+
 public class WalletView : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI moneyValue;

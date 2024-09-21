@@ -17,6 +17,6 @@ public class SpeedometrUIComponent : RaceUIComponent
     private void UpdateText(float speed)
     {
         if(!controller.Pause)
-            speedText.text = speed.ToString() + "km/h";
+            speedText.text = speed.ToString() + Localization.Get("CarSpeed");
     }
 }

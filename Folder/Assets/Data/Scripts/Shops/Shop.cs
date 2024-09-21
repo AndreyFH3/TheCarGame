@@ -14,6 +14,7 @@ public class CarShop : Shop
         if (wallet.SpendSoft(price))
         {
             carIds.Add(carId);
+            SaveAndLoad.SaveProife();
             return true;
         }
         return false;
@@ -39,6 +40,7 @@ public class MapShop : Shop
         if (wallet.SpendSoft(price))
         {
             mapsIds.Add(mapId);
+            SaveAndLoad.SaveProife();
             return true;
         }
         return false;

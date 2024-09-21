@@ -21,7 +21,7 @@ public class UpgradeCardView : MonoBehaviour
             return;
         }
         icon.sprite = Game.Config.icons.GetSpriteCharacteristic(carIdType.Type);
-        cardName.text = carIdType.Type.ToString();
+        cardName.text = Localization.Get(carIdType.Type.ToString());
         SetUpgrades();
         Game.Player.wallet.OnCurrencyChanged += CheckBuyAvailibleByMoney;
     }
@@ -34,6 +34,7 @@ public class UpgradeCardView : MonoBehaviour
     private void SetUpgrades()
     {
         buttonUpgade.gameObject.SetActive(!characteristic.IsMaxUpgrade);
+        price.gameObject.SetActive(!characteristic.IsMaxUpgrade);
 
         for (int i = 0; i < upgradeShower.Count; i++)
         {

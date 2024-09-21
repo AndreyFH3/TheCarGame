@@ -30,14 +30,10 @@ public class Game : MonoBehaviour
                 return playerContainer;
             else
             {
-                string data = "";
-                if (!string.IsNullOrEmpty(data))
-                {
-                    playerContainer = JsonUtility.FromJson<PlayerProfile>(data);
-                }
-                else
+                playerContainer = SaveAndLoad.GetPlayer();
+                if(playerContainer is null)
                     playerContainer = new();
-                if(!playerContainer.IsInited)
+                else if(!playerContainer.IsInited)
                     playerContainer.Init();
                 return playerContainer;
             }

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class CameraFollow : MonoBehaviour {
@@ -16,6 +17,9 @@ public class CameraFollow : MonoBehaviour {
     private Vector3 absoluteInitCameraPosition;
 
 
+	private Vector3 newPos;
+	public Vector2[] cameraPos;
+
 	void Start(){
 		initialCameraPosition = gameObject.transform.position;
 		initialCarPosition = carTransform.transform.position;
@@ -27,9 +31,9 @@ public class CameraFollow : MonoBehaviour {
 		if (carTransform is null) 
 			return;
 
-		transform.position = target.position * ( 1- smoothTime) + transform.position * smoothTime;
-		transform.LookAt(carTransform.transform.position + Vector3.up);
-		smoothTime = Mathf.Abs(carTransform.carSpeed) >= 350 ? Mathf.Abs(Mathf.Abs(carTransform.carSpeed)/150 - .85f) : .45f;
+        transform.position = target.position * ( 1- smoothTime) + transform.position * smoothTime;
+        transform.LookAt(carTransform.transform.position + Vector3.up);
+        //smoothTime = Mathf.Abs(carTransform.carSpeed) >= 350 ? Mathf.Abs(Mathf.Abs(carTransform.carSpeed)/150 - .85f) : .45f;
     }
 
 	public void Init(PrometeoCarController carTransform, float followSpeed = 2, float lookSpeed = 5, float smoothTime = 0.5f)

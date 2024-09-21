@@ -53,6 +53,7 @@ public class Wallet
         { 
             softCurrency -= value;
             OnCurrencyChanged?.Invoke();
+            SaveAndLoad.SaveProife();
             return true;
         }
         else
@@ -69,6 +70,7 @@ public class Wallet
     public void EarnSoft(int value)
     {
         softCurrency += value;
+        SaveAndLoad.SaveProife();
         OnCurrencyChanged?.Invoke();
     }
 }
@@ -144,7 +146,7 @@ public class CarCharacteristic
             level = MAX_LEVEL;
         info = Game.Config.statsConfig.upgradeCosts.Find(x => x.Type == type && x.CarId == carId && x.Level == level+1);
         if(info is not null)
-            calculatedPower = info.Bonus; //тут надо конфиг сделать будет
-
+            calculatedPower = info.Bonus;
+        SaveAndLoad.SaveProife();
     }
 }

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 753730316960803577}
   - component: {fileID: 2524120918173353981}
   - component: {fileID: 511057163831661123}
+  - component: {fileID: 5607809900904779684}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -134,6 +135,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &5607809900904779684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619363681784383637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a25539f5a01d8f84ba7ef0353c7b4cbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  string:
+    key: Continue
 --- !u!1 &2000531999955126907
 GameObject:
   m_ObjectHideFlags: 0
@@ -145,6 +160,7 @@ GameObject:
   - component: {fileID: 3003947179648945733}
   - component: {fileID: 8978928684204728024}
   - component: {fileID: 6849574529786310478}
+  - component: {fileID: 4213152872075931835}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -268,6 +284,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &4213152872075931835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2000531999955126907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a25539f5a01d8f84ba7ef0353c7b4cbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  string:
+    key: Restart
 --- !u!1 &2434509926270069690
 GameObject:
   m_ObjectHideFlags: 0
@@ -372,6 +402,7 @@ GameObject:
   - component: {fileID: 3592728968165577433}
   - component: {fileID: 8433159058760826419}
   - component: {fileID: 7733829338360411669}
+  - component: {fileID: 6774320518458255573}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -495,6 +526,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &6774320518458255573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5896872283516146177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a25539f5a01d8f84ba7ef0353c7b4cbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  string:
+    key: Home
 --- !u!1 &6089186781125481197
 GameObject:
   m_ObjectHideFlags: 0
@@ -615,7 +660,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7344622650803752156}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6997744360399367530}
+        m_TargetAssemblyTypeName: PauseUIComponent, Assembly-CSharp
+        m_MethodName: RestartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6400835964527617859
 GameObject:
   m_ObjectHideFlags: 0
@@ -948,6 +1005,7 @@ GameObject:
   - component: {fileID: 6633515824558937574}
   - component: {fileID: 8468721789744192104}
   - component: {fileID: 4250922866325239485}
+  - component: {fileID: 6870228372785803882}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1011,8 +1069,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1071,6 +1129,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &6870228372785803882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8238878924194847265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a25539f5a01d8f84ba7ef0353c7b4cbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  string:
+    key: Pause
 --- !u!1 &8778016513461576900
 GameObject:
   m_ObjectHideFlags: 0

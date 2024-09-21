@@ -16,6 +16,6 @@ public class DriftPointsShowComponent : RaceUIComponent
 
     private void ShowPoints(float points)
     {
-        pointsText.text = $"Points: {Mathf.RoundToInt(points)}";
+        pointsText.text = $"{Localization.Get("Points")}: {Mathf.RoundToInt(points)}";
     }
 }

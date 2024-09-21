@@ -28,10 +28,10 @@ public class LapsUIComponent : RaceUIComponent
 
     private void CircleRace(int lap)
     {
-        lapsText.text = $"lap: {lap}/{controllerCircle.Laps}";
+        lapsText.text = $"{Localization.Get("Lap")}: {lap}/{controllerCircle.Laps}";
     }
     private void DriftRace(int lap)
     {
-        lapsText.text = $"lap: {lap}/{controllerDrift.Laps}";
+        lapsText.text = $"{Localization.Get("Lap")}: {lap}/{controllerDrift.Laps}";
     }
 }

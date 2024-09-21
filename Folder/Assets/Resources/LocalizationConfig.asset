@@ -1,0 +1,178 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5df9ab0b98513944dbddffd1142a3203, type: 3}
+  m_Name: LocalizationConfig
+  m_EditorClassIdentifier: 
+  currentLanguage: 30
+  defaultLanguage: 30
+  notFoundPreffix: 
+  showKeysInsteadLocalizationInEditor: 0
+  urls:
+  - https://docs.google.com/spreadsheets/d/1CKywUXhBF4mZYKGsgelZEPyFDfs3ZXriiDgH3upG6ak/edit?usp=sharing&gid=0
+  keys:
+  - RACE
+  - DRIFTRACE
+  - UPGRADE
+  - BACK
+  - WIN
+  - LOSE
+  - BOOST
+  - CONTROLLABILITY
+  - SPEED
+  - HOME
+  - PLACE
+  - RACETIME
+  - PAUSE
+  - POINTS
+  - LAP
+  - CARSPEED
+  - CONTINUE
+  - RESTART
+  locales:
+  - language: 30
+    title: 
+    icon: {fileID: 0}
+    strings:
+    - "\u0413\u043E\u043D\u043A\u0430"
+    - "\u0414\u0440\u0438\u0444\u0442-\u0433\u043E\u043D\u043A\u0430"
+    - "\u0423\u043B\u0443\u0447\u0448\u0435\u043D\u0438\u0435"
+    - "\u041D\u0430\u0437\u0430\u0434"
+    - "\u041F\u043E\u0431\u0435\u0434\u0430"
+    - "\u041F\u043E\u0440\u0430\u0436\u0435\u043D\u0438\u0435"
+    - "\u0423\u0441\u043A\u043E\u0440\u0435\u043D\u0438\u0435"
+    - "\u0423\u043F\u0440\u0430\u0432\u043B\u044F\u0435\u043C\u043E\u0441\u0442\u044C"
+    - "\u0421\u043A\u043E\u0440\u043E\u0440\u0441\u0442\u044C"
+    - "\u0414\u043E\u043C\u043E\u0439"
+    - "\u041C\u0435\u0441\u0442\u043E"
+    - "\u0412\u0440\u0435\u043C\u044F \u0437\u0430\u0435\u0437\u0434\u0430: {0} \u0441\u0435\u043A."
+    - "\u041F\u0430\u0443\u0437\u0430"
+    - "\u041E\u0447\u043A\u0438"
+    - "\u041A\u0440\u0443\u0433"
+    - "\u043A\u043C\\\u0447"
+    - "\u041F\u0440\u043E\u0434\u043E\u043B\u0436\u0438\u0442\u044C"
+    - "\u0417\u0430\u043D\u043E\u0432\u043E"
+    enabled: 0
+  - language: 10
+    title: 
+    icon: {fileID: 0}
+    strings:
+    - Race
+    - Drift race
+    - Improvement
+    - Back
+    - Victory
+    - Defeat
+    - Acceleration
+    - Controllability
+    - Speed
+    - Home
+    - Place
+    - 'Check-in time: {0} sec.'
+    - Pause
+    - Points
+    - Lap
+    - km\h
+    - Continue
+    - Restart
+    enabled: 0
+  - language: 37
+    title: 
+    icon: {fileID: 0}
+    strings:
+    - "Aceary\u015F"
+    - "Drift \xFDary\u015Fy"
+    - "Gowula\u015Fmak"
+    - Yzyna
+    - "Orye\u0148i\u015F"
+    - "Ate\u0148"
+    - Tizlenme
+    - "Dolandyry\u015F"
+    - Tizlik
+    - "\xD6\xFD"
+    - Placeeri
+    - "Giri\u015F wagty: {0} sek."
+    - Arakesme
+    - Ballar
+    - "A\xFDlaw"
+    - km \ sag
+    - Dowam et
+    - "Ga\xFDtadan a\xE7y\u0148"
+    enabled: 0
+  - language: 15
+    title: 
+    icon: {fileID: 0}
+    strings:
+    - Wettrennen
+    - Driftrennen
+    - Verbesserung
+    - "Zur\xFCck"
+    - Sieg
+    - Verlust
+    - Beschleunigung
+    - Kontrollierbarkeit
+    - Geschwindigkeit
+    - Heim
+    - Ort
+    - 'Check-in-Zeit: {0} Sek.'
+    - Pause
+    - Punkte
+    - "Scho\xDF"
+    - km\h
+    - Weitermachen
+    - Neustart
+    enabled: 0
+  - language: 14
+    title: 
+    icon: {fileID: 0}
+    strings:
+    - Course
+    - "Course de d\xE9rive"
+    - "Am\xE9lioration"
+    - Dos
+    - Victoire
+    - "D\xE9faite"
+    - "Acc\xE9l\xE9ration"
+    - "Contr\xF4labilit\xE9"
+    - Vitesse
+    - Maison
+    - Lieu
+    - "Heure d'enregistrement\_:\_{0}\_secondes."
+    - Pause
+    - Points
+    - Genoux
+    - km\h
+    - Continuer
+    - "Red\xE9marrage"
+    enabled: 0
+  - language: 21
+    title: 
+    icon: {fileID: 0}
+    strings:
+    - Gara
+    - Gara di deriva
+    - Miglioramento
+    - Indietro
+    - Vittoria
+    - Sconfitta
+    - Accelerazione
+    - "Controllabilit\xE0"
+    - "Velocit\xE0"
+    - Casa
+    - Posto
+    - 'Orario del check-in: {0} sec.'
+    - Pausa
+    - Punti
+    - Giro
+    - km\h
+    - Continuare
+    - Ricomincia
+    enabled: 0

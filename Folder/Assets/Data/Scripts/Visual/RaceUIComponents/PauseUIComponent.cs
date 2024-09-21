@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseUIComponent : RaceUIComponent
 {
@@ -13,6 +14,12 @@ public class PauseUIComponent : RaceUIComponent
     private void Update()
     {
         showPart.gameObject.SetActive(controller.Pause);
+    }
+
+    public void RestartGame()
+    {
+        Race.SetSettings(controller.RaceSettings);
+        SceneManager.LoadScene(2);    
     }
 
     public void SetUnpaused()

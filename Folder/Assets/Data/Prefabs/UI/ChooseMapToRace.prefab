@@ -200,6 +200,7 @@ GameObject:
   - component: {fileID: 4446269984754330196}
   - component: {fileID: 6462451177103407639}
   - component: {fileID: 4193203074419094306}
+  - component: {fileID: 6859679736909522542}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -323,6 +324,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &6859679736909522542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 965889423567325931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a25539f5a01d8f84ba7ef0353c7b4cbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  string:
+    key: Race
 --- !u!1 &1307011949939036484
 GameObject:
   m_ObjectHideFlags: 0
@@ -587,6 +602,7 @@ GameObject:
   - component: {fileID: 7933259208033065917}
   - component: {fileID: 6099359989321672610}
   - component: {fileID: 1928756302907884789}
+  - component: {fileID: 8947089531054421496}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -712,6 +728,20 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &8947089531054421496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521536237924467770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a25539f5a01d8f84ba7ef0353c7b4cbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  string:
+    key: DriftRace
 --- !u!1 &1634195135439694833
 GameObject:
   m_ObjectHideFlags: 0

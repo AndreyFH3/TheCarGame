@@ -14,7 +14,9 @@ public abstract class RaceController
     
     public System.Action OnFinish;
     public PrometeoCarController CarController { get; protected set; }
+    public DefaultRaceSettings RaceSettings => settings;
     protected DefaultRaceSettings settings;
+
     public virtual void Init(PrometeoCarController carController, List<TrackWay> countedCollider, DefaultRaceSettings settings) 
     { 
         CarController = carController; 
@@ -43,7 +45,8 @@ public abstract class RaceController
     protected virtual void Finish() 
     {
         CarController.enabled = false;
-        OnFinish?.Invoke(); 
+        OnFinish?.Invoke();
+        SaveAndLoad.SaveProife();
     }
     public virtual void ExitRace() { UnityEngine.SceneManagement.SceneManager.LoadScene(0); Time.timeScale = 1; Pause = true; }
 
@@ -166,6 +169,8 @@ public class DriftRaceController : RaceController
 
     public void CalculatePoints()
     {
+        if (Pause)
+            return;
         driftPoints += CarController.carSpeed;
         OnDrift?.Invoke(DriftPoints);
     }
