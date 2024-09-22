@@ -23,6 +23,8 @@ public class TrackSaveAndLoad : MonoBehaviour
 
     private void Awake()
     {
+        if(Game.Instance is null)
+            return;
         raceController = RaceControllerCreator.GetController(Race.RaceType);
 
         if (Race.Settings is null && Controller is not null)

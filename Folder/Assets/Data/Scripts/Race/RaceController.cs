@@ -48,7 +48,7 @@ public abstract class RaceController
         OnFinish?.Invoke();
         SaveAndLoad.SaveProife();
     }
-    public virtual void ExitRace() { UnityEngine.SceneManagement.SceneManager.LoadScene(0); Time.timeScale = 1; Pause = true; }
+    public virtual void ExitRace() { UnityEngine.SceneManagement.SceneManager.LoadScene(1); Time.timeScale = 1; Pause = true; }
 
     public abstract int GetEarn();
 }

@@ -8,8 +8,12 @@ using UnityEngine.SceneManagement;
 public class Game : MonoBehaviour
 {
     [SerializeField] private static GameConfig config;
+
+    private bool isInit = false;
     private static Game _instance;
     private const string PLAYER_DATA = "PLAYER_DATA";
+    public static Game Instance => _instance;
+    public bool IsInit => isInit;
     public static GameConfig Config 
     {
         get
@@ -50,7 +54,12 @@ public class Game : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        Player.Init();
+        if(Instance is not null && !Instance.IsInit)
+        {
+            Player.Init();
+            isInit = true;
+            SceneManager.LoadScene(1);
+        }
     }
 
     private void OnDataLoad()
