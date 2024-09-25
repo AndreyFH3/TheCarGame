@@ -32,7 +32,7 @@ MonoBehaviour:
   - trackData: {fileID: 4900000, guid: 052603f3c3289dc49ab3e54016c05fd0, type: 3}
     spriteOfmap: {fileID: 0}
     isCircle: 1
-    laps: 4
+    laps: 1
   - trackData: {fileID: 4900000, guid: 68d77b39e11619148bc27c922946f4b6, type: 3}
     spriteOfmap: {fileID: 0}
     isCircle: 1
@@ -85,6 +85,7 @@ MonoBehaviour:
     touchInputView: {fileID: 3633293278728464353, guid: 48e8e20a810c2924f810d3a211afee09, type: 3}
     chooseMapSelectView: {fileID: 6575272692931635863, guid: a9491caab39c9d640b66d953ec8af4d4, type: 3}
     finishCanvas: {fileID: 2955690936779175351, guid: 6cda0dee1d9aca644ac3bc06fbfe798d, type: 3}
+    rateWindow: {fileID: 5355106062193951517, guid: 388ba79cec43cb945ba0f82deaedbd67, type: 3}
   raceUI:
   - id: 1
     components:
@@ -121,4 +122,6 @@ MonoBehaviour:
   - {fileID: -7874467363475250475, guid: c6b7fb383a3534b039692b5485b6e739, type: 3}
   - {fileID: -2487651090662050853, guid: 826b6a0b570e8460990010fa615b5a2a, type: 3}
   colliderExample: {fileID: 4638569914639234111, guid: 04f7e158de75f084c9a249c1c95238e9, type: 3}
+  rewardForRate: 5000
+  adReward: 5000
   statsConfig: {fileID: 11400000, guid: 33d31eee3051b6d4a90b2230ee14c3ce, type: 2}

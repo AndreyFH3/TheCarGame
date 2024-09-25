@@ -15,9 +15,13 @@ public class GameConfig : ScriptableObject
     [SerializeField] private List<RaceUI> raceUI;
     [SerializeField] private List<TrackPart> trackParts;
     [SerializeField] private TrackWay colliderExample;
-    
+    [SerializeField] private int rewardForRate = 5000;
+    [SerializeField] private int adReward = 5000;
+
     public StatsConfig statsConfig;
 
+    public int RewardForRate => rewardForRate;
+    public int AdReward => adReward;
     public RaceUIComponent[] GetRaceUICompnents(RaceType id) => raceUI.Find(x => x.Id == id).Components;
 
     public TrackWay ColliderExample => colliderExample;
@@ -97,6 +101,9 @@ public class Views
 
     [SerializeField] private FinishCanvas finishCanvas;
     public FinishCanvas GetFinishCanvas => finishCanvas;
+
+    [SerializeField] private RateWindow rateWindow;
+    public RateWindow GetRateWindow => rateWindow;
 
 }
 

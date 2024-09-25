@@ -19,6 +19,7 @@ public class PauseUIComponent : RaceUIComponent
     public void RestartGame()
     {
         Race.SetSettings(controller.RaceSettings);
+        Time.timeScale = 1;
         SceneManager.LoadScene(2);    
     }
 

@@ -21,7 +21,9 @@ public class PlayerProfile
            "FirstRace"
        }
     };
+
     public Wallet wallet = new Wallet();
+    public RateGame rate = new RateGame();
 
     [SerializeField] private bool isInited = false;
     public bool IsInited => isInited;
@@ -44,7 +46,7 @@ public class PlayerProfile
 [System.Serializable]
 public class Wallet
 {
-    [SerializeField] private int softCurrency = 500000;
+    [SerializeField] private int softCurrency = 100000;
     public int SoftCurrency => softCurrency;
     public System.Action OnCurrencyChanged;
     public bool SpendSoft(int value)

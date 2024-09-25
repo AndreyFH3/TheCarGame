@@ -68,6 +68,7 @@
     <Compile Include="Assets\Data\Scripts\Race\CarSettings.cs" />
     <Compile Include="Assets\Data\Scripts\Shops\Shop.cs" />
     <Compile Include="Assets\Data\Scripts\Visual\RaceUIComponents\RaceUIComponent.cs" />
+    <Compile Include="Assets\Data\Scripts\AdRewarder.cs" />
     <Compile Include="Assets\PathCreator\Examples\Scripts\PathPlacer.cs" />
     <Compile Include="Assets\PathCreator\Examples\Scripts\PathSceneTool.cs" />
     <Compile Include="Assets\Data\Scripts\Localization\LocalizationTMProTextUI.cs" />
@@ -81,9 +82,11 @@
     <Compile Include="Assets\Data\Scripts\Visual\RaceUIComponents\PauseUIComponent.cs" />
     <Compile Include="Assets\Data\Scripts\CarController\TouchInputView.cs" />
     <Compile Include="Assets\Data\Scripts\Race\RaceController.cs" />
+    <Compile Include="Assets\Data\Scripts\Rewards\RewardAfterRaceView.cs" />
     <Compile Include="Assets\Data\Scripts\Visual\StartScene\ChooseMapSelectView.cs" />
     <Compile Include="Assets\Data\Scripts\Visual\StartScene\CarUpgradeView.cs" />
     <Compile Include="Assets\Data\Scripts\Visual\StartScene\WalletView.cs" />
+    <Compile Include="Assets\Data\Scripts\RateGame\RateWindow.cs" />
     <Compile Include="Assets\PathCreator\Examples\Scripts\PathFollower.cs" />
     <Compile Include="Assets\Data\Scripts\TracksInfo\TrackPart.cs" />
     <Compile Include="Assets\Data\Scripts\Visual\RaceUIComponents\DriftPointsShowComponent.cs" />
@@ -92,7 +95,9 @@
     <Compile Include="Assets\Data\Scripts\Visual\RaceUIComponents\TimerRaceComponent.cs" />
     <Compile Include="Assets\Data\Scripts\Localization\LocalizationConfig.cs" />
     <Compile Include="Assets\Data\Scripts\CarController\PrometeoTouchInput.cs" />
+    <Compile Include="Assets\Data\Scripts\Rewards\RewardAfterRace.cs" />
     <Compile Include="Assets\Data\Scripts\TracksInfo\TrackWay.cs" />
+    <Compile Include="Assets\Data\Scripts\RateGame\RateGame.cs" />
     <Compile Include="Assets\Data\Scripts\Visual\StartScene\UpgradeCardView.cs" />
     <Compile Include="Assets\Data\Scripts\Visual\RaceUIComponents\SpeedometrUIComponent.cs" />
     <Compile Include="Assets\PathCreator\Examples\Scripts\GeneratePathExample.cs" />
@@ -518,14 +523,6 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
       <HintPath>Library\PackageCache\com.unity.visualscripting@1.9.1\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.20f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Common">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.20f1\Editor\Data\PlaybackEngines\iOSSupport\UnityEditor.iOS.Extensions.Common.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Unity.Android.Types">

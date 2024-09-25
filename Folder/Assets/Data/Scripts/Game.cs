@@ -57,6 +57,7 @@ public class Game : MonoBehaviour
         if(Instance is not null && !Instance.IsInit)
         {
             Player.Init();
+            Player.rate.Init();
             isInit = true;
             SceneManager.LoadScene(1);
         }

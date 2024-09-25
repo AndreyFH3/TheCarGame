@@ -1,13 +1,17 @@
+using GamePush;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public class WalletView : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI moneyValue;
+    [SerializeField] private TextMeshProUGUI adReward;
 
     private void OnEnable()
     {
+        adReward.text = Localization.Get("AdReward", Game.Config.AdReward);
         Game.Player.wallet.OnCurrencyChanged += UpdateValue;
         moneyValue.text = Game.Player.wallet.SoftCurrency.ToString();
     }
@@ -21,6 +25,15 @@ public class WalletView : MonoBehaviour
 
     public void AddMoney()
     {
-        Game.Player.wallet.EarnSoft(500);
+        GP_Ads.ShowRewarded("",
+        stringData =>
+        {
+            Game.Player.wallet.EarnSoft(Game.Config.AdReward);
+        },
+        () =>
+        {
+            gameObject.SetActive(false);
+        },
+        isTrue => { });
     }
 }
