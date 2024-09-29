@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="Assets\Data\Scripts\Visual\RaceUIComponents\FinishCanvas.cs" />
     <Compile Include="Assets\Data\Scripts\CarController\CameraFollow.cs" />
+    <Compile Include="Assets\Data\Scripts\Leaderboard\LeaderboardController.cs" />
     <Compile Include="Assets\Data\Scripts\Localization\Localization.cs" />
     <Compile Include="Assets\Data\Scripts\CarController\PrometeoCarController.cs" />
     <Compile Include="Assets\Data\Scripts\Localization\LocalizationCollector.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="Assets\Data\Scripts\PlayerProfile.cs" />
     <Compile Include="Assets\Data\Scripts\Visual\StartScene\CarShower.cs" />
     <Compile Include="Assets\Data\Scripts\ScriptableObjects\StatsConfig.cs" />
+    <Compile Include="Assets\Data\Scripts\SoundPlayer.cs" />
     <Compile Include="Assets\Data\Scripts\Visual\StartScene\SelectCarView.cs" />
     <Compile Include="Assets\Data\Scripts\TracksInfo\TrackSaveAndLoad.cs" />
     <Compile Include="Assets\Data\Scripts\ScriptableObjects\GameConfig.cs" />
@@ -83,7 +85,9 @@
     <Compile Include="Assets\Data\Scripts\CarController\TouchInputView.cs" />
     <Compile Include="Assets\Data\Scripts\Race\RaceController.cs" />
     <Compile Include="Assets\Data\Scripts\Rewards\RewardAfterRaceView.cs" />
+    <Compile Include="Assets\Data\Scripts\Leaderboard\View\LeaderboardView.cs" />
     <Compile Include="Assets\Data\Scripts\Visual\StartScene\ChooseMapSelectView.cs" />
+    <Compile Include="Assets\Data\Scripts\Leaderboard\View\LeaderboardPlayerView.cs" />
     <Compile Include="Assets\Data\Scripts\Visual\StartScene\CarUpgradeView.cs" />
     <Compile Include="Assets\Data\Scripts\Visual\StartScene\WalletView.cs" />
     <Compile Include="Assets\Data\Scripts\RateGame\RateWindow.cs" />
@@ -107,11 +111,13 @@
     <Compile Include="Assets\Data\Scripts\Visual\RaceUIComponents\LapsUIComponent.cs" />
     <Compile Include="Assets\Data\Scripts\Visual\RaceUIComponents\RewardView.cs" />
     <Compile Include="Assets\Data\Scripts\Race\Race.cs" />
+    <Compile Include="Assets\Data\Scripts\ScriptableObjects\SoundsConfig.cs" />
     <Compile Include="Assets\Data\Scripts\SaveAndLoad.cs" />
     <Compile Include="Assets\Data\Scripts\DOWNLOADER\GoogleDocsDownloader.cs" />
     <Compile Include="Assets\PathCreator\Examples\Scripts\PathSpawner.cs" />
     <Compile Include="Assets\Data\Scripts\ApplicationSettings.cs" />
     <Compile Include="Assets\Data\Scripts\Visual\RaceUIComponents\PauseButtonUIComponent.cs" />
+    <Compile Include="Assets\Data\Scripts\Settings.cs" />
     <Compile Include="Assets\PathCreator\Examples\Scripts\CylinderMeshCreator.cs" />
   </ItemGroup>
   <ItemGroup>

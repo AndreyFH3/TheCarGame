@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class GameIniter : MonoBehaviour
 {
@@ -9,7 +6,7 @@ public class GameIniter : MonoBehaviour
     {
         if (Game.Instance is null )
         {
-            //SceneManager.LoadScene(0);
+            
         }
     
     }

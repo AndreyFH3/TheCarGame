@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19ee31f600210ed41b000d72fdc1d892, type: 3}
   m_Name: GameConfig
   m_EditorClassIdentifier: 
+  soundConfig: {fileID: 11400000, guid: e5de6a40e4c2e1a428b0b24927fc3045, type: 2}
   cars:
   - id: DefaultCar
     carModel: {fileID: -927199367670048503, guid: 6aefcc9737d9afc42955a9700d11dbc1, type: 3}

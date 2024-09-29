@@ -7,6 +7,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "GameConfig", menuName = "ScriptableObjects/CreateGameConfig", order = 1)]
 public class GameConfig : ScriptableObject
 {
+    [SerializeField] private SoundsConfig soundConfig;
     [SerializeField] private List<Car> cars;
     public List<TracksList> tracksList;
     public List<SkyBoxMaterial> skyBoxes;
@@ -19,6 +20,8 @@ public class GameConfig : ScriptableObject
     [SerializeField] private int adReward = 5000;
 
     public StatsConfig statsConfig;
+
+    public SoundsConfig SoundConfig => soundConfig;
 
     public int RewardForRate => rewardForRate;
     public int AdReward => adReward;
