@@ -108,6 +108,9 @@ public class Views
     [SerializeField] private RateWindow rateWindow;
     public RateWindow GetRateWindow => rateWindow;
 
+    [SerializeField] private SettingsView settingsView;
+    public SettingsView GetSettingsView => settingsView;
+
 }
 
 [Serializable]

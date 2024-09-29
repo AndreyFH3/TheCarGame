@@ -102,6 +102,7 @@
     <Compile Include="Assets\Data\Scripts\Rewards\RewardAfterRace.cs" />
     <Compile Include="Assets\Data\Scripts\TracksInfo\TrackWay.cs" />
     <Compile Include="Assets\Data\Scripts\RateGame\RateGame.cs" />
+    <Compile Include="Assets\Data\Scripts\OpenSettings.cs" />
     <Compile Include="Assets\Data\Scripts\Visual\StartScene\UpgradeCardView.cs" />
     <Compile Include="Assets\Data\Scripts\Visual\RaceUIComponents\SpeedometrUIComponent.cs" />
     <Compile Include="Assets\PathCreator\Examples\Scripts\GeneratePathExample.cs" />
@@ -113,11 +114,11 @@
     <Compile Include="Assets\Data\Scripts\Race\Race.cs" />
     <Compile Include="Assets\Data\Scripts\ScriptableObjects\SoundsConfig.cs" />
     <Compile Include="Assets\Data\Scripts\SaveAndLoad.cs" />
+    <Compile Include="Assets\Data\Scripts\SettingsView.cs" />
     <Compile Include="Assets\Data\Scripts\DOWNLOADER\GoogleDocsDownloader.cs" />
     <Compile Include="Assets\PathCreator\Examples\Scripts\PathSpawner.cs" />
     <Compile Include="Assets\Data\Scripts\ApplicationSettings.cs" />
     <Compile Include="Assets\Data\Scripts\Visual\RaceUIComponents\PauseButtonUIComponent.cs" />
-    <Compile Include="Assets\Data\Scripts\Settings.cs" />
     <Compile Include="Assets\PathCreator\Examples\Scripts\CylinderMeshCreator.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -21,6 +21,7 @@ public class PlayerProfile
            "FirstRace"
        }
     };
+    [SerializeField] public Settings settings = new Settings();
 
     public Wallet wallet = new Wallet();
     public RateGame rate = new RateGame();

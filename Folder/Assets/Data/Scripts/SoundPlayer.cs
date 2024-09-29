@@ -1,13 +1,16 @@
-using JetBrains.Annotations;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
 public class SoundPlayer : MonoBehaviour
 {
+    [SerializeField] private AudioMixer mixer;
+    [Space(10)]
     [SerializeField] private AudioSource firstPlayer;
     [SerializeField] private AudioSource secondPlayer;
+    [Space(10)]
     [SerializeField] private float timeToChangeTracks = 1.5f;
-
+    
     private float currentTrackTime;
     private string currentSceneName = "";
 
@@ -27,11 +30,6 @@ public class SoundPlayer : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-    private void OnDestroy()
-    {
-    }
-
 
     private void Play(AudioClip music)
     {
@@ -74,6 +72,18 @@ public class SoundPlayer : MonoBehaviour
             else
                 PlayMenuMusic();
         }
+    }
+
+    public void SetMusic(bool value)
+    {
+        mixer.SetFloat("Music", value ? 1 : 0);
+        Game.Player.settings.SetCarSoundSound(value);
+    }
+
+    public void SetCarSound(bool value)
+    {
+        mixer.SetFloat("CarSound", value ? 1 : 0);
+        Game.Player.settings.SetMusic(value);
     }
 
 }

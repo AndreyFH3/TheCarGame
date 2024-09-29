@@ -8,19 +8,22 @@ public class RateGame
     [SerializeField] private bool isRated = false;
     
     public bool IsRated => isRated;
-
+    private float lastTimeShow = 180;
     public void Init()
     {
-        if(!isRated)
+        if (!isRated)
+        {
             SceneManager.sceneUnloaded += ShowReward;
+        }
     }
 
     public void ShowReward(Scene scene)
     {
-        if (scene.name.Contains("Track"))
+        if (scene.name.Contains("Track") && lastTimeShow - Time.time < 0)
         {
             var instance = GameObject.Instantiate(Game.Config.views.GetRateWindow);
             instance.Init(this);
+            lastTimeShow = 180 + Time.time;
         }
     }
 

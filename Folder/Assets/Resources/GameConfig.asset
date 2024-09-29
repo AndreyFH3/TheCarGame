@@ -87,6 +87,7 @@ MonoBehaviour:
     chooseMapSelectView: {fileID: 6575272692931635863, guid: a9491caab39c9d640b66d953ec8af4d4, type: 3}
     finishCanvas: {fileID: 2955690936779175351, guid: 6cda0dee1d9aca644ac3bc06fbfe798d, type: 3}
     rateWindow: {fileID: 5355106062193951517, guid: 388ba79cec43cb945ba0f82deaedbd67, type: 3}
+    settingsView: {fileID: 4166469832672179537, guid: 3b8ceef6060ef6f48b6cc6507e1bcde5, type: 3}
   raceUI:
   - id: 1
     components:
