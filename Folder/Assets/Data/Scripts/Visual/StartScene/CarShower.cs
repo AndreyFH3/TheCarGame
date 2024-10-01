@@ -17,6 +17,9 @@ public class CarShower : MonoBehaviour
             carsTransforms.Add(car.Id, instance);
             instance.SetActive(false);
         }
+        currentCarId = Game.Player.settings.LastChoosedCar;
+        if(currentCarId == -1) 
+            currentCarId = 0;
         carsTransforms[Cars[currentCarId].Id].SetActive(true);
         var instanceView = Instantiate(Game.Config.views.GetSelectCarView);
         instanceView.Init(this);
@@ -28,17 +31,20 @@ public class CarShower : MonoBehaviour
     {
         carsTransforms[Cars[currentCarId].Id].SetActive(false);
         currentCarId++;
-        if (currentCarId >= Cars.Length) currentCarId = 0;
+        if (currentCarId >= Cars.Length) 
+           currentCarId = 0; 
+        Game.Player.settings.SetLastChoosedCar(currentCarId);
         carsTransforms[Cars[currentCarId].Id].SetActive(true);
 
     }
 
     public void PreviousCarChoose()
     {
-
         carsTransforms[Cars[currentCarId].Id].SetActive(false);
         currentCarId--;
-        if (currentCarId < 0) currentCarId = Cars.Length - 1;
+        if (currentCarId < 0)
+            currentCarId = Cars.Length - 1;
+        Game.Player.settings.SetLastChoosedCar(currentCarId);
         carsTransforms[Cars[currentCarId].Id].SetActive(true);
     }
 }

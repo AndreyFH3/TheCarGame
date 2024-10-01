@@ -63,7 +63,9 @@
           },
           {
             "name": "AudioClip",
-            "scenes": [],
+            "scenes": [
+              "Assets/Data/Scenes/StartScene.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
@@ -71,7 +73,6 @@
             "name": "AudioListener",
             "scenes": [
               "Assets/Data/Scenes/GarageScene.unity",
-              "Assets/Data/Scenes/StartScene.unity",
               "Assets/Data/Scenes/Track.unity"
             ],
             "dependencyType": 0,
@@ -84,14 +85,46 @@
             "icon": null
           },
           {
+            "name": "AudioMixer",
+            "scenes": [
+              "Assets/Data/Scenes/GarageScene.unity",
+              "Assets/Data/Scenes/StartScene.unity"
+            ],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "AudioMixerGroup",
+            "scenes": [
+              "Assets/Data/Scenes/GarageScene.unity",
+              "Assets/Data/Scenes/StartScene.unity"
+            ],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "AudioMixerSnapshot",
+            "scenes": [
+              "Assets/Data/Scenes/GarageScene.unity",
+              "Assets/Data/Scenes/StartScene.unity"
+            ],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
             "name": "AudioSource",
-            "scenes": [],
+            "scenes": [
+              "Assets/Data/Scenes/GarageScene.unity",
+              "Assets/Data/Scenes/StartScene.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "SampleClip",
-            "scenes": [],
+            "scenes": [
+              "Assets/Data/Scenes/StartScene.unity"
+            ],
             "dependencyType": 1,
             "icon": null
           }
@@ -116,7 +149,6 @@
             "name": "Camera",
             "scenes": [
               "Assets/Data/Scenes/GarageScene.unity",
-              "Assets/Data/Scenes/StartScene.unity",
               "Assets/Data/Scenes/Track.unity"
             ],
             "dependencyType": 0,
@@ -214,7 +246,6 @@
             "name": "Light",
             "scenes": [
               "Assets/Data/Scenes/GarageScene.unity",
-              "Assets/Data/Scenes/StartScene.unity",
               "Assets/Data/Scenes/Track.unity"
             ],
             "dependencyType": 0,
@@ -261,7 +292,9 @@
           {
             "name": "Mesh",
             "scenes": [
-              "Assets/Data/Scenes/StartScene.unity"
+              "Assets/Data/Scenes/GarageScene.unity",
+              "Assets/Data/Scenes/StartScene.unity",
+              "Assets/Data/Scenes/Track.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -269,7 +302,9 @@
           {
             "name": "MeshFilter",
             "scenes": [
-              "Assets/Data/Scenes/StartScene.unity"
+              "Assets/Data/Scenes/GarageScene.unity",
+              "Assets/Data/Scenes/StartScene.unity",
+              "Assets/Data/Scenes/Track.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -277,7 +312,9 @@
           {
             "name": "MeshRenderer",
             "scenes": [
-              "Assets/Data/Scenes/StartScene.unity"
+              "Assets/Data/Scenes/GarageScene.unity",
+              "Assets/Data/Scenes/StartScene.unity",
+              "Assets/Data/Scenes/Track.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -285,6 +322,7 @@
           {
             "name": "MonoBehaviour",
             "scenes": [
+              "Assets/Data/Scenes/GarageScene.unity",
               "Assets/Data/Scenes/StartScene.unity",
               "Assets/Data/Scenes/Track.unity"
             ],
@@ -300,6 +338,7 @@
           {
             "name": "MonoScript",
             "scenes": [
+              "Assets/Data/Scenes/GarageScene.unity",
               "Assets/Data/Scenes/StartScene.unity",
               "Assets/Data/Scenes/Track.unity"
             ],
@@ -343,6 +382,7 @@
           {
             "name": "RectTransform",
             "scenes": [
+              "Assets/Data/Scenes/GarageScene.unity",
               "Assets/Data/Scenes/StartScene.unity",
               "Assets/Data/Scenes/Track.unity"
             ],
@@ -414,6 +454,7 @@
           {
             "name": "Sprite",
             "scenes": [
+              "Assets/Data/Scenes/GarageScene.unity",
               "Assets/Data/Scenes/StartScene.unity"
             ],
             "dependencyType": 0,
@@ -686,7 +727,8 @@
           {
             "name": "BoxCollider",
             "scenes": [
-              "Assets/Data/Scenes/StartScene.unity"
+              "Assets/Data/Scenes/StartScene.unity",
+              "Assets/Data/Scenes/Track.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -700,7 +742,7 @@
           {
             "name": "MeshCollider",
             "scenes": [
-              "Assets/Data/Scenes/StartScene.unity"
+              "Assets/Data/Scenes/GarageScene.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -957,6 +999,7 @@
           {
             "name": "Canvas",
             "scenes": [
+              "Assets/Data/Scenes/GarageScene.unity",
               "Assets/Data/Scenes/StartScene.unity",
               "Assets/Data/Scenes/Track.unity"
             ],
@@ -972,6 +1015,7 @@
           {
             "name": "CanvasRenderer",
             "scenes": [
+              "Assets/Data/Scenes/GarageScene.unity",
               "Assets/Data/Scenes/StartScene.unity"
             ],
             "dependencyType": 0,

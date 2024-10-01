@@ -15,7 +15,7 @@ public class FinishCanvas : MonoBehaviour
     public void Init(RaceController controller)
     {
         raceController = controller;
-        timeText.text = Localization.Get("RaceTime:", raceController.RaceTime.ToString("n2"));
+        timeText.text = Localization.Get("RaceTime", raceController.RaceTime.ToString("n2"));
         winText.text = Localization.Get("win");
         SetReward(controller.GetEarn());
         multiplayer.Init(controller);

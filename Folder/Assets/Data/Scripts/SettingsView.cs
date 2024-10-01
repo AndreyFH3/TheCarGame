@@ -16,6 +16,10 @@ public class SettingsView : MonoBehaviour
     public void Init()
     {
         int graphicsValue = Settings.GraphicsValue;
+        if (graphicsValue < 0)
+        {
+            graphicsValue = QualitySettings.GetQualityLevel();
+        }
         graphicsValues.ClearOptions();
         var options = new List<TMP_Dropdown.OptionData>();
         foreach (var graphics in QualitySettings.names)
@@ -38,6 +42,7 @@ public class SettingsView : MonoBehaviour
 
     public void SetGraphics(int value)
     {
+        Game.Player.settings.SetGraphics(value);
         QualitySettings.SetQualityLevel(value);
     }
 
@@ -54,17 +59,23 @@ public class Settings
     [SerializeField] private bool musicValue = true;
 
     [SerializeField] private int graphicsValue = -1;
+    [SerializeField] private int lastChoosedCar = -1;
 
     public bool CarSound => carSoundValue;
     public bool MusicValue => musicValue;
-
     public int GraphicsValue => graphicsValue;
+    public int LastChoosedCar => lastChoosedCar;
 
     public void Init()
     {
         SoundPlayer.Player.SetMusic(MusicValue);
         SoundPlayer.Player.SetCarSound(CarSound);
         QualitySettings.SetQualityLevel(graphicsValue);
+    }
+    
+    public void SetLastChoosedCar(int value)
+    {
+        lastChoosedCar = value;
     }
 
     public void SetGraphics(int value)

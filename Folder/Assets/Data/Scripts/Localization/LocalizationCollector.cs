@@ -1,10 +1,7 @@
 using GamePush;
 using NaughtyAttributes;
 using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor.Localization.Editor;
 using UnityEngine;
-using static UnityEditor.PlayerSettings.Switch;
 
 [CreateAssetMenu(fileName = "Localization", menuName = "ScriptableObjects/Localization", order = 2)]
 public class LocalizationCollector : ScriptableObject
