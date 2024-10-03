@@ -12,7 +12,7 @@ public class TimerRaceComponent : RaceUIComponent
 
     private void Update()
     {
-        timerText.text = $"RaceTime: {raceController.RaceTime.ToString("n2")} sec";
+        timerText.text = Localization.Get("RaceTime", raceController.RaceTime.ToString("n2"));
     }
 
 }

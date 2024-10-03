@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Collections;
 using UnityEngine;
 using System.Linq;
 
@@ -8,11 +7,20 @@ public abstract class RaceController
 {
     public abstract RaceType RaceType { get; }
     public abstract bool Pause { get; protected set; }
+    public virtual bool IsStarted { get; protected set; }
     public float StartTime { get; protected set; }
     public abstract float RaceTime { get; }
     public List<TrackWay> TrackWays { get; protected set; }
+    public float distanceToNextCheckPoint { get; protected set; } = float.MaxValue;
+    public int lastPointIndex { get; protected set; } = -1;
     
     public System.Action OnFinish;
+    public System.Action<bool> OnPlayerWrongWay;
+
+    public bool isWrongWay { get; protected set; } = false;
+    public float TimeWrongDistance { get; protected set; } = 5f;
+    public float timeWrongDistance = 5f;
+
     public PrometeoCarController CarController { get; protected set; }
     public DefaultRaceSettings RaceSettings => settings;
     protected DefaultRaceSettings settings;
@@ -22,6 +30,9 @@ public abstract class RaceController
         CarController = carController; 
         TrackWays = countedCollider; 
         this.settings = settings;
+
+        TrackWays.ForEach(x => x.OnFixedUpdate += CalculatePosition);
+
         var characteristics = Game.Player.GetCarCharacteristics(settings.carId);
         CarController.maxSpeed += (int)characteristics.Characteristics.ToList().Find(x => x.Type == CharacteristicType.speed).CalculatedPower;
         CarController.accelerationMultiplier+= (int)characteristics.Characteristics.ToList().Find(x => x.Type == CharacteristicType.boost).CalculatedPower;
@@ -29,6 +40,16 @@ public abstract class RaceController
         CarController.maxSteeringAngle += (int)characteristics.Characteristics.ToList().Find(x => x.Type == CharacteristicType.controllability).CalculatedPower;
     }
     
+    public void StartRace()
+    {
+        IsStarted = true;
+    }
+
+    public void FinishRace()
+    {
+
+    }
+
     public abstract void OnControlPointPassed(int ind);
     public virtual void SetPaused() 
     { 
@@ -48,6 +69,42 @@ public abstract class RaceController
         OnFinish?.Invoke();
         SaveAndLoad.SaveProife();
     }
+
+    private void CalculatePosition(int counted)
+    {
+        if (lastPointIndex != counted)
+        {
+            lastPointIndex = counted;
+            distanceToNextCheckPoint = float.MaxValue;
+        }
+        if (counted >= TrackWays.Count)
+            counted = 0;
+
+        var distance = Vector3.Distance(TrackWays[counted].transform.position, CarController.transform.position);
+        if (distance <= distanceToNextCheckPoint)
+        {
+            timeWrongDistance = 0;
+            isWrongWay = false;
+            distanceToNextCheckPoint = distance;
+            Debug.Log(isWrongWay);
+        }
+        else
+        {
+            if (distance + 50 >= distanceToNextCheckPoint)
+            {
+                timeWrongDistance += Time.fixedDeltaTime;
+            }
+            if(timeWrongDistance >= TimeWrongDistance)
+            {
+                isWrongWay = true;
+                Debug.Log(isWrongWay);
+            }
+        } 
+    
+        OnPlayerWrongWay?.Invoke(isWrongWay);
+    }
+
+
     public virtual void ExitRace() { UnityEngine.SceneManagement.SceneManager.LoadScene(1); Time.timeScale = 1; Pause = true; }
 
     public abstract int GetEarn();
@@ -140,13 +197,14 @@ public class DriftRaceController : RaceController
 {
     private float driftPoints;
     public override RaceType RaceType => RaceType.driftRace;
-    public override bool Pause { get; protected set; }
-    public override float RaceTime => Time.time - StartTime;
-    private float DriftPoints => driftPoints;
-    private int laps = 1;
     private int passedLaps = 1;
-    public int Laps => laps;
     private TrackInfo trackInfo;
+    private int laps = 1;
+
+    public override float RaceTime => Time.time - StartTime;
+    public override bool Pause { get; protected set; }
+    public int Laps => laps;
+    public float DriftPoints => driftPoints;
     private DriftRaceSettings Settings => (DriftRaceSettings)settings;
 
     public System.Action<float> OnDrift;
@@ -169,7 +227,7 @@ public class DriftRaceController : RaceController
 
     public void CalculatePoints()
     {
-        if (Pause)
+        if (Pause || isWrongWay)
             return;
         driftPoints += CarController.carSpeed;
         OnDrift?.Invoke(DriftPoints);

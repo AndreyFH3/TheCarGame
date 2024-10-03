@@ -1,3 +1,4 @@
+using GamePush;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
@@ -23,6 +24,8 @@ public class SoundPlayer : MonoBehaviour
         if(player is null)
         {
             player = this;
+            GP_Ads.OnAdsStart += OnAdShow;
+            GP_Ads.OnAdsClose += OnAdClose;
             DontDestroyOnLoad(gameObject);
         }
         else
@@ -76,14 +79,24 @@ public class SoundPlayer : MonoBehaviour
 
     public void SetMusic(bool value)
     {
-        mixer.SetFloat("Music", value ? 1 : 0);
+        mixer.SetFloat("Music", value ? 0 : -80);
         Game.Player.settings.SetCarSoundSound(value);
     }
 
     public void SetCarSound(bool value)
     {
-        mixer.SetFloat("CarSound", value ? 1 : 0);
+        mixer.SetFloat("CarSound", value ? 0 : -80);
         Game.Player.settings.SetMusic(value);
+    }
+
+    private void OnAdShow()
+    {
+        AudioListener.volume = 0;
+    }
+
+    private void OnAdClose(bool value)
+    {
+        AudioListener.volume = 1;
     }
 
 }

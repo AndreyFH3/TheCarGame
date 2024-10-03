@@ -50,6 +50,7 @@ MonoBehaviour:
   - MEDIUM
   - HIGH
   - ADBLOKC_TEXT
+  - WRONGWAY
   locales:
   - language: 30
     title: 
@@ -92,6 +93,7 @@ MonoBehaviour:
       \u043E\u0442\u043A\u043B\u044E\u0447\u0438\u0442\u0435 \u0440\u0430\u0441\u0448\u0438\u0440\u0435\u043D\u0438\u0435
       \u0438 \u043F\u0435\u0440\u0435\u0437\u0430\u0433\u0440\u0443\u0437\u0438\u0442\u0435
       \u0441\u0442\u0440\u0430\u043D\u0438\u0446\u0443."
+    - "\u041D\u0435\u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u0439\u044B \u043F\u0443\u0442\u044C"
     enabled: 0
   - language: 10
     title: 
@@ -129,6 +131,7 @@ MonoBehaviour:
     - High
     - "You may have AdBlock enabled.  \nPlease disable the extension and reload the
       page."
+    - Wrong way
     enabled: 0
   - language: 37
     title: 
@@ -166,6 +169,7 @@ MonoBehaviour:
     - "Be\xFDik"
     - "AdBlock a\xE7yk bolmagy m\xFCmkin.  \nGi\u0148eltm\xE4ni \xF6\xE7\xFCri\u0148
       we sahypany t\xE4zeden \xFD\xFCkl\xE4\u0148."
+    - "N\xE4dogry \xFDol"
     enabled: 0
   - language: 15
     title: 
@@ -203,6 +207,7 @@ MonoBehaviour:
     - Hoch
     - "M\xF6glicherweise haben Sie AdBlock aktiviert.  \nBitte deaktivieren Sie die
       Erweiterung und laden Sie die Seite neu."
+    - Falscher Weg
     enabled: 0
   - language: 14
     title: 
@@ -240,6 +245,7 @@ MonoBehaviour:
     - Haut
     - "Vous avez peut-\xEAtre activ\xE9 AdBlock.  \nVeuillez d\xE9sactiver l'extension
       et recharger la page."
+    - "Mauvaise fa\xE7on"
     enabled: 0
   - language: 21
     title: 
@@ -277,4 +283,5 @@ MonoBehaviour:
     - Alto
     - "Potresti avere AdBlock abilitato.  \nDisattiva l'estensione e ricarica la
       pagina."
+    - Senso vietato
     enabled: 0

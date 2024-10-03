@@ -13,7 +13,10 @@ public class PauseUIComponent : RaceUIComponent
 
     private void Update()
     {
-        showPart.gameObject.SetActive(controller.Pause);
+        if(controller.IsStarted)
+            showPart.gameObject.SetActive(controller.Pause);
+        else
+            showPart.gameObject.SetActive(false);
     }
 
     public void RestartGame()

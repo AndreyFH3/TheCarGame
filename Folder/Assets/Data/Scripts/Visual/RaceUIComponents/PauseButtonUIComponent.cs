@@ -14,12 +14,17 @@ public class PauseButtonUIComponent : RaceUIComponent
 
     public void SetPaused()
     {
+        if (!controller.IsStarted)
+            return; 
         controller.SetPaused();
     }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            if (!controller.IsStarted)
+                return;
             if (controller.Pause)
                 controller.SetUnpaused();
             else 

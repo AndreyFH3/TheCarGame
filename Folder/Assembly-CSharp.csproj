@@ -82,6 +82,7 @@
     <Compile Include="Assets\Data\Scripts\ScriptableObjects\GameConfig.cs" />
     <Compile Include="Assets\Data\Scripts\Game.cs" />
     <Compile Include="Assets\Data\Scripts\Visual\RaceUIComponents\PauseUIComponent.cs" />
+    <Compile Include="Assets\Data\Scripts\LoadingScreenView.cs" />
     <Compile Include="Assets\Data\Scripts\CarController\TouchInputView.cs" />
     <Compile Include="Assets\Data\Scripts\Race\RaceController.cs" />
     <Compile Include="Assets\Data\Scripts\Rewards\RewardAfterRaceView.cs" />
@@ -95,6 +96,7 @@
     <Compile Include="Assets\PathCreator\Examples\Scripts\PathFollower.cs" />
     <Compile Include="Assets\Data\Scripts\TracksInfo\TrackPart.cs" />
     <Compile Include="Assets\Data\Scripts\Visual\RaceUIComponents\DriftPointsShowComponent.cs" />
+    <Compile Include="Assets\Data\Scripts\Visual\RaceUIComponents\WrongWayUIComponent.cs" />
     <Compile Include="Assets\Data\Scripts\ScriptableObjects\StatsSettings.cs" />
     <Compile Include="Assets\Data\Scripts\Visual\StartScene\MapRaceView.cs" />
     <Compile Include="Assets\Data\Scripts\Visual\RaceUIComponents\TimerRaceComponent.cs" />
@@ -111,6 +113,7 @@
     <Compile Include="Assets\Data\Scripts\TracksInfo\TreeRotator.cs" />
     <Compile Include="Assets\Data\Scripts\GameIniter.cs" />
     <Compile Include="Assets\Data\Scripts\Visual\RaceUIComponents\LapsUIComponent.cs" />
+    <Compile Include="Assets\Data\Scripts\Visual\RaceUIComponents\StartRace.cs" />
     <Compile Include="Assets\Data\Scripts\Visual\RaceUIComponents\RewardView.cs" />
     <Compile Include="Assets\Data\Scripts\Race\Race.cs" />
     <Compile Include="Assets\Data\Scripts\ScriptableObjects\SoundsConfig.cs" />

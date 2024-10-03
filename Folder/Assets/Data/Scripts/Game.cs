@@ -14,6 +14,8 @@ public class Game : MonoBehaviour
     private const string PLAYER_DATA = "PLAYER_DATA";
     public static Game Instance => _instance;
     public bool IsInit => isInit;
+
+
     public static GameConfig Config 
     {
         get
@@ -44,7 +46,7 @@ public class Game : MonoBehaviour
         }
     }
 
-    private void Start()
+    private void Awake()
     {
         if (_instance is null)
         {
@@ -54,13 +56,40 @@ public class Game : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if (!Game.Instance.IsInit && SceneManager.GetActiveScene().name != SceneNames.START_SCENE_SCENE)
+            SceneManager.LoadScene(SceneNames.START_SCENE_SCENE);
+    }
+
+    public void Init()
+    {
         if(Instance is not null && !Instance.IsInit)
         {
             Player.Init();
             Player.settings.Init();
             Player.rate.Init();
             isInit = true;
-            SceneManager.LoadScene(1);
+            Localization.SetLanguage(ConverLanguage(GP_Language.Current()));
+        }
+    }
+
+    private SystemLanguage ConverLanguage(Language language)
+    {
+        switch(language)
+        {
+            case Language.English:
+                return SystemLanguage.English;
+            case Language.French:
+                return SystemLanguage.French;
+            case Language.Italian:
+                return SystemLanguage.Italian;
+            case Language.Russian:
+                return SystemLanguage.Russian;
+            case Language.German:
+                return SystemLanguage.German;
+            case Language.Turkish:
+                return SystemLanguage.Turkish;
+            default:
+                return SystemLanguage.English;
         }
     }
 

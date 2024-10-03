@@ -31,35 +31,35 @@ MonoBehaviour:
     carReferene: {fileID: 6913686840104296857, guid: 4ffee0f57f3ae6848b0a69c6e2cc62af, type: 3}
   tracksList:
   - trackData: {fileID: 4900000, guid: 052603f3c3289dc49ab3e54016c05fd0, type: 3}
-    spriteOfmap: {fileID: 0}
+    spriteOfmap: {fileID: 21300000, guid: 9ca3035d23261b042bf45b547dfaa97a, type: 3}
     isCircle: 1
-    laps: 1
+    laps: 3
   - trackData: {fileID: 4900000, guid: 68d77b39e11619148bc27c922946f4b6, type: 3}
-    spriteOfmap: {fileID: 0}
+    spriteOfmap: {fileID: 21300000, guid: f0455cb6a0e0c6342b30e0168700f16e, type: 3}
     isCircle: 1
-    laps: 3
+    laps: 2
   - trackData: {fileID: 4900000, guid: b6b884e1df9d7e141b977c83c514c431, type: 3}
-    spriteOfmap: {fileID: 0}
+    spriteOfmap: {fileID: 21300000, guid: 921f14c2f32017a4e84ab0d7f0670617, type: 3}
     isCircle: 1
-    laps: 3
+    laps: 2
   - trackData: {fileID: 4900000, guid: 266a097fa415608488fff874b9319858, type: 3}
-    spriteOfmap: {fileID: 0}
+    spriteOfmap: {fileID: 21300000, guid: b9308aabc469d8b48ba26b320673a44f, type: 3}
     isCircle: 1
-    laps: 3
+    laps: 2
   - trackData: {fileID: 4900000, guid: 28bb036c42873e14db31fc249675ff5c, type: 3}
-    spriteOfmap: {fileID: 0}
+    spriteOfmap: {fileID: 21300000, guid: 5d1a2059e3cc9bd4ca34433870671807, type: 3}
     isCircle: 1
     laps: 2
   - trackData: {fileID: 4900000, guid: 87b88eb8be2132a4a92f3a218679b265, type: 3}
-    spriteOfmap: {fileID: 0}
+    spriteOfmap: {fileID: 21300000, guid: 3f9a10b8155bdb14ab7385e0dbabc6fc, type: 3}
     isCircle: 1
     laps: 2
   - trackData: {fileID: 4900000, guid: eb4e715becfa32e4f9a0f06fee9a6760, type: 3}
-    spriteOfmap: {fileID: 0}
+    spriteOfmap: {fileID: 21300000, guid: e0ed09565875a2a48a11b957ca2db313, type: 3}
     isCircle: 1
     laps: 2
   - trackData: {fileID: 4900000, guid: 525de850d74145b4ab0348aa748e8c66, type: 3}
-    spriteOfmap: {fileID: 0}
+    spriteOfmap: {fileID: 21300000, guid: f1a94e90b8f552945bd405f93f90bb87, type: 3}
     isCircle: 1
     laps: 2
   skyBoxes:
@@ -96,6 +96,8 @@ MonoBehaviour:
     - {fileID: 3865441312311346175, guid: 2ec9de4db24825e479a698f677e912ab, type: 3}
     - {fileID: 6585794998650239280, guid: f312323bfd5f7904b9f544cf6afaaa5c, type: 3}
     - {fileID: 6997744360399367530, guid: ccefba7d340cf2a45852c00a77f37fc1, type: 3}
+    - {fileID: 3222693967073416084, guid: 44b9b5b1a7e10a447aaa570529446206, type: 3}
+    - {fileID: 1057793595727316399, guid: e90b2584327352f499565dd8565ab752, type: 3}
   - id: 2
     components:
     - {fileID: 7310723109501460994, guid: d2e8d72869cb7e349a4ced2b37373042, type: 3}
@@ -103,6 +105,8 @@ MonoBehaviour:
     - {fileID: 6585794998650239280, guid: f312323bfd5f7904b9f544cf6afaaa5c, type: 3}
     - {fileID: 8401175077691980706, guid: 96927cc92172c0c4dafcb01113e951e7, type: 3}
     - {fileID: 6997744360399367530, guid: ccefba7d340cf2a45852c00a77f37fc1, type: 3}
+    - {fileID: 3222693967073416084, guid: 44b9b5b1a7e10a447aaa570529446206, type: 3}
+    - {fileID: 1057793595727316399, guid: e90b2584327352f499565dd8565ab752, type: 3}
   trackParts:
   - {fileID: 3825274973899890916, guid: d9ab2401bf6839744952d1947386d8b3, type: 3}
   - {fileID: 5216754720833665095, guid: dd0831f60632baf4492b92858d493b29, type: 3}

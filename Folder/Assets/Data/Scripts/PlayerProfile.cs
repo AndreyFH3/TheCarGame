@@ -47,7 +47,7 @@ public class PlayerProfile
 [System.Serializable]
 public class Wallet
 {
-    [SerializeField] private int softCurrency = 100000;
+    [SerializeField] private int softCurrency = 0;
     public int SoftCurrency => softCurrency;
     public System.Action OnCurrencyChanged;
     public bool SpendSoft(int value)

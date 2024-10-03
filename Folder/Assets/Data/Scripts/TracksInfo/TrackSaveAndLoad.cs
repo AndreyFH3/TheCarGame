@@ -100,7 +100,7 @@ public class TrackSaveAndLoad : MonoBehaviour
     public PrometeoCarController SetCar(string carId, Vector3 spawnPosiition, Vector3 lookAtPosition)
     {
         var carData = Instantiate(Game.Config.GetCar(carId).CarReference);
-        carData.Init(Game.Config.statsConfig.GetCarSettings(Race.Settings.carId), GP_Device.IsDesktop());
+        carData.Init(Game.Config.statsConfig.GetCarSettings(Race.Settings.carId), GP_Device.IsMobile());
         carData.transform.position = spawnPosiition;
 
         var lookPos = lookAtPosition;

@@ -294,9 +294,14 @@ public class PrometeoCarController : MonoBehaviour
 
     }
 
-    public void Init(CarSettings settings, bool isDesktop)
+    public void Init(CarSettings settings, bool IsMobile)
     {
-        if (isDesktop)
+#if UNITY_EDITOR
+        if (true)
+#endif
+#if !UNITY_EDITOR
+        if (IsMobile)
+#endif
         {
             useTouchControls = true;
             var instance = Instantiate(Game.Config.views.GetTouchInputView);

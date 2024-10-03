@@ -8,19 +8,29 @@ public class LeaderboardController: IDisposable
 {
     public System.Action<List<LeaderboardFetchData>> OnDataGet;
     private RaceController controller;
+    private string mode = "";
 
     public LeaderboardController(RaceController controller)
     {
         this.controller = controller;
+        if (controller is CircleRaceController)
+        {
+            mode = "_Circle";
+        }
+        else if (controller is DriftRaceController drift)
+        {
+            mode = "_Drift";
+        }
         SetResult();
         GP_Leaderboard.OnFetchSuccess += OnFetchSuccess;
+        GetLeaderboard();
     }
 
     private void GetLeaderboard()
     {
         GP_Leaderboard.Fetch(
-            controller.RaceSettings.trackId,
-            "zsdc",
+            controller.RaceSettings.trackId + mode,
+            controller.RaceSettings.trackId + mode,
             Order.DESC,
             25,
             10,

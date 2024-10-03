@@ -6,6 +6,7 @@ public class TrackWay : MonoBehaviour
     public int NumberWay => numberWay;
 
     public System.Action<int> OnColliderTouched;
+    public System.Action<int> OnFixedUpdate;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -26,5 +27,10 @@ public class TrackWay : MonoBehaviour
         transform.localScale = savable.Scale;
         transform.eulerAngles = savable.RotationEuler;
         numberWay = savable.WayIndex;
+    }
+
+    public void FixedUpdate()
+    {
+        OnFixedUpdate?.Invoke(NumberWay);
     }
 }

@@ -8,8 +8,10 @@ public class SettingsView : MonoBehaviour
 {
     [SerializeField] private Toggle carSound;
     [SerializeField] private Toggle music;
-
     [SerializeField] private TMP_Dropdown graphicsValues;
+    [SerializeField] private TMP_Dropdown languagesValues;
+
+    [SerializeField] private List<SystemLanguage> languages;
 
     private Settings Settings => Game.Player.settings;
 
@@ -28,11 +30,27 @@ public class SettingsView : MonoBehaviour
         }
         graphicsValues.AddOptions(options);
         graphicsValues.value = graphicsValue;
+
+        languagesValues.ClearOptions();
+        var options2 = new List<TMP_Dropdown.OptionData>();
+        int index = -1;
+        foreach (var language in languages)
+        {
+            options2.Add(new TMP_Dropdown.OptionData(Localization.Get(language.ToString())));
+        }
+        languagesValues.AddOptions(options2);
+        index = languages.FindIndex(x => x == Localization.Language);
+        languagesValues.value = index;
     }
     
     public void SetMusic(bool value)
     {
         SoundPlayer.Player.SetMusic(value);
+    }
+
+    public void SetLanguage(int index)
+    {
+        Localization.SetLanguage(languages[index]);
     }
 
     public void SetCarSound(bool value)

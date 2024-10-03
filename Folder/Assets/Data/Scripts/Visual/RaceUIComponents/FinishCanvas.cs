@@ -15,7 +15,11 @@ public class FinishCanvas : MonoBehaviour
     public void Init(RaceController controller)
     {
         raceController = controller;
-        timeText.text = Localization.Get("RaceTime", raceController.RaceTime.ToString("n2"));
+        if(controller is CircleRaceController)
+            timeText.text = Localization.Get("RaceTime", raceController.RaceTime.ToString("n2"));
+        else if (controller is DriftRaceController drift)
+            timeText.text = $"{Localization.Get("Points")}: {Mathf.RoundToInt(drift.DriftPoints)}";
+        
         winText.text = Localization.Get("win");
         SetReward(controller.GetEarn());
         multiplayer.Init(controller);
