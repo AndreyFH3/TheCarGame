@@ -297,7 +297,7 @@ public class PrometeoCarController : MonoBehaviour
     public void Init(CarSettings settings, bool IsMobile)
     {
 #if UNITY_EDITOR
-        if (true)
+        if (false)
 #endif
 #if !UNITY_EDITOR
         if (IsMobile)
@@ -523,13 +523,16 @@ public class PrometeoCarController : MonoBehaviour
         {
             steeringAxis = steeringAxis - (Time.deltaTime * 10f * steeringSpeed);
         }
-        if (Mathf.Abs(frontLeftCollider.steerAngle) < 1f)
+        if (Mathf.Abs(frontLeftCollider.steerAngle) < 2f)
         {
             steeringAxis = 0f;
         }
         var steeringAngle = steeringAxis * maxSteeringAngle;
-        frontLeftCollider.steerAngle = Mathf.Lerp(frontLeftCollider.steerAngle, steeringAngle, steeringSpeed);
-        frontRightCollider.steerAngle = Mathf.Lerp(frontRightCollider.steerAngle, steeringAngle, steeringSpeed);
+        frontLeftCollider.steerAngle = steeringAxis == 0 ? 0 : Mathf.Lerp(frontLeftCollider.steerAngle, steeringAngle, steeringSpeed);
+        frontRightCollider.steerAngle = steeringAxis == 0 ? 0 : Mathf.Lerp(frontRightCollider.steerAngle, steeringAngle, steeringSpeed);
+        
+        Debug.Log($"frontRightCollider.steerAngle: {frontRightCollider.steerAngle}");
+        Debug.Log($"frontLeftCollider.steerAngle: {frontLeftCollider.steerAngle}");
     }
 
     // This method matches both the position and rotation of the WheelColliders with the WheelMeshes.

@@ -43,7 +43,9 @@ public abstract class RaceController
     public void StartRace()
     {
         IsStarted = true;
+        StartTime = Time.time;
     }
+
 
     public void FinishRace()
     {
@@ -131,7 +133,6 @@ public class CircleRaceController : RaceController
     public override void Init(PrometeoCarController carController, List<TrackWay> countedCollider , DefaultRaceSettings settings)
     {
         base.Init(carController, countedCollider, settings);
-        StartTime = Time.time;
         for (int i = 0; i < TrackWays.Count; i++)
         {
             TrackWays[i].OnColliderTouched += OnControlPointPassed;
@@ -214,7 +215,6 @@ public class DriftRaceController : RaceController
     {
         base.Init(carController, countedCollider, settings);
         carController.OnDrift += CalculatePoints;
-        StartTime = Time.time;
         for (int i = 0; i < TrackWays.Count; i++)
         {
             TrackWays[i].OnColliderTouched += OnControlPointPassed;

@@ -12,7 +12,13 @@ public class TimerRaceComponent : RaceUIComponent
 
     private void Update()
     {
-        timerText.text = Localization.Get("RaceTime", raceController.RaceTime.ToString("n2"));
+        if (raceController.IsStarted)
+        {   
+            timerText.text = Localization.Get("RaceTime", raceController.RaceTime.ToString("n2"));
+        }
+        else
+            timerText.text = Localization.Get("RaceTime", 0.ToString("n2"));
+
     }
 
 }

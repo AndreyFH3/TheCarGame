@@ -1,4 +1,5 @@
 using GamePush;
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -36,7 +37,7 @@ public class Game : MonoBehaviour
                 return playerContainer;
             else
             {
-                playerContainer = SaveAndLoad.GetPlayer();
+                playerContainer = SaveAndLoad.LoadPlayer();
                 if(playerContainer is null)
                     playerContainer = new();
                 else if(!playerContainer.IsInited)
@@ -60,10 +61,11 @@ public class Game : MonoBehaviour
             SceneManager.LoadScene(SceneNames.START_SCENE_SCENE);
     }
 
-    public void Init()
+    public IEnumerator Init()
     {
         if(Instance is not null && !Instance.IsInit)
         {
+            yield return null;
             Player.Init();
             Player.settings.Init();
             Player.rate.Init();

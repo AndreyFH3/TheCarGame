@@ -19,11 +19,19 @@ public class FinishCanvas : MonoBehaviour
             timeText.text = Localization.Get("RaceTime", raceController.RaceTime.ToString("n2"));
         else if (controller is DriftRaceController drift)
             timeText.text = $"{Localization.Get("Points")}: {Mathf.RoundToInt(drift.DriftPoints)}";
-        
-        winText.text = Localization.Get("win");
-        SetReward(controller.GetEarn());
-        multiplayer.Init(controller);
-        multiplayer.Rewarder.OnChangeValue += SetReward;
+
+        var reward = controller.GetEarn();
+        winText.text = reward == 0 ? Localization.Get("lose") : Localization.Get("win");
+        SetReward(reward);
+        if(reward == 0)
+        {
+            multiplayer.gameObject.SetActive(false);
+        }
+        else
+        {
+            multiplayer.Init(controller);
+            multiplayer.Rewarder.OnChangeValue += SetReward;
+        }
         leadrboardView.Init(controller);
 
     }

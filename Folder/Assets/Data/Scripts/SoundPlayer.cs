@@ -79,13 +79,19 @@ public class SoundPlayer : MonoBehaviour
 
     public void SetMusic(bool value)
     {
-        mixer.SetFloat("Music", value ? 0 : -80);
+        float valueFloat = value ? 0 : -80;
+        mixer.SetFloat("Music", valueFloat);
+        mixer.GetFloat("Music", out float result);
+        Debug.Log($"Music: {result}|{value}|{name}");
         Game.Player.settings.SetCarSoundSound(value);
     }
 
     public void SetCarSound(bool value)
     {
-        mixer.SetFloat("CarSound", value ? 0 : -80);
+        float valueFloat = value ? 0 : -80;
+        mixer.SetFloat("CarSound", valueFloat);
+        mixer.GetFloat("CarSound", out float result);
+        Debug.Log($"Music: {result}|{value}|{name}");
         Game.Player.settings.SetMusic(value);
     }
 

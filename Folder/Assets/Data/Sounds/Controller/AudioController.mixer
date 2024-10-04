@@ -48,7 +48,11 @@ AudioMixerController:
   m_SuspendThreshold: -80
   m_EnableSuspend: 1
   m_UpdateMode: 0
-  m_ExposedParameters: []
+  m_ExposedParameters:
+  - guid: 5d998e0889129c647a2ec845aedce952
+    name: CarSound
+  - guid: a327a0fd158532348a9eececd6bf96d9
+    name: Music
   m_AudioMixerGroupViews:
   - guids:
     - 982e8c16a72f71b49bfbd6d89153eb79
@@ -102,7 +106,9 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: fc89d28518e9d184482cc55742e16872
   m_FloatValues:
-    a327a0fd158532348a9eececd6bf96d9: -0.4
+    5c3b66346dce3384c95bbdaad902a97d: 1
+    26fae1845699c1b40a2c4b01cc457fd7: 0
+    a327a0fd158532348a9eececd6bf96d9: 0
   m_TransitionOverrides: {}
 --- !u!244 &1037387195133734168
 AudioMixerEffectController:

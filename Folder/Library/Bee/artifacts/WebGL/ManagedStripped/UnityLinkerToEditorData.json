@@ -73,6 +73,7 @@
             "name": "AudioListener",
             "scenes": [
               "Assets/Data/Scenes/GarageScene.unity",
+              "Assets/Data/Scenes/StartScene.unity",
               "Assets/Data/Scenes/Track.unity"
             ],
             "dependencyType": 0,
@@ -88,8 +89,7 @@
             "name": "AudioMixer",
             "scenes": [
               "Assets/Data/Scenes/GarageScene.unity",
-              "Assets/Data/Scenes/StartScene.unity",
-              "Assets/Data/Scenes/Track.unity"
+              "Assets/Data/Scenes/StartScene.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -98,8 +98,7 @@
             "name": "AudioMixerGroup",
             "scenes": [
               "Assets/Data/Scenes/GarageScene.unity",
-              "Assets/Data/Scenes/StartScene.unity",
-              "Assets/Data/Scenes/Track.unity"
+              "Assets/Data/Scenes/StartScene.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -108,8 +107,7 @@
             "name": "AudioMixerSnapshot",
             "scenes": [
               "Assets/Data/Scenes/GarageScene.unity",
-              "Assets/Data/Scenes/StartScene.unity",
-              "Assets/Data/Scenes/Track.unity"
+              "Assets/Data/Scenes/StartScene.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -118,8 +116,7 @@
             "name": "AudioSource",
             "scenes": [
               "Assets/Data/Scenes/GarageScene.unity",
-              "Assets/Data/Scenes/StartScene.unity",
-              "Assets/Data/Scenes/Track.unity"
+              "Assets/Data/Scenes/StartScene.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -153,6 +150,7 @@
             "name": "Camera",
             "scenes": [
               "Assets/Data/Scenes/GarageScene.unity",
+              "Assets/Data/Scenes/StartScene.unity",
               "Assets/Data/Scenes/Track.unity"
             ],
             "dependencyType": 0,
@@ -264,9 +262,7 @@
           {
             "name": "LightingSettings",
             "scenes": [
-              "Assets/Data/Scenes/GarageScene.unity",
-              "Assets/Data/Scenes/StartScene.unity",
-              "Assets/Data/Scenes/Track.unity"
+              "Assets/Data/Scenes/StartScene.unity"
             ],
             "dependencyType": 0,
             "icon": null

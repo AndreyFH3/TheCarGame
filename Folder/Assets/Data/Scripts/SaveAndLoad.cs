@@ -1,15 +1,22 @@
 using GamePush;
+using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public static class SaveAndLoad
 {
     private const string ACCOUNT = "Account";
+
+    //private static List<PlayerFetchFieldsData> fields;
+
+    //public static List<PlayerFetchFieldsData> Fields => fields;
+
     public static void SaveProife()
     {
         var profile = Game.Player;
         var stringToSave = JsonUtility.ToJson(profile);
         GP_Player.Set(ACCOUNT, stringToSave);
-        GP_Player.Sync(forceOverride: true);
+        GP_Player.Sync();
     }
 
     public static void ResetSaves()
@@ -17,14 +24,11 @@ public static class SaveAndLoad
         GP_Player.ResetPlayer();    
     }
 
-    public static PlayerProfile GetPlayer()
+    public static PlayerProfile LoadPlayer()
     {
-        var accountInfo = GP_Player.GetString(ACCOUNT);
-        if (System.String.IsNullOrEmpty(accountInfo))
-        {
-            PlayerProfile profile = JsonUtility.FromJson<PlayerProfile>(accountInfo);
-            return profile;
-        }
-        return null;
+        var profileString = GP_Player.GetString(ACCOUNT);
+        var profile = JsonUtility.FromJson<PlayerProfile>(profileString);
+        return profile;
+
     }
 }

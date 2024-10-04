@@ -1423,7 +1423,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7344874181333496816, guid: ab4ea67cd9337c341af0bd7182c60f92, type: 3}
       propertyPath: m_Parameters.widthMultiplier
-      value: 0.5
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 7344874181333496817, guid: ab4ea67cd9337c341af0bd7182c60f92, type: 3}
       propertyPath: m_LocalPosition.x

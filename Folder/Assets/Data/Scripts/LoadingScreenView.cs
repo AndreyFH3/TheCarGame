@@ -10,7 +10,7 @@ public class LoadingScreenView : MonoBehaviour
     {
         if (!Game.Instance.IsInit)
         {
-            Game.Instance.Init();
+            StartCoroutine(Game.Instance.Init());
         }
     }
 
@@ -27,7 +27,7 @@ public class LoadingScreenView : MonoBehaviour
         }
         else
         {
-            slider.value = 0;
+            slider.value += slider.value > .4f ? 0 : Time.deltaTime *.8f;
         }        
     }
 }

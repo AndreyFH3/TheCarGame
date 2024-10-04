@@ -49,7 +49,7 @@ public class StatsConfig : ScriptableObject
     
     public TrackInfo GetTrackTimes(string id) => times.Find(x => x.Id == id);
     
-    public TrackInfo GetTrackPoints(string id) => times.Find(x => x.Id == id);
+    public TrackInfo GetTrackPoints(string id) => points.Find(x => x.Id == id);
     
     public Reward GetReward(string id) => rewards.Find(x => x.Id == id);
     

@@ -28,6 +28,6 @@ public class StartRace : RaceUIComponent
         }
         raceController.SetUnpaused();
         raceController.StartRace();
-        textMesh.gameObject.SetActive(false);
+        gameObject.SetActive(false);
     }
 }

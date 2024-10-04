@@ -1308,15 +1308,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7344874181333496817, guid: ab4ea67cd9337c341af0bd7182c60f92, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.14285715
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7344874181333496817, guid: ab4ea67cd9337c341af0bd7182c60f92, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.14285715
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7344874181333496817, guid: ab4ea67cd9337c341af0bd7182c60f92, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.14285715
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7344874181333496817, guid: ab4ea67cd9337c341af0bd7182c60f92, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1458,15 +1458,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7344874181333496817, guid: ab4ea67cd9337c341af0bd7182c60f92, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.14285715
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7344874181333496817, guid: ab4ea67cd9337c341af0bd7182c60f92, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.14285715
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7344874181333496817, guid: ab4ea67cd9337c341af0bd7182c60f92, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.14285715
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7344874181333496817, guid: ab4ea67cd9337c341af0bd7182c60f92, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1478,7 +1478,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7344874181333496817, guid: ab4ea67cd9337c341af0bd7182c60f92, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.7759999
+      value: -0.75
       objectReference: {fileID: 0}
     - target: {fileID: 7344874181333496817, guid: ab4ea67cd9337c341af0bd7182c60f92, type: 3}
       propertyPath: m_LocalRotation.w

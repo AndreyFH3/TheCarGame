@@ -1,6 +1,5 @@
 using GamePush;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -23,7 +22,13 @@ public class LeaderboardController: IDisposable
         }
         SetResult();
         GP_Leaderboard.OnFetchSuccess += OnFetchSuccess;
+        GP_Leaderboard.OnFetchError += Error;
         GetLeaderboard();
+    }
+
+    private void Error()
+    {
+        Debug.Log("Error get Leaderboard");
     }
 
     private void GetLeaderboard()
@@ -50,7 +55,7 @@ public class LeaderboardController: IDisposable
 
     private void SetResult()
     {
-        GP_Player.Set(controller.RaceSettings.trackId, controller.RaceTime);
+        GP_Player.Set(controller.RaceSettings.trackId + mode, controller.RaceTime);
 
     }
 }
