@@ -64,6 +64,7 @@ public class SettingsView : MonoBehaviour
     public void SetMusic(bool value)
     {
         SoundPlayer.Player.SetMusic(value);
+        
     }
 
     public void SetLanguage(int index)
@@ -117,15 +118,18 @@ public class Settings
     public void SetGraphics(int value)
     {
         graphicsValue = value;
+        SaveAndLoad.SaveProife();
     }
 
     public void SetCarSoundSound(bool value)
     {
         carSoundValue = value;
+        SaveAndLoad.SaveProife();
     }
 
     public void SetMusic(bool value) 
     {
         musicValue = value;
+        SaveAndLoad.SaveProife();
     }
 }
