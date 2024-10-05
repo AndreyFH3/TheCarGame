@@ -83,7 +83,7 @@ public class SoundPlayer : MonoBehaviour
         mixer.SetFloat("Music", valueFloat);
         mixer.GetFloat("Music", out float result);
         Debug.Log($"Music: {result}|{value}|{name}");
-        Game.Player.settings.SetCarSoundSound(value);
+        Game.Player.settings.SetMusic(value);
     }
 
     public void SetCarSound(bool value)
@@ -92,7 +92,7 @@ public class SoundPlayer : MonoBehaviour
         mixer.SetFloat("CarSound", valueFloat);
         mixer.GetFloat("CarSound", out float result);
         Debug.Log($"Music: {result}|{value}|{name}");
-        Game.Player.settings.SetMusic(value);
+        Game.Player.settings.SetCarSoundSound(value);
     }
 
     private void OnAdShow()

@@ -3,15 +3,17 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LeaderboardController: IDisposable
+public class LeaderboardController : IDisposable
 {
     public System.Action<List<LeaderboardFetchData>> OnDataGet;
     private RaceController controller;
+    private LeaderboardView view;
     private string mode = "";
 
-    public LeaderboardController(RaceController controller)
+    public LeaderboardController(RaceController controller, LeaderboardView view)
     {
         this.controller = controller;
+        this.view = view;
         if (controller is CircleRaceController)
         {
             mode = "_Circle";
@@ -23,14 +25,38 @@ public class LeaderboardController: IDisposable
         SetResult();
         GP_Leaderboard.OnFetchSuccess += OnFetchSuccess;
         GP_Leaderboard.OnFetchError += Error;
+        
+        GP_Leaderboard.OnLeaderboardOpen += OnOpen;
+        GP_Leaderboard.OnLeaderboardClose += OnClose;
+        OpenLeaderboard();
         GetLeaderboard();
+        view.gameObject.SetActive(false);
+    }
+
+    private void OnOpen()
+    {
+        view.gameObject.SetActive(true);
+    }
+
+    private void OnClose()
+    {
+        view.gameObject.SetActive(false);
     }
 
     private void Error()
     {
         Debug.Log("Error get Leaderboard");
     }
-
+    
+    private void OpenLeaderboard()
+    {
+        GP_Leaderboard.Open(
+            controller.RaceSettings.trackId,
+            mode == "_Circle" ? Order.ASC : Order.DESC,
+            25,
+            10,
+            WithMe.last);
+    }
     private void GetLeaderboard()
     {
         GP_Leaderboard.Fetch(
@@ -51,6 +77,9 @@ public class LeaderboardController: IDisposable
     public void Dispose()
     {
         GP_Leaderboard.OnFetchSuccess -= OnFetchSuccess;
+        GP_Leaderboard.OnFetchError += Error;
+        GP_Leaderboard.OnLeaderboardOpen -= OnOpen;
+        GP_Leaderboard.OnLeaderboardClose -= OnClose;
     }
 
     private void SetResult()

@@ -21,7 +21,12 @@ public class WalletView : MonoBehaviour
     {
         Game.Player.wallet.OnCurrencyChanged -= UpdateValue;
     }
-    
+
+    private void Update()
+    {
+        moneyValueRect.gameObject.SetActive(GP_Ads.IsRewardedAvailable());
+    }
+
     public void Refresh()
     {
         adReward.text = Localization.Get("AdReward", Game.Config.AdReward);
@@ -32,6 +37,8 @@ public class WalletView : MonoBehaviour
 
     public void AddMoney()
     {
+        var instance = Instantiate(Game.Config.views.GetAdLoader);
+
         GP_Ads.ShowRewarded("",
         stringData =>
         {
@@ -40,7 +47,11 @@ public class WalletView : MonoBehaviour
         () =>
         {
             moneyValueRect.gameObject.SetActive(false);
+            instance.gameObject.SetActive(true);
         },
-        isTrue => { });
+        isTrue => 
+        { 
+            Destroy(instance.gameObject);
+        });
     }
 }

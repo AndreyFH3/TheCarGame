@@ -20,6 +20,7 @@ public class CarUpgradeView : MonoBehaviour
         card.gameObject.SetActive(false);
     }
 
+
     public void Close()
     {
         OnClose?.Invoke();

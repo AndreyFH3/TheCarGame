@@ -19,7 +19,7 @@ public class RateGame
 
     public void ShowReward(Scene scene)
     {
-        if (scene.name.Contains("Track") && lastTimeShow - Time.time < 0)
+        if (!isRated && scene.name.Contains("Track") && lastTimeShow - Time.time < 0)
         {
             var instance = GameObject.Instantiate(Game.Config.views.GetRateWindow);
             instance.Init(this);
@@ -44,6 +44,6 @@ public class RateGame
 
     public void OnReviewClose(string info)//error
     {
-
+        isRated = true;
     }
 }

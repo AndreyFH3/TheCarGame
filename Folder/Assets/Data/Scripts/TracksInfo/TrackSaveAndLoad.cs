@@ -34,7 +34,7 @@ public class TrackSaveAndLoad : MonoBehaviour
         SetDayTime(Race.Settings.isDay);
         var info = LoadTrack(Race.Settings.trackId);
         Controller.Init(
-            SetCar(Race.Settings.carId, info.Last().transform.position, info[0].transform.position),
+            SetCar(Race.Settings.carId, info.Last().transform.position, info[0].transform.position, Controller.RaceType),
             info,
             Race.Settings);
 
@@ -90,17 +90,16 @@ public class TrackSaveAndLoad : MonoBehaviour
             obj.SetSavedData(child);
             obj.OnColliderTouched += action;
             colliders.Add(obj);
-            //тут надо сделать какой-то метод, который будет передавать необходимую информацию
         }
         isTrackSet = true;
         return colliders;
     }
 
 
-    public PrometeoCarController SetCar(string carId, Vector3 spawnPosiition, Vector3 lookAtPosition)
+    public PrometeoCarController SetCar(string carId, Vector3 spawnPosiition, Vector3 lookAtPosition, RaceType type)
     {
         var carData = Instantiate(Game.Config.GetCar(carId).CarReference);
-        carData.Init(Game.Config.statsConfig.GetCarSettings(Race.Settings.carId), GP_Device.IsMobile());
+        carData.Init(Game.Config.statsConfig.GetCarSettings(Race.Settings.carId), GP_Device.IsMobile(), type);
         carData.transform.position = spawnPosiition;
 
         var lookPos = lookAtPosition;

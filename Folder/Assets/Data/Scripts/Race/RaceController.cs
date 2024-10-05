@@ -36,8 +36,9 @@ public abstract class RaceController
         var characteristics = Game.Player.GetCarCharacteristics(settings.carId);
         CarController.maxSpeed += (int)characteristics.Characteristics.ToList().Find(x => x.Type == CharacteristicType.speed).CalculatedPower;
         CarController.accelerationMultiplier+= (int)characteristics.Characteristics.ToList().Find(x => x.Type == CharacteristicType.boost).CalculatedPower;
-        CarController.brakeForce += (int)characteristics.Characteristics.ToList().Find(x => x.Type == CharacteristicType.controllability).CalculatedPower;
-        CarController.maxSteeringAngle += (int)characteristics.Characteristics.ToList().Find(x => x.Type == CharacteristicType.controllability).CalculatedPower;
+        CarController.handbrakeDriftMultiplier = characteristics.Characteristics.ToList().Find(x => x.Type == CharacteristicType.controllability).CalculatedPower;
+        //CarController.brakeForce += (int)characteristics.Characteristics.ToList().Find(x => x.Type == CharacteristicType.controllability).CalculatedPower;
+        //CarController.maxSteeringAngle += (int)characteristics.Characteristics.ToList().Find(x => x.Type == CharacteristicType.controllability).CalculatedPower;
     }
     
     public void StartRace()

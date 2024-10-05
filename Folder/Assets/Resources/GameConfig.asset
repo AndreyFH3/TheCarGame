@@ -88,6 +88,7 @@ MonoBehaviour:
     finishCanvas: {fileID: 2955690936779175351, guid: 6cda0dee1d9aca644ac3bc06fbfe798d, type: 3}
     rateWindow: {fileID: 5355106062193951517, guid: 388ba79cec43cb945ba0f82deaedbd67, type: 3}
     settingsView: {fileID: 4166469832672179537, guid: 3b8ceef6060ef6f48b6cc6507e1bcde5, type: 3}
+    adLoaderShower: {fileID: 4212026054004325174, guid: b1cc2d970369a454fae56db6b7eed38b, type: 3}
   raceUI:
   - id: 1
     components:

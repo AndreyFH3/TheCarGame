@@ -9,7 +9,7 @@ public class FinishCanvas : MonoBehaviour
     [SerializeField] private TextMeshProUGUI winText;
     [SerializeField] private RewardView rewardView;
     [SerializeField] private RewardAfterRaceView multiplayer;
-    [SerializeField] private LeaderboardView leadrboardView;
+    //[SerializeField] private LeaderboardView leadrboardView;
 
     private RaceController raceController;
     public void Init(RaceController controller)
@@ -32,7 +32,7 @@ public class FinishCanvas : MonoBehaviour
             multiplayer.Init(controller);
             multiplayer.Rewarder.OnChangeValue += SetReward;
         }
-        leadrboardView.Init(controller);
+        //leadrboardView.Init(controller);
 
     }
 

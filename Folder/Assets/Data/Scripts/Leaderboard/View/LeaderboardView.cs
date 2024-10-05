@@ -15,7 +15,7 @@ public class LeaderboardView : MonoBehaviour
     {
         this.controller = controller;
         template.gameObject.SetActive(false);
-        leaderboard = new LeaderboardController(controller);
+        leaderboard = new LeaderboardController(controller, this);
         leaderboard.OnDataGet += CreateLeaders;
     }
 

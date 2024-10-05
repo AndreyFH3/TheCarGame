@@ -104,7 +104,7 @@ public class CarSettings
     [SerializeField] private float Steering_Speed;
     [SerializeField] private int Brake_Force;
     [SerializeField] private int Deceleration_Multiplayer;
-    [SerializeField] private int Drift_Multiplayer;
+    [SerializeField] private float Drift_Multiplayer;
 
     public string CarId => Car_ID;  
     public int MaxSpeed => Max_Speed;
@@ -114,7 +114,7 @@ public class CarSettings
     public float SteeringSpeed => Steering_Speed;
     public int BrakeForce => Brake_Force;
     public int DecelerationMultiplayer => Deceleration_Multiplayer;
-    public int DriftMultiplayer => Drift_Multiplayer;
+    public float DriftMultiplayer => Drift_Multiplayer;
 }
 
 [System.Serializable]

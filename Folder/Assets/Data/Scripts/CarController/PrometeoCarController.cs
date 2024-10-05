@@ -35,8 +35,8 @@ public class PrometeoCarController : MonoBehaviour
     public int brakeForce = 350; // The strength of the wheel brakes.
     [Range(1, 10)]
     public int decelerationMultiplier = 2; // How fast the car decelerates when the user is not using the throttle.
-    [Range(1, 10)]
-    public int handbrakeDriftMultiplier = 5; // How much grip the car loses when the user hit the handbrake.
+    [Range(0, 1)]
+    public float handbrakeDriftMultiplier = 0; // How much grip the car loses when the user hit the handbrake.
     [Space(10)]
     public Vector3 bodyMassCenter; // This is a vector that contains the center of mass of the car. I recommend to set this value
                                    // in the points x = 0 and z = 0 of your car. You can select the value that you want in the y axis,
@@ -158,7 +158,7 @@ public class PrometeoCarController : MonoBehaviour
     #endregion
     // Start is called before the first frame update
 
-
+    RaceType raceType;
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -169,8 +169,14 @@ public class PrometeoCarController : MonoBehaviour
         //CAR DATA
 
         // We determine the speed of the car.
-        carSpeed = (2 * Mathf.PI * frontLeftCollider.radius * frontLeftCollider.rpm * 60) / 1000;
+        
+        //var rpms = (frontLeftCollider.rpm + frontRightCollider.rpm + rearRightCollider.rpm + rearLeftCollider.rpm) / 4;
+        //carSpeed = Mathf.Clamp((2 * Mathf.PI * frontLeftCollider.radius * rpms * 60) / 1000, 0, maxSpeed);
+        
         // Save the local velocity of the car in the x axis. Used to know if the car is drifting.
+        carSpeed = carRigidbody.velocity.magnitude * 3.6f;
+
+
         localVelocityX = transform.InverseTransformDirection(carRigidbody.velocity).x;
         // Save the local velocity of the car in the z axis. Used to know if the car is going forward or backwards.
         localVelocityZ = transform.InverseTransformDirection(carRigidbody.velocity).z;
@@ -294,8 +300,9 @@ public class PrometeoCarController : MonoBehaviour
 
     }
 
-    public void Init(CarSettings settings, bool IsMobile)
+    public void Init(CarSettings settings, bool IsMobile, RaceType type)
     {
+        raceType = type;
 #if UNITY_EDITOR
         if (false)
 #endif
@@ -523,16 +530,14 @@ public class PrometeoCarController : MonoBehaviour
         {
             steeringAxis = steeringAxis - (Time.deltaTime * 10f * steeringSpeed);
         }
-        if (Mathf.Abs(frontLeftCollider.steerAngle) < 2f)
+        if (Mathf.Abs(frontLeftCollider.steerAngle) < .5f)
         {
             steeringAxis = 0f;
         }
         var steeringAngle = steeringAxis * maxSteeringAngle;
         frontLeftCollider.steerAngle = steeringAxis == 0 ? 0 : Mathf.Lerp(frontLeftCollider.steerAngle, steeringAngle, steeringSpeed);
         frontRightCollider.steerAngle = steeringAxis == 0 ? 0 : Mathf.Lerp(frontRightCollider.steerAngle, steeringAngle, steeringSpeed);
-        
-        Debug.Log($"frontRightCollider.steerAngle: {frontRightCollider.steerAngle}");
-        Debug.Log($"frontLeftCollider.steerAngle: {frontLeftCollider.steerAngle}");
+
     }
 
     // This method matches both the position and rotation of the WheelColliders with the WheelMeshes.
@@ -601,20 +606,21 @@ public class PrometeoCarController : MonoBehaviour
         if (localVelocityZ < -1f)
         {
             Brakes();
+            Debug.Log("Brakes Forward");
         }
         else
         {
             if (Mathf.RoundToInt(carSpeed) < maxSpeed)
             {
-                //Apply positive torque in all wheels to go forward if maxSpeed has not been reached.
-                frontLeftCollider.brakeTorque = 0;
-                frontLeftCollider.motorTorque = (accelerationMultiplier * 50f) * throttleAxis;
-                frontRightCollider.brakeTorque = 0;
-                frontRightCollider.motorTorque = (accelerationMultiplier * 50f) * throttleAxis;
-                rearLeftCollider.brakeTorque = 0;
-                rearLeftCollider.motorTorque = (accelerationMultiplier * 50f) * throttleAxis;
-                rearRightCollider.brakeTorque = 0;
-                rearRightCollider.motorTorque = (accelerationMultiplier * 50f) * throttleAxis;
+               frontLeftCollider.brakeTorque = 0;
+               frontLeftCollider.motorTorque = (accelerationMultiplier * 200f) * throttleAxis * (handbrakeDriftMultiplier + .2f);
+               frontRightCollider.brakeTorque = 0;
+               frontRightCollider.motorTorque = (accelerationMultiplier * 200f) * throttleAxis * (handbrakeDriftMultiplier + .2f);
+               rearLeftCollider.brakeTorque = 0;
+               rearLeftCollider.motorTorque = (accelerationMultiplier * 200f) * throttleAxis * (1 - handbrakeDriftMultiplier + .5f);
+               rearRightCollider.brakeTorque = 0;
+               rearRightCollider.motorTorque = (accelerationMultiplier * 200f) * throttleAxis * (1 - handbrakeDriftMultiplier + .5f);
+                
             }
             else
             {
@@ -656,20 +662,20 @@ public class PrometeoCarController : MonoBehaviour
         if (localVelocityZ > 1f)
         {
             Brakes();
+            Debug.Log("Brakes Backwards");
         }
         else
         {
             if (Mathf.Abs(Mathf.RoundToInt(carSpeed)) < maxReverseSpeed)
             {
-                //Apply negative torque in all wheels to go in reverse if maxReverseSpeed has not been reached.
                 frontLeftCollider.brakeTorque = 0;
-                frontLeftCollider.motorTorque = (accelerationMultiplier * 50f) * throttleAxis;
+                frontLeftCollider.motorTorque = (accelerationMultiplier * 200f) * throttleAxis * (handbrakeDriftMultiplier + .2f);
                 frontRightCollider.brakeTorque = 0;
-                frontRightCollider.motorTorque = (accelerationMultiplier * 50f) * throttleAxis;
+                frontRightCollider.motorTorque = (accelerationMultiplier * 200f) * throttleAxis * (handbrakeDriftMultiplier + .2f);
                 rearLeftCollider.brakeTorque = 0;
-                rearLeftCollider.motorTorque = (accelerationMultiplier * 50f) * throttleAxis;
+                rearLeftCollider.motorTorque = (accelerationMultiplier * 200f) * throttleAxis * (1 - handbrakeDriftMultiplier + .5f);
                 rearRightCollider.brakeTorque = 0;
-                rearRightCollider.motorTorque = (accelerationMultiplier * 50f) * throttleAxis;
+                rearRightCollider.motorTorque = (accelerationMultiplier * 200f) * throttleAxis * (1 - handbrakeDriftMultiplier + .5f);
             }
             else
             {

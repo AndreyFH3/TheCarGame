@@ -892,10 +892,10 @@ MonoBehaviour:
   maxReverseSpeed: 45
   accelerationMultiplier: 2
   maxSteeringAngle: 27
-  steeringSpeed: 0.5
+  steeringSpeed: 1
   brakeForce: 350
   decelerationMultiplier: 2
-  handbrakeDriftMultiplier: 5
+  handbrakeDriftMultiplier: 1
   bodyMassCenter: {x: 0, y: 0, z: 0}
   frontLeftMesh: {fileID: 645270662093068880}
   frontLeftCollider: {fileID: 1175460032677922124}
@@ -1012,7 +1012,7 @@ AudioSource:
   m_GameObject: {fileID: 6859915121293967892}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: -585597034916988161, guid: 05704a4b6bf67654ba987bc99e3df2c2, type: 2}
+  OutputAudioMixerGroup: {fileID: 2487390155209991078, guid: 05704a4b6bf67654ba987bc99e3df2c2, type: 2}
   m_audioClip: {fileID: 8300000, guid: 771ce407ce807b74885ec23ebd1e6647, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -1140,7 +1140,7 @@ AudioSource:
   m_GameObject: {fileID: 9091554736792599524}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: -585597034916988161, guid: 05704a4b6bf67654ba987bc99e3df2c2, type: 2}
+  OutputAudioMixerGroup: {fileID: 2487390155209991078, guid: 05704a4b6bf67654ba987bc99e3df2c2, type: 2}
   m_audioClip: {fileID: 8300000, guid: f632e2ace80a32e47a2c531f64901a50, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1

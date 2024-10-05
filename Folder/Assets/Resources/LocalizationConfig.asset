@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5df9ab0b98513944dbddffd1142a3203, type: 3}
   m_Name: LocalizationConfig
   m_EditorClassIdentifier: 
-  currentLanguage: 30
+  currentLanguage: 21
   defaultLanguage: 30
   notFoundPreffix: 
   showKeysInsteadLocalizationInEditor: 0
@@ -51,6 +51,12 @@ MonoBehaviour:
   - HIGH
   - ADBLOKC_TEXT
   - WRONGWAY
+  - RUSSIAN
+  - ENGLISH
+  - TURKISH
+  - GERMAN
+  - FRENCH
+  - ITALIAN
   locales:
   - language: 30
     title: 
@@ -93,7 +99,13 @@ MonoBehaviour:
       \u043E\u0442\u043A\u043B\u044E\u0447\u0438\u0442\u0435 \u0440\u0430\u0441\u0448\u0438\u0440\u0435\u043D\u0438\u0435
       \u0438 \u043F\u0435\u0440\u0435\u0437\u0430\u0433\u0440\u0443\u0437\u0438\u0442\u0435
       \u0441\u0442\u0440\u0430\u043D\u0438\u0446\u0443."
-    - "\u041D\u0435\u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u0439\u044B \u043F\u0443\u0442\u044C"
+    - "\u041D\u0435\u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u044B\u0439 \u043F\u0443\u0442\u044C"
+    - "\u0420\u0443\u0441\u0441\u043A\u0438\u0439"
+    - English
+    - "T\xFCrk"
+    - Deutsch
+    - "Fran\xE7ais"
+    - Italiano
     enabled: 0
   - language: 10
     title: 
@@ -131,7 +143,13 @@ MonoBehaviour:
     - High
     - "You may have AdBlock enabled.  \nPlease disable the extension and reload the
       page."
-    - Wrong way
+    - Wrong Way
+    - "\u0420\u0443\u0441\u0441\u043A\u0438\u0439"
+    - English
+    - "T\xFCrk"
+    - Deutsch
+    - "Fran\xE7ais"
+    - Italiano
     enabled: 0
   - language: 37
     title: 
@@ -170,6 +188,12 @@ MonoBehaviour:
     - "AdBlock a\xE7yk bolmagy m\xFCmkin.  \nGi\u0148eltm\xE4ni \xF6\xE7\xFCri\u0148
       we sahypany t\xE4zeden \xFD\xFCkl\xE4\u0148."
     - "N\xE4dogry \xFDol"
+    - "\u0420\u0443\u0441\u0441\u043A\u0438\u0439"
+    - English
+    - "T\xFCrk"
+    - Deutsch
+    - "Fran\xE7ais"
+    - Italiano
     enabled: 0
   - language: 15
     title: 
@@ -208,6 +232,12 @@ MonoBehaviour:
     - "M\xF6glicherweise haben Sie AdBlock aktiviert.  \nBitte deaktivieren Sie die
       Erweiterung und laden Sie die Seite neu."
     - Falscher Weg
+    - "\u0420\u0443\u0441\u0441\u043A\u0438\u0439"
+    - English
+    - "T\xFCrk"
+    - Deutsch
+    - "Fran\xE7ais"
+    - Italiano
     enabled: 0
   - language: 14
     title: 
@@ -232,7 +262,7 @@ MonoBehaviour:
     - Continuer
     - "Red\xE9marrage"
     - Taux
-    - Veuillez noter le jeu
+    - "Veuillez \xE9valuer le jeu"
     - Plus tard
     - "R\xE9compense de visionnage (+{0})"
     - Augmenter
@@ -246,6 +276,12 @@ MonoBehaviour:
     - "Vous avez peut-\xEAtre activ\xE9 AdBlock.  \nVeuillez d\xE9sactiver l'extension
       et recharger la page."
     - "Mauvaise fa\xE7on"
+    - "\u0420\u0443\u0441\u0441\u043A\u0438\u0439"
+    - English
+    - "T\xFCrk"
+    - Deutsch
+    - "Fran\xE7ais"
+    - Italiano
     enabled: 0
   - language: 21
     title: 
@@ -284,4 +320,10 @@ MonoBehaviour:
     - "Potresti avere AdBlock abilitato.  \nDisattiva l'estensione e ricarica la
       pagina."
     - Senso vietato
+    - "\u0420\u0443\u0441\u0441\u043A\u0438\u0439"
+    - English
+    - "T\xFCrk"
+    - Deutsch
+    - "Fran\xE7ais"
+    - Italiano
     enabled: 0

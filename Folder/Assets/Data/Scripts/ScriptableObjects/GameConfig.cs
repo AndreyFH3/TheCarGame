@@ -110,6 +110,9 @@ public class Views
 
     [SerializeField] private SettingsView settingsView;
     public SettingsView GetSettingsView => settingsView;
+    
+    [SerializeField] private AdLoaderShower adLoaderShower;
+    public AdLoaderShower GetAdLoader => adLoaderShower;
 
 }
 

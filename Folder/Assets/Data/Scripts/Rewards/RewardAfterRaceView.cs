@@ -39,16 +39,22 @@ public class RewardAfterRaceView : MonoBehaviour
 
     public void GetReward()
     {
+        var instance = Instantiate(Game.Config.views.GetAdLoader);
+
         GP_Ads.ShowRewarded("",
-            stringData => 
-            { 
-                rewarder.GiveReward(controller.GetEarn(), slider.value);
-            },
-            () => 
-            {
-                gameObject.SetActive(false);
-            },
-            isTrue => { });
+        stringData =>
+        {
+            rewarder.GiveReward(controller.GetEarn(), slider.value);
+        },
+        () =>
+        {
+            gameObject.SetActive(false);
+            instance.gameObject.SetActive(true);
+        },
+        isTrue =>
+        {
+            Destroy(instance.gameObject);
+        });
     }
 
 }

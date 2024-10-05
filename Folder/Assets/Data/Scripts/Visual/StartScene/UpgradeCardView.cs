@@ -20,10 +20,26 @@ public class UpgradeCardView : MonoBehaviour
             price.gameObject.SetActive(false);  
             return;
         }
+        UpdateName();
         icon.sprite = Game.Config.icons.GetSpriteCharacteristic(carIdType.Type);
-        cardName.text = Localization.Get(carIdType.Type.ToString());
         SetUpgrades();
         Game.Player.wallet.OnCurrencyChanged += CheckBuyAvailibleByMoney;
+    }
+
+    private void UpdateName()
+    {
+        cardName.text = Localization.Get(characteristic.Type.ToString());
+
+    }
+
+    private void OnEnable()
+    {
+        Localization.OnLanguageChange += UpdateName;
+    }
+
+    private void OnDisable()
+    {
+        Localization.OnLanguageChange -= UpdateName;
     }
 
     private void CheckBuyAvailibleByMoney()

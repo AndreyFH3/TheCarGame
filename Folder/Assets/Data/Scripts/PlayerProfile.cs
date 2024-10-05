@@ -47,7 +47,7 @@ public class PlayerProfile
 [System.Serializable]
 public class Wallet
 {
-    [SerializeField] private int softCurrency = 0;
+    [SerializeField] private int softCurrency = 1000000;
     public int SoftCurrency => softCurrency;
     public System.Action OnCurrencyChanged;
     public bool SpendSoft(int value)
@@ -109,8 +109,8 @@ public class CarCharacteristic
     [SerializeField] private int level = 1;
     [SerializeField] private CharacteristicType type;
     [SerializeField] private float calculatedPower;
+    [SerializeField] private string carId;
 
-    private string carId;
     private UpgradeCosts info;
 
     public bool CanUpgrade => Game.Player.wallet.CheckSoftEnough(Cost);

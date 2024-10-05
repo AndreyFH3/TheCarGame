@@ -3134,6 +3134,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Transform_InverseTransformPoint_Injected();
 		Register_UnityEngine_Transform_InverseTransformPoint_Injected();
 
+		//System.Void UnityEngine.Transform::RotateAroundInternal_Injected(UnityEngine.Vector3&,System.Single)
+		void Register_UnityEngine_Transform_RotateAroundInternal_Injected();
+		Register_UnityEngine_Transform_RotateAroundInternal_Injected();
+
 		//System.Void UnityEngine.Transform::SetAsFirstSibling()
 		void Register_UnityEngine_Transform_SetAsFirstSibling();
 		Register_UnityEngine_Transform_SetAsFirstSibling();
@@ -3141,6 +3145,10 @@ void RegisterAllStrippedInternalCalls()
 		//System.Void UnityEngine.Transform::SetParent(UnityEngine.Transform,System.Boolean)
 		void Register_UnityEngine_Transform_SetParent();
 		Register_UnityEngine_Transform_SetParent();
+
+		//System.Void UnityEngine.Transform::TransformDirection_Injected(UnityEngine.Vector3&,UnityEngine.Vector3&)
+		void Register_UnityEngine_Transform_TransformDirection_Injected();
+		Register_UnityEngine_Transform_TransformDirection_Injected();
 
 		//System.Void UnityEngine.Transform::TransformPoint_Injected(UnityEngine.Vector3&,UnityEngine.Vector3&)
 		void Register_UnityEngine_Transform_TransformPoint_Injected();
@@ -3417,14 +3425,6 @@ void RegisterAllStrippedInternalCalls()
 	//End Registrations for type : UnityEngine.WebGLInput
 
 	//Start Registrations for type : UnityEngine.WheelCollider
-
-		//System.Single UnityEngine.WheelCollider::get_radius()
-		void Register_UnityEngine_WheelCollider_get_radius();
-		Register_UnityEngine_WheelCollider_get_radius();
-
-		//System.Single UnityEngine.WheelCollider::get_rpm()
-		void Register_UnityEngine_WheelCollider_get_rpm();
-		Register_UnityEngine_WheelCollider_get_rpm();
 
 		//System.Single UnityEngine.WheelCollider::get_steerAngle()
 		void Register_UnityEngine_WheelCollider_get_steerAngle();

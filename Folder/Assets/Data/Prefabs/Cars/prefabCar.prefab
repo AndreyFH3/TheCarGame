@@ -854,10 +854,10 @@ MonoBehaviour:
   maxReverseSpeed: 45
   accelerationMultiplier: 2
   maxSteeringAngle: 27
-  steeringSpeed: 0.5
+  steeringSpeed: 1
   brakeForce: 350
   decelerationMultiplier: 2
-  handbrakeDriftMultiplier: 5
+  handbrakeDriftMultiplier: 1
   bodyMassCenter: {x: 0, y: 0, z: 0}
   frontLeftMesh: {fileID: 8421685435104689038}
   frontLeftCollider: {fileID: 7278600025764642074}
@@ -1234,8 +1234,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.1021447, y: 1.049084, z: 4.846349}
-  m_Center: {x: 0.0022313595, y: 0.4886024, z: 0.026772976}
+  m_Size: {x: 2.1021447, y: 0.92297107, z: 4.846349}
+  m_Center: {x: 0.0022313595, y: 0.55165887, z: 0.026772976}
 --- !u!1 &8976019215272493115
 GameObject:
   m_ObjectHideFlags: 0
