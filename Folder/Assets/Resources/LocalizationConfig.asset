@@ -57,6 +57,7 @@ MonoBehaviour:
   - GERMAN
   - FRENCH
   - ITALIAN
+  - BRAKE
   locales:
   - language: 30
     title: 
@@ -106,6 +107,7 @@ MonoBehaviour:
     - Deutsch
     - "Fran\xE7ais"
     - Italiano
+    - "\u0422\u043E\u0440\u043C\u043E\u0437"
     enabled: 0
   - language: 10
     title: 
@@ -150,6 +152,7 @@ MonoBehaviour:
     - Deutsch
     - "Fran\xE7ais"
     - Italiano
+    - Brake
     enabled: 0
   - language: 37
     title: 
@@ -194,6 +197,7 @@ MonoBehaviour:
     - Deutsch
     - "Fran\xE7ais"
     - Italiano
+    - Tormoz
     enabled: 0
   - language: 15
     title: 
@@ -238,6 +242,7 @@ MonoBehaviour:
     - Deutsch
     - "Fran\xE7ais"
     - Italiano
+    - Bremse
     enabled: 0
   - language: 14
     title: 
@@ -282,6 +287,7 @@ MonoBehaviour:
     - Deutsch
     - "Fran\xE7ais"
     - Italiano
+    - Frein
     enabled: 0
   - language: 21
     title: 
@@ -326,4 +332,5 @@ MonoBehaviour:
     - Deutsch
     - "Fran\xE7ais"
     - Italiano
+    - Freno
     enabled: 0

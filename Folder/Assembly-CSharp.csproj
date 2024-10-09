@@ -1128,13 +1128,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{665E8E74-7612-29C1-CB78-13789555B1E6}</Project>
-      <Name>Assembly-CSharp-firstpass</Name>
-    </ProjectReference>
     <ProjectReference Include="NaughtyAttributes.Core.csproj">
       <Project>{FE7D56E3-16F3-BB8F-A7DB-9C9773330734}</Project>
       <Name>NaughtyAttributes.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="GamePush.csproj">
+      <Project>{457D4B79-75F2-3E0B-8B72-9D00B169C1A0}</Project>
+      <Name>GamePush</Name>
     </ProjectReference>
     <ProjectReference Include="NaughtyAttributes.Editor.csproj">
       <Project>{0EA18153-73EC-E851-BDC7-83237258C0BA}</Project>
@@ -1144,9 +1144,17 @@
       <Project>{6D5C2F43-999C-03D5-AF29-1AA6A0F1A16A}</Project>
       <Name>NaughtyAttributes.Test</Name>
     </ProjectReference>
+    <ProjectReference Include="GamePush.Editor.csproj">
+      <Project>{A2E97589-3ADB-B8D2-2CC6-F38346CD357F}</Project>
+      <Name>GamePush.Editor</Name>
+    </ProjectReference>
     <ProjectReference Include="PathCreatorEditor.csproj">
       <Project>{7EC59599-1E61-F573-F0B6-29505B3C2DC4}</Project>
       <Name>PathCreatorEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="GamePush.Data.csproj">
+      <Project>{15617E45-2D10-F5DD-5851-F525DB0E3F17}</Project>
+      <Name>GamePush.Data</Name>
     </ProjectReference>
     <ProjectReference Include="PathCreator.csproj">
       <Project>{F3C94308-B711-2C8F-6A1B-5AB8016D4F50}</Project>

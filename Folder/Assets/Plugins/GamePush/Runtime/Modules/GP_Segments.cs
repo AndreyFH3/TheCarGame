@@ -1,15 +1,14 @@
-using System;
+﻿using System;
 using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.Events;
 
-using GP_Utilities;
-using GP_Utilities.Console;
-
 namespace GamePush
 {
-    public class GP_Segments : MonoBehaviour
+    public class GP_Segments : GP_Module
     {
+        private static void ConsoleLog(string log) => GP_Logger.ModuleLog(log, ModuleName.Segments);
+
         public static event UnityAction<string> OnSegmentEnter;
         public static event UnityAction<string> OnSegmentLeave;
 
@@ -23,8 +22,8 @@ namespace GamePush
 #if !UNITY_EDITOR && UNITY_WEBGL
             return GP_Segments_List();
 #else
-            if (GP_ConsoleController.Instance.ChannelConsoleLogs)
-                Console.Log("SEGMENTS: ", "LIST");
+
+            ConsoleLog("LIST");
 
             return null;
 #endif
@@ -37,8 +36,8 @@ namespace GamePush
 #if !UNITY_EDITOR && UNITY_WEBGL
             return GP_Segments_Has(tag) == "true";
 #else
-            if (GP_ConsoleController.Instance.AdsConsoleLogs)
-                Console.Log("SEGMENTS: ", tag);
+
+            ConsoleLog("HAS: " + tag);
             return false;
 #endif
         }

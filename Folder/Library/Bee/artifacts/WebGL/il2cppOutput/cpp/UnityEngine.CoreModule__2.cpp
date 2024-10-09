@@ -381,6 +381,9 @@ struct ScriptableRuntimeReflectionSystemWrapper_t5E4ABCD6EBCCBC665EFFD6A654A6355
 {
 	RuntimeObject* ___U3CimplementationU3Ek__BackingField;
 };
+struct SplashScreen_t7CCA1F303C074EB0781069A631E5D5F8C923F9CC  : public RuntimeObject
+{
+};
 struct SpriteRendererGroup_t2925A4576406FAB40F064EDE3A989F9AD410027C  : public RuntimeObject
 {
 };
@@ -2256,6 +2259,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OnDemandRendering__cctor_mED0B1BA868A046
 		((OnDemandRendering_t3ED2CE20D351518F912948DF1D2D03079F5CE34E_StaticFields*)il2cpp_codegen_static_fields_for(OnDemandRendering_t3ED2CE20D351518F912948DF1D2D03079F5CE34E_il2cpp_TypeInfo_var))->___m_RenderFrameInterval = 1;
 		return;
 	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SplashScreen_get_isFinished_m60A9E6ED04B2E64E51B7E698B8524B510452662F (const RuntimeMethod* method) 
+{
+	typedef bool (*SplashScreen_get_isFinished_m60A9E6ED04B2E64E51B7E698B8524B510452662F_ftn) ();
+	static SplashScreen_get_isFinished_m60A9E6ED04B2E64E51B7E698B8524B510452662F_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (SplashScreen_get_isFinished_m60A9E6ED04B2E64E51B7E698B8524B510452662F_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Rendering.SplashScreen::get_isFinished()");
+	bool icallRetVal = _il2cpp_icall_func();
+	return icallRetVal;
 }
 #ifdef __clang__
 #pragma clang diagnostic pop

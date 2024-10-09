@@ -12,16 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89dbd408fcef4c6c9ec88804ecf62a23, type: 3}
   m_Name: GP_PlatformSettings
   m_EditorClassIdentifier: 
-  PlatformToEmulate: 1
+  PlatformToEmulate: 0
   Language: 1
-  IsMobile: 0
+  IsMobile: 1
   IsPortrait: 0
   HasIntegratedAuth: 1
+  IsLogoutAvailable: 1
   IsExternalLinksAllowed: 1
+  IsSecretCodeAuthAvailable: 1
+  IsSupportsCloudSaves: 1
   IsLoggedIn: 1
   HasAnyCredentials: 1
   IsStub: 1
-  IsDev: 1
+  IsDev: 0
   IsAllowedOrigin: 1
   Settings:
   - Platform: 0
@@ -54,7 +57,7 @@ MonoBehaviour:
     IsStickyAvailable: 1
     IsPreloaderAvailable: 1
     IsAdblockEnabled: 1
-    CanReview: 1
+    CanReview: 0
     IsAlreadyReviewed: 0
   - Platform: 2
     IsSupportsShare: 1
@@ -185,22 +188,6 @@ MonoBehaviour:
     CanReview: 0
     IsAlreadyReviewed: 0
   - Platform: 10
-    IsSupportsShare: 1
-    IsSupportsNativeShare: 1
-    IsSupportsNativeInvite: 1
-    IsSupportsNativePosts: 1
-    IsSupportsNativeCommunityJoin: 1
-    CanJoinCommunity: 1
-    IsPaymentsAvailable: 1
-    IsSubscriptionsAvailable: 1
-    IsFullscreenAvailable: 1
-    IsRewardedAvailable: 1
-    IsStickyAvailable: 1
-    IsPreloaderAvailable: 1
-    IsAdblockEnabled: 1
-    CanReview: 1
-    IsAlreadyReviewed: 0
-  - Platform: 11
     IsSupportsShare: 1
     IsSupportsNativeShare: 1
     IsSupportsNativeInvite: 1

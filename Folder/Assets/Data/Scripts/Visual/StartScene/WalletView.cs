@@ -11,7 +11,7 @@ public class WalletView : MonoBehaviour
 
     private void OnEnable()
     {
-        adReward.text = Localization.Get("AdReward", Game.Config.AdReward);
+        adReward.text = "+"+Game.Config.AdReward.ToString();
         Game.Player.wallet.OnCurrencyChanged += UpdateValue;
         moneyValue.text = Game.Player.wallet.SoftCurrency.ToString();
         Localization.OnLanguageChange += Refresh;
@@ -24,12 +24,18 @@ public class WalletView : MonoBehaviour
 
     private void Update()
     {
+#if UNITY_EDITOR
+        moneyValueRect.gameObject.SetActive(true);
+#endif
+#if !UNITY_EDITOR
         moneyValueRect.gameObject.SetActive(GP_Ads.IsRewardedAvailable());
+#endif
+
     }
 
     public void Refresh()
     {
-        adReward.text = Localization.Get("AdReward", Game.Config.AdReward);
+        adReward.text = "+" + Game.Config.AdReward.ToString();
         Localization.OnLanguageChange -= Refresh;
     }
 

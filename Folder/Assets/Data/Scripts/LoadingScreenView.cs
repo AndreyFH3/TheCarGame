@@ -1,3 +1,4 @@
+using GamePush;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -22,8 +23,9 @@ public class LoadingScreenView : MonoBehaviour
             if (slider.value >= 1)
             { 
                 SceneManager.LoadScene(SceneNames.GARAGE_SCENE_SCENE);
+                //GP_Game.GameReady();
+                //GP_Ads.ShowFullscreen();
             }
-
         }
         else
         {

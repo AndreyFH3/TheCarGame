@@ -1,15 +1,17 @@
-using System;
+﻿using System;
 using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.Events;
 
-using GP_Utilities;
-using GP_Utilities.Console;
+using GamePush.Utilities;
+using GamePush.ConsoleController;
 
 namespace GamePush
 {
-    public class GP_Events : MonoBehaviour
+    public class GP_Events : GP_Module
     {
+        private static void ConsoleLog(string log) => GP_Logger.ModuleLog(log, ModuleName.Events);
+
         public static event UnityAction<PlayerEvents> OnEventJoin;
         public static event UnityAction<string> OnEventJoinError;
 
@@ -23,8 +25,8 @@ namespace GamePush
 #if !UNITY_EDITOR && UNITY_WEBGL
             GP_Events_Join(idOrTag);
 #else
-            if (GP_ConsoleController.Instance.ChannelConsoleLogs)
-                Console.Log("EVENTS: ", "Join");
+
+            ConsoleLog("Join");
 #endif
         }
 
@@ -34,10 +36,10 @@ namespace GamePush
         {
 #if !UNITY_EDITOR && UNITY_WEBGL
             string eventsData = GP_Events_List();
-            return GP_JSON.GetArray<EventData>(eventsData );
+            return UtilityJSON.GetArray<EventData>(eventsData );
 #else
-            if (GP_ConsoleController.Instance.ChannelConsoleLogs)
-                Console.Log("EVENTS: ", "LIST");
+
+            ConsoleLog("LIST");
 
             return null;
 #endif
@@ -49,10 +51,10 @@ namespace GamePush
         {
 #if !UNITY_EDITOR && UNITY_WEBGL
             string activeEvents = GP_Events_ActiveList();
-            return GP_JSON.GetArray<PlayerEvents>(activeEvents);
+            return UtilityJSON.GetArray<PlayerEvents>(activeEvents);
 #else
-            if (GP_ConsoleController.Instance.ChannelConsoleLogs)
-                Console.Log("EVENTS: ", "Active List");
+
+            ConsoleLog("Active List");
 
             return null;
 #endif
@@ -64,10 +66,10 @@ namespace GamePush
         {
 #if !UNITY_EDITOR && UNITY_WEBGL
             string data = GP_Events_GetEvent(idOrTag);
-            return GP_JSON.Get<EventData>(data);
+            return UtilityJSON.Get<EventData>(data);
 #else
-            if (GP_ConsoleController.Instance.ChannelConsoleLogs)
-                Console.Log("EVENTS: ", "Get Event");
+
+            ConsoleLog("Get Event");
 
             return null;
 #endif
@@ -80,8 +82,7 @@ namespace GamePush
 #if !UNITY_EDITOR && UNITY_WEBGL
             return GP_Events_IsActive(idOrTag) == "true";
 #else
-            if (GP_ConsoleController.Instance.AdsConsoleLogs)
-                Console.Log("EVENTS: ", "IsActive");
+            ConsoleLog("IsActive");
             return false;
 #endif
         }
@@ -93,8 +94,7 @@ namespace GamePush
 #if !UNITY_EDITOR && UNITY_WEBGL
             return GP_Events_IsJoined(idOrTag) == "true";
 #else
-            if (GP_ConsoleController.Instance.AdsConsoleLogs)
-                Console.Log("EVENTS: ", "IsJoined");
+            ConsoleLog("IsJoined");
             return false;
 #endif
         }

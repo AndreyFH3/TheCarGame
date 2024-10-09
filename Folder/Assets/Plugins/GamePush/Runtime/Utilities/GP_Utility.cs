@@ -3,13 +3,11 @@ using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
+using System;
 
-using GamePush;
-using GP_Utilities;
-
-namespace GP_Utilities
+namespace GamePush.Utilities
 {
-    public class GP_Utility
+    public class UtilityImage
     {
         public async static Task DownloadImageAsync(string url, Image image)
         {
@@ -39,8 +37,7 @@ namespace GP_Utilities
 
     }
 
-
-    public class GP_JSON
+    public class UtilityJSON
     {
         public static T[] GetArray<T>(string json)
         {
@@ -141,6 +138,22 @@ namespace GP_Utilities
         }
     }
 
+    public class UtilityType
+    {
+        public static T ConvertValue<T>(object value)
+        {
+            try
+            {
+                return (T)Convert.ChangeType(value, typeof(T));
+            }
+            catch
+            {
+                return default(T);
+            }
+        }
+    }
+    
+
     [System.Serializable]
     public class PlayersIdList
     {
@@ -151,39 +164,5 @@ namespace GP_Utilities
     public class PlayersIdArray
     {
         public int[] idsArray;
-    }
-}
-
-namespace GamePush
-{
-    public class GP_Data
-    {
-        private string _data;
-        public string Data => _data;
-
-        public GP_Data(string data) => _data = data;
-
-        public T Get<T>() => GP_JSON.Get<T>(_data);
-        public List<T> GetList<T>() => GP_JSON.GetList<T>(_data);
-        public T[] GetArray<T>() => GP_JSON.GetArray<T>(_data);
-    }
-
-    public class Console
-    {
-        public static void Log(string message)
-        {
-            if(GP_Settings.instance.viewLogs)
-            {
-                Debug.Log("<color=#04bc04> Game Push: </color> " + message);
-            }
-        }
-
-        public static void Log(string message, string colorMessage)
-        {
-            if(GP_Settings.instance.viewLogs)
-            {
-                Debug.Log("<color=#04bc04> Game Push: </color> " + message + $"<color=#04bc04> {colorMessage} </color>");
-            }
-        }
     }
 }

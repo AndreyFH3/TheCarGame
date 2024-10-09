@@ -1,16 +1,16 @@
-using System;
+﻿using System;
 using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.Events;
 
-using GP_Utilities.Console;
-
 namespace GamePush
 {
-    public class GP_Language : MonoBehaviour
+    public class GP_Language : GP_Module
     {
+        private static void ConsoleLog(string log) => GP_Logger.ModuleLog(log, ModuleName.Language);
+
         public static event UnityAction<Language> OnChangeLanguage;
-        public static event Action<Language> _onChangeLanguage;
+        private static event Action<Language> _onChangeLanguage;
 
         private static string English = "en";
         private static string Russian = "ru";
@@ -34,9 +34,20 @@ namespace GamePush
 #if !UNITY_EDITOR && UNITY_WEBGL
             return ConvertToEnum(GP_Current_Language());
 #else
-            if (GP_ConsoleController.Instance.LanguageConsoleLogs)
-                Console.Log("LANGUAGE CURRENT: ", Language.English.ToString());
+
+            ConsoleLog("CURRENT: " + GP_Settings.instance.GetLanguage().ToString());
             return GP_Settings.instance.GetLanguage();
+#endif
+        }
+
+        public static string CurrentISO()
+        {
+#if !UNITY_EDITOR && UNITY_WEBGL
+            return GP_Current_Language();
+#else
+
+            ConsoleLog("CURRENT: " + GP_Settings.instance.GetLanguage().ToString());
+            return ConvertToString(GP_Settings.instance.GetLanguage());
 #endif
         }
 
@@ -48,10 +59,23 @@ namespace GamePush
 #if !UNITY_EDITOR && UNITY_WEBGL
             GP_ChangeLanguage(ConvertToString(lang));
 #else
-            if (GP_ConsoleController.Instance.LanguageConsoleLogs)
-                Console.Log("LANGUAGE CHANGE: ", lang.ToString());
+
+            ConsoleLog("CHANGE: " + lang.ToString());
             OnChangeLanguage?.Invoke(lang);
             _onChangeLanguage?.Invoke(lang);
+#endif
+        }
+
+        public static void Change(string lang, Action<Language> onLanguageChange = null)
+        {
+            _onChangeLanguage = onLanguageChange;
+#if !UNITY_EDITOR && UNITY_WEBGL
+            GP_ChangeLanguage(lang);
+#else
+
+            ConsoleLog("CHANGE: " + lang);
+            OnChangeLanguage?.Invoke(ConvertToEnum(lang));
+            _onChangeLanguage?.Invoke(ConvertToEnum(lang));
 #endif
         }
 

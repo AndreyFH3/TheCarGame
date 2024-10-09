@@ -1,20 +1,21 @@
-using System;
+﻿using System;
 using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.Events;
 
-using GP_Utilities.Console;
+using GamePush.ConsoleController;
 
 namespace GamePush
 {
-    public class GP_Documents : MonoBehaviour
+    public class GP_Documents : GP_Module
     {
+        private static void ConsoleLog(string log) => GP_Logger.ModuleLog(log, ModuleName.Documents);
+
         public static event UnityAction OnDocumentsOpen;
         public static event UnityAction OnDocumentsClose;
 
         public static event UnityAction<string> OnFetchSuccess;
         public static event UnityAction OnFetchError;
-
 
         private static event Action<string> _onFetchSuccess;
         private static event Action _onFetchError;
@@ -33,8 +34,8 @@ namespace GamePush
 #if !UNITY_EDITOR && UNITY_WEBGL
             GP_Documents_Open();
 #else
-            if (GP_ConsoleController.Instance.DocumentsConsoleLogs)
-                Console.Log("DOCUMENTS: ", "OPEN");
+
+            ConsoleLog("OPEN");
 #endif
         }
 
@@ -48,8 +49,8 @@ namespace GamePush
 #if !UNITY_EDITOR && UNITY_WEBGL
             GP_Documents_Fetch();
 #else
-            if (GP_ConsoleController.Instance.DocumentsConsoleLogs)
-                Console.Log("DOCUMENTS: ", "FETCH");
+
+            ConsoleLog("FETCH");
 #endif
         }
 

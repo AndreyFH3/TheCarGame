@@ -2190,13 +2190,29 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_PlayerPrefs_HasKey();
 		Register_UnityEngine_PlayerPrefs_HasKey();
 
+		//System.Boolean UnityEngine.PlayerPrefs::TrySetFloat(System.String,System.Single)
+		void Register_UnityEngine_PlayerPrefs_TrySetFloat();
+		Register_UnityEngine_PlayerPrefs_TrySetFloat();
+
 		//System.Boolean UnityEngine.PlayerPrefs::TrySetInt(System.String,System.Int32)
 		void Register_UnityEngine_PlayerPrefs_TrySetInt();
 		Register_UnityEngine_PlayerPrefs_TrySetInt();
 
+		//System.Boolean UnityEngine.PlayerPrefs::TrySetSetString(System.String,System.String)
+		void Register_UnityEngine_PlayerPrefs_TrySetSetString();
+		Register_UnityEngine_PlayerPrefs_TrySetSetString();
+
 		//System.Int32 UnityEngine.PlayerPrefs::GetInt(System.String,System.Int32)
 		void Register_UnityEngine_PlayerPrefs_GetInt();
 		Register_UnityEngine_PlayerPrefs_GetInt();
+
+		//System.Single UnityEngine.PlayerPrefs::GetFloat(System.String,System.Single)
+		void Register_UnityEngine_PlayerPrefs_GetFloat();
+		Register_UnityEngine_PlayerPrefs_GetFloat();
+
+		//System.String UnityEngine.PlayerPrefs::GetString(System.String,System.String)
+		void Register_UnityEngine_PlayerPrefs_GetString();
+		Register_UnityEngine_PlayerPrefs_GetString();
 
 		//System.Void UnityEngine.PlayerPrefs::Save()
 		void Register_UnityEngine_PlayerPrefs_Save();
@@ -2467,6 +2483,14 @@ void RegisterAllStrippedInternalCalls()
 		Register_UnityEngine_Rendering_SortingGroup_GetSortingGroupByIndex();
 
 	//End Registrations for type : UnityEngine.Rendering.SortingGroup
+
+	//Start Registrations for type : UnityEngine.Rendering.SplashScreen
+
+		//System.Boolean UnityEngine.Rendering.SplashScreen::get_isFinished()
+		void Register_UnityEngine_Rendering_SplashScreen_get_isFinished();
+		Register_UnityEngine_Rendering_SplashScreen_get_isFinished();
+
+	//End Registrations for type : UnityEngine.Rendering.SplashScreen
 
 	//Start Registrations for type : UnityEngine.RenderSettings
 
