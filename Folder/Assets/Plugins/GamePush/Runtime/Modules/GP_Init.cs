@@ -58,7 +58,7 @@ namespace GamePush
             }
             if (ProjectData.GAMEREADY_AUTOCALL)
             {
-                //GP_Game.GameReady();
+                GP_Game.GameReady();
             }
         }
 

@@ -14,6 +14,7 @@
 
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_m18BEF2FD7AA3B03BF73FF8406E0C0DA1E694B1A3 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_m4FF98F3B1524FDBAABDD20B2675C9B0C02928767 (void);
+extern void PluginData__ctor_m2684DF4D4097995B233EF55C53E471FBFC8FA097 (void);
 extern void ConfigData__ctor_mE3C3DA7519C4DEBED5E2FE9AB81657B0068BF467 (void);
 extern void DataWrap__ctor_m7E589A6FB17F0F78183CF208039915383D784D07 (void);
 extern void AllData__ctor_m20BD380F7DD3D792D6219B13E02BF08CC63AED20 (void);
@@ -45,10 +46,11 @@ extern void Translations__ctor_m783E4D339446FA9989706E50FB4AFA00B671D43E (void);
 extern void ProjectData__cctor_m973B5ABE964AE6F7DE0D67D915A00536BDA2EB32 (void);
 extern void SavedDataSO__ctor_m669AFCE0CA1C2263B50E17170BC076550D273A2A (void);
 extern void SavedProjectData__ctor_m2A665DADCDFF2153D0F7AC866DAB1EA607555A5F (void);
-static Il2CppMethodPointer s_methodPointers[33] = 
+static Il2CppMethodPointer s_methodPointers[34] = 
 {
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_m18BEF2FD7AA3B03BF73FF8406E0C0DA1E694B1A3,
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_m4FF98F3B1524FDBAABDD20B2675C9B0C02928767,
+	PluginData__ctor_m2684DF4D4097995B233EF55C53E471FBFC8FA097,
 	ConfigData__ctor_mE3C3DA7519C4DEBED5E2FE9AB81657B0068BF467,
 	DataWrap__ctor_m7E589A6FB17F0F78183CF208039915383D784D07,
 	AllData__ctor_m20BD380F7DD3D792D6219B13E02BF08CC63AED20,
@@ -81,9 +83,10 @@ static Il2CppMethodPointer s_methodPointers[33] =
 	SavedDataSO__ctor_m669AFCE0CA1C2263B50E17170BC076550D273A2A,
 	SavedProjectData__ctor_m2A665DADCDFF2153D0F7AC866DAB1EA607555A5F,
 };
-static const int32_t s_InvokerIndices[33] = 
+static const int32_t s_InvokerIndices[34] = 
 {
 	7053,
+	4861,
 	4861,
 	4861,
 	4861,
@@ -121,7 +124,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_GamePush_Data_CodeGenModule;
 const Il2CppCodeGenModule g_GamePush_Data_CodeGenModule = 
 {
 	"GamePush.Data.dll",
-	33,
+	34,
 	s_methodPointers,
 	0,
 	NULL,

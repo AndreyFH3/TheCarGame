@@ -7,7 +7,7 @@
           {
             "name": "Animation",
             "scenes": [
-              "Assets/Data/Scenes/StartScene.unity"
+              "Assets/Data/Scenes/GarageScene.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -15,7 +15,7 @@
           {
             "name": "Animator",
             "scenes": [
-              "Assets/Data/Scenes/StartScene.unity"
+              "Assets/Data/Scenes/GarageScene.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -35,7 +35,7 @@
           {
             "name": "Avatar",
             "scenes": [
-              "Assets/Data/Scenes/StartScene.unity"
+              "Assets/Data/Scenes/GarageScene.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -64,6 +64,7 @@
           {
             "name": "AudioClip",
             "scenes": [
+              "Assets/Data/Scenes/GarageScene.unity",
               "Assets/Data/Scenes/StartScene.unity"
             ],
             "dependencyType": 0,
@@ -124,6 +125,7 @@
           {
             "name": "SampleClip",
             "scenes": [
+              "Assets/Data/Scenes/GarageScene.unity",
               "Assets/Data/Scenes/StartScene.unity"
             ],
             "dependencyType": 1,
@@ -297,7 +299,6 @@
             "name": "Mesh",
             "scenes": [
               "Assets/Data/Scenes/GarageScene.unity",
-              "Assets/Data/Scenes/StartScene.unity",
               "Assets/Data/Scenes/Track.unity"
             ],
             "dependencyType": 0,
@@ -307,7 +308,6 @@
             "name": "MeshFilter",
             "scenes": [
               "Assets/Data/Scenes/GarageScene.unity",
-              "Assets/Data/Scenes/StartScene.unity",
               "Assets/Data/Scenes/Track.unity"
             ],
             "dependencyType": 0,
@@ -317,7 +317,6 @@
             "name": "MeshRenderer",
             "scenes": [
               "Assets/Data/Scenes/GarageScene.unity",
-              "Assets/Data/Scenes/StartScene.unity",
               "Assets/Data/Scenes/Track.unity"
             ],
             "dependencyType": 0,
@@ -521,7 +520,7 @@
           {
             "name": "TrailRenderer",
             "scenes": [
-              "Assets/Data/Scenes/StartScene.unity"
+              "Assets/Data/Scenes/GarageScene.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -710,7 +709,7 @@
           {
             "name": "ParticleSystem",
             "scenes": [
-              "Assets/Data/Scenes/StartScene.unity"
+              "Assets/Data/Scenes/GarageScene.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -718,7 +717,7 @@
           {
             "name": "ParticleSystemRenderer",
             "scenes": [
-              "Assets/Data/Scenes/StartScene.unity"
+              "Assets/Data/Scenes/GarageScene.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -731,7 +730,7 @@
           {
             "name": "BoxCollider",
             "scenes": [
-              "Assets/Data/Scenes/StartScene.unity",
+              "Assets/Data/Scenes/GarageScene.unity",
               "Assets/Data/Scenes/Track.unity"
             ],
             "dependencyType": 0,
@@ -760,7 +759,7 @@
           {
             "name": "Rigidbody",
             "scenes": [
-              "Assets/Data/Scenes/StartScene.unity"
+              "Assets/Data/Scenes/GarageScene.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -960,7 +959,7 @@
           {
             "name": "Font",
             "scenes": [
-              "Assets/Data/Scenes/StartScene.unity"
+              "Assets/Data/Scenes/GarageScene.unity"
             ],
             "dependencyType": 0,
             "icon": null
@@ -1058,7 +1057,7 @@
           {
             "name": "WheelCollider",
             "scenes": [
-              "Assets/Data/Scenes/StartScene.unity"
+              "Assets/Data/Scenes/GarageScene.unity"
             ],
             "dependencyType": 0,
             "icon": null

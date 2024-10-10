@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Data/Scenes/GarageScene.unity
+- path: Assets/Data/Scenes/StartScene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
