@@ -23,538 +23,538 @@ MonoBehaviour:
   - CAR_ID: DefaultCar
     LEVEL: 2
     TYPE: speed
-    PRICE: 250
+    PRICE: 500
     BONUS: 5
-  - CAR_ID: DefaultCar
-    LEVEL: 2
-    TYPE: boost
-    PRICE: 250
-    BONUS: 1
-  - CAR_ID: DefaultCar
-    LEVEL: 2
-    TYPE: controllability
-    PRICE: 250
-    BONUS: 0.1
   - CAR_ID: DefaultCar
     LEVEL: 3
     TYPE: speed
-    PRICE: 300
+    PRICE: 600
     BONUS: 10
   - CAR_ID: DefaultCar
-    LEVEL: 3
-    TYPE: boost
-    PRICE: 300
-    BONUS: 2
-  - CAR_ID: DefaultCar
-    LEVEL: 3
-    TYPE: controllability
-    PRICE: 300
-    BONUS: 0.2
-  - CAR_ID: DefaultCar
     LEVEL: 4
     TYPE: speed
-    PRICE: 350
+    PRICE: 700
     BONUS: 12.5
   - CAR_ID: DefaultCar
-    LEVEL: 4
-    TYPE: boost
-    PRICE: 350
-    BONUS: 3
-  - CAR_ID: DefaultCar
-    LEVEL: 4
-    TYPE: controllability
-    PRICE: 350
-    BONUS: 0.3
-  - CAR_ID: DefaultCar
     LEVEL: 5
     TYPE: speed
-    PRICE: 400
+    PRICE: 800
     BONUS: 15
   - CAR_ID: DefaultCar
-    LEVEL: 5
-    TYPE: boost
-    PRICE: 400
-    BONUS: 4
-  - CAR_ID: DefaultCar
-    LEVEL: 5
-    TYPE: controllability
-    PRICE: 400
-    BONUS: 0.4
-  - CAR_ID: DefaultCar
     LEVEL: 6
     TYPE: speed
-    PRICE: 450
-    BONUS: 16.5
-  - CAR_ID: DefaultCar
-    LEVEL: 6
-    TYPE: boost
-    PRICE: 450
-    BONUS: 5
-  - CAR_ID: DefaultCar
-    LEVEL: 6
-    TYPE: controllability
-    PRICE: 450
-    BONUS: 0.5
-  - CAR_ID: DefaultCar
-    LEVEL: 7
-    TYPE: speed
-    PRICE: 500
+    PRICE: 900
     BONUS: 16.5
   - CAR_ID: DefaultCar
     LEVEL: 7
-    TYPE: boost
-    PRICE: 500
-    BONUS: 1.65
-  - CAR_ID: DefaultCar
-    LEVEL: 7
-    TYPE: controllability
-    PRICE: 500
-    BONUS: 0.6
-  - CAR_ID: DefaultCar
-    LEVEL: 8
     TYPE: speed
-    PRICE: 550
+    PRICE: 1000
     BONUS: 18
   - CAR_ID: DefaultCar
     LEVEL: 8
-    TYPE: boost
-    PRICE: 550
-    BONUS: 6
-  - CAR_ID: DefaultCar
-    LEVEL: 8
-    TYPE: controllability
-    PRICE: 550
-    BONUS: 0.7
-  - CAR_ID: DefaultCar
-    LEVEL: 9
     TYPE: speed
-    PRICE: 600
+    PRICE: 1100
     BONUS: 20
   - CAR_ID: DefaultCar
     LEVEL: 9
+    TYPE: speed
+    PRICE: 1200
+    BONUS: 21.5
+  - CAR_ID: DefaultCar
+    LEVEL: 10
+    TYPE: speed
+    PRICE: 1300
+    BONUS: 25
+  - CAR_ID: DefaultCar
+    LEVEL: 2
     TYPE: boost
-    PRICE: 600
+    PRICE: 400
+    BONUS: 1
+  - CAR_ID: DefaultCar
+    LEVEL: 3
+    TYPE: boost
+    PRICE: 475
+    BONUS: 2
+  - CAR_ID: DefaultCar
+    LEVEL: 4
+    TYPE: boost
+    PRICE: 550
+    BONUS: 3
+  - CAR_ID: DefaultCar
+    LEVEL: 5
+    TYPE: boost
+    PRICE: 625
+    BONUS: 4
+  - CAR_ID: DefaultCar
+    LEVEL: 6
+    TYPE: boost
+    PRICE: 700
+    BONUS: 5
+  - CAR_ID: DefaultCar
+    LEVEL: 7
+    TYPE: boost
+    PRICE: 775
+    BONUS: 6
+  - CAR_ID: DefaultCar
+    LEVEL: 8
+    TYPE: boost
+    PRICE: 850
     BONUS: 7
   - CAR_ID: DefaultCar
     LEVEL: 9
+    TYPE: boost
+    PRICE: 925
+    BONUS: 8
+  - CAR_ID: DefaultCar
+    LEVEL: 10
+    TYPE: boost
+    PRICE: 1000
+    BONUS: 9
+  - CAR_ID: DefaultCar
+    LEVEL: 2
+    TYPE: controllability
+    PRICE: 300
+    BONUS: 0.2
+  - CAR_ID: DefaultCar
+    LEVEL: 3
+    TYPE: controllability
+    PRICE: 350
+    BONUS: 0.3
+  - CAR_ID: DefaultCar
+    LEVEL: 4
+    TYPE: controllability
+    PRICE: 400
+    BONUS: 0.4
+  - CAR_ID: DefaultCar
+    LEVEL: 5
+    TYPE: controllability
+    PRICE: 450
+    BONUS: 0.5
+  - CAR_ID: DefaultCar
+    LEVEL: 6
+    TYPE: controllability
+    PRICE: 500
+    BONUS: 0.6
+  - CAR_ID: DefaultCar
+    LEVEL: 7
+    TYPE: controllability
+    PRICE: 550
+    BONUS: 0.7
+  - CAR_ID: DefaultCar
+    LEVEL: 8
     TYPE: controllability
     PRICE: 600
     BONUS: 0.8
   - CAR_ID: DefaultCar
-    LEVEL: 10
-    TYPE: speed
+    LEVEL: 9
+    TYPE: controllability
     PRICE: 650
-    BONUS: 19.5
-  - CAR_ID: DefaultCar
-    LEVEL: 10
-    TYPE: boost
-    PRICE: 650
-    BONUS: 8
+    BONUS: 0.9
   - CAR_ID: DefaultCar
     LEVEL: 10
     TYPE: controllability
-    PRICE: 650
+    PRICE: 700
     BONUS: 1
   - CAR_ID: Furururi
     LEVEL: 2
     TYPE: speed
-    PRICE: 750
-    BONUS: 6.25
-  - CAR_ID: Furururi
-    LEVEL: 2
-    TYPE: boost
-    PRICE: 750
-    BONUS: 2
-  - CAR_ID: Furururi
-    LEVEL: 2
-    TYPE: controllability
-    PRICE: 750
-    BONUS: 0.1
+    PRICE: 1000
+    BONUS: 5
   - CAR_ID: Furururi
     LEVEL: 3
     TYPE: speed
-    PRICE: 900
+    PRICE: 1200
+    BONUS: 8.25
+  - CAR_ID: Furururi
+    LEVEL: 4
+    TYPE: speed
+    PRICE: 1400
     BONUS: 12.5
   - CAR_ID: Furururi
-    LEVEL: 3
-    TYPE: boost
-    PRICE: 900
-    BONUS: 4
-  - CAR_ID: Furururi
-    LEVEL: 3
-    TYPE: controllability
-    PRICE: 900
-    BONUS: 0.2
-  - CAR_ID: Furururi
-    LEVEL: 4
-    TYPE: speed
-    PRICE: 1000
-    BONUS: 6
-  - CAR_ID: Furururi
-    LEVEL: 4
-    TYPE: boost
-    PRICE: 1000
-    BONUS: 1.25
-  - CAR_ID: Furururi
-    LEVEL: 4
-    TYPE: controllability
-    PRICE: 1000
-    BONUS: 0.3
-  - CAR_ID: Furururi
     LEVEL: 5
     TYPE: speed
-    PRICE: 1100
-    BONUS: 18.75
-  - CAR_ID: Furururi
-    LEVEL: 5
-    TYPE: boost
-    PRICE: 1100
-    BONUS: 8
-  - CAR_ID: Furururi
-    LEVEL: 5
-    TYPE: controllability
-    PRICE: 1100
-    BONUS: 0.4
+    PRICE: 1600
+    BONUS: 16.25
   - CAR_ID: Furururi
     LEVEL: 6
     TYPE: speed
-    PRICE: 1200
-    BONUS: 20.63
-  - CAR_ID: Furururi
-    LEVEL: 6
-    TYPE: boost
-    PRICE: 1200
-    BONUS: 10
-  - CAR_ID: Furururi
-    LEVEL: 6
-    TYPE: controllability
-    PRICE: 1200
-    BONUS: 0.5
+    PRICE: 1800
+    BONUS: 20
   - CAR_ID: Furururi
     LEVEL: 7
     TYPE: speed
-    PRICE: 1300
-    BONUS: 22.5
-  - CAR_ID: Furururi
-    LEVEL: 7
-    TYPE: boost
-    PRICE: 1300
-    BONUS: 12
-  - CAR_ID: Furururi
-    LEVEL: 7
-    TYPE: controllability
-    PRICE: 1300
-    BONUS: 0.6
-  - CAR_ID: Furururi
-    LEVEL: 8
-    TYPE: speed
-    PRICE: 1400
-    BONUS: 23.13
-  - CAR_ID: Furururi
-    LEVEL: 8
-    TYPE: boost
-    PRICE: 1400
-    BONUS: 14
-  - CAR_ID: Furururi
-    LEVEL: 8
-    TYPE: controllability
-    PRICE: 1400
-    BONUS: 0.7
-  - CAR_ID: Furururi
-    LEVEL: 9
-    TYPE: speed
-    PRICE: 1500
+    PRICE: 2000
     BONUS: 25
   - CAR_ID: Furururi
+    LEVEL: 8
+    TYPE: speed
+    PRICE: 2200
+    BONUS: 30
+  - CAR_ID: Furururi
+    LEVEL: 9
+    TYPE: speed
+    PRICE: 2400
+    BONUS: 35
+  - CAR_ID: Furururi
+    LEVEL: 10
+    TYPE: speed
+    PRICE: 2600
+    BONUS: 40
+  - CAR_ID: Furururi
+    LEVEL: 2
+    TYPE: boost
+    PRICE: 800
+    BONUS: 2
+  - CAR_ID: Furururi
+    LEVEL: 3
+    TYPE: boost
+    PRICE: 950
+    BONUS: 4
+  - CAR_ID: Furururi
+    LEVEL: 4
+    TYPE: boost
+    PRICE: 1100
+    BONUS: 6
+  - CAR_ID: Furururi
+    LEVEL: 5
+    TYPE: boost
+    PRICE: 1250
+    BONUS: 8
+  - CAR_ID: Furururi
+    LEVEL: 6
+    TYPE: boost
+    PRICE: 1400
+    BONUS: 10
+  - CAR_ID: Furururi
+    LEVEL: 7
+    TYPE: boost
+    PRICE: 1550
+    BONUS: 12
+  - CAR_ID: Furururi
+    LEVEL: 8
+    TYPE: boost
+    PRICE: 1700
+    BONUS: 14
+  - CAR_ID: Furururi
     LEVEL: 9
     TYPE: boost
-    PRICE: 1500
+    PRICE: 1850
     BONUS: 16
   - CAR_ID: Furururi
+    LEVEL: 10
+    TYPE: boost
+    PRICE: 2000
+    BONUS: 20
+  - CAR_ID: Furururi
+    LEVEL: 2
+    TYPE: controllability
+    PRICE: 600
+    BONUS: 0.2
+  - CAR_ID: Furururi
+    LEVEL: 3
+    TYPE: controllability
+    PRICE: 700
+    BONUS: 0.3
+  - CAR_ID: Furururi
+    LEVEL: 4
+    TYPE: controllability
+    PRICE: 800
+    BONUS: 0.4
+  - CAR_ID: Furururi
+    LEVEL: 5
+    TYPE: controllability
+    PRICE: 900
+    BONUS: 0.5
+  - CAR_ID: Furururi
+    LEVEL: 6
+    TYPE: controllability
+    PRICE: 1000
+    BONUS: 0.6
+  - CAR_ID: Furururi
+    LEVEL: 7
+    TYPE: controllability
+    PRICE: 1100
+    BONUS: 0.7
+  - CAR_ID: Furururi
+    LEVEL: 8
+    TYPE: controllability
+    PRICE: 1200
+    BONUS: 0.8
+  - CAR_ID: Furururi
     LEVEL: 9
+    TYPE: controllability
+    PRICE: 1300
+    BONUS: 0.9
+  - CAR_ID: Furururi
+    LEVEL: 10
+    TYPE: controllability
+    PRICE: 1400
+    BONUS: 1
+  - CAR_ID: Rarity Car
+    LEVEL: 2
+    TYPE: speed
+    PRICE: 2500
+    BONUS: 10
+  - CAR_ID: Rarity Car
+    LEVEL: 3
+    TYPE: speed
+    PRICE: 2800
+    BONUS: 16.25
+  - CAR_ID: Rarity Car
+    LEVEL: 4
+    TYPE: speed
+    PRICE: 3100
+    BONUS: 22.5
+  - CAR_ID: Rarity Car
+    LEVEL: 5
+    TYPE: speed
+    PRICE: 3400
+    BONUS: 28.5
+  - CAR_ID: Rarity Car
+    LEVEL: 6
+    TYPE: speed
+    PRICE: 3700
+    BONUS: 35
+  - CAR_ID: Rarity Car
+    LEVEL: 7
+    TYPE: speed
+    PRICE: 4000
+    BONUS: 41.25
+  - CAR_ID: Rarity Car
+    LEVEL: 8
+    TYPE: speed
+    PRICE: 4300
+    BONUS: 47.5
+  - CAR_ID: Rarity Car
+    LEVEL: 9
+    TYPE: speed
+    PRICE: 4600
+    BONUS: 53.75
+  - CAR_ID: Rarity Car
+    LEVEL: 10
+    TYPE: speed
+    PRICE: 4900
+    BONUS: 60
+  - CAR_ID: Rarity Car
+    LEVEL: 2
+    TYPE: boost
+    PRICE: 2000
+    BONUS: 3
+  - CAR_ID: Rarity Car
+    LEVEL: 3
+    TYPE: boost
+    PRICE: 2250
+    BONUS: 6
+  - CAR_ID: Rarity Car
+    LEVEL: 4
+    TYPE: boost
+    PRICE: 2500
+    BONUS: 9
+  - CAR_ID: Rarity Car
+    LEVEL: 5
+    TYPE: boost
+    PRICE: 2750
+    BONUS: 12
+  - CAR_ID: Rarity Car
+    LEVEL: 6
+    TYPE: boost
+    PRICE: 3000
+    BONUS: 15
+  - CAR_ID: Rarity Car
+    LEVEL: 7
+    TYPE: boost
+    PRICE: 3250
+    BONUS: 18
+  - CAR_ID: Rarity Car
+    LEVEL: 8
+    TYPE: boost
+    PRICE: 3500
+    BONUS: 21
+  - CAR_ID: Rarity Car
+    LEVEL: 9
+    TYPE: boost
+    PRICE: 3750
+    BONUS: 24
+  - CAR_ID: Rarity Car
+    LEVEL: 10
+    TYPE: boost
+    PRICE: 4000
+    BONUS: 27
+  - CAR_ID: Rarity Car
+    LEVEL: 2
     TYPE: controllability
     PRICE: 1500
-    BONUS: 0.8
-  - CAR_ID: Furururi
-    LEVEL: 10
-    TYPE: speed
-    PRICE: 1600
-    BONUS: 26.25
-  - CAR_ID: Furururi
-    LEVEL: 10
-    TYPE: boost
-    PRICE: 1600
-    BONUS: 18
-  - CAR_ID: Furururi
-    LEVEL: 10
-    TYPE: controllability
-    PRICE: 1600
-    BONUS: 1
-  - CAR_ID: Rarity Car
-    LEVEL: 2
-    TYPE: speed
-    PRICE: 2000
-    BONUS: 9.38
-  - CAR_ID: Rarity Car
-    LEVEL: 2
-    TYPE: boost
-    PRICE: 2000
-    BONUS: 0.94
-  - CAR_ID: Rarity Car
-    LEVEL: 2
-    TYPE: controllability
-    PRICE: 2000
-    BONUS: 0.1
-  - CAR_ID: Rarity Car
-    LEVEL: 3
-    TYPE: speed
-    PRICE: 2200
-    BONUS: 18.75
-  - CAR_ID: Rarity Car
-    LEVEL: 3
-    TYPE: boost
-    PRICE: 2200
-    BONUS: 1.41
-  - CAR_ID: Rarity Car
-    LEVEL: 3
-    TYPE: controllability
-    PRICE: 2200
     BONUS: 0.2
   - CAR_ID: Rarity Car
-    LEVEL: 4
-    TYPE: speed
-    PRICE: 2400
-    BONUS: 23.44
-  - CAR_ID: Rarity Car
-    LEVEL: 4
-    TYPE: boost
-    PRICE: 2400
-    BONUS: 1.88
-  - CAR_ID: Rarity Car
-    LEVEL: 4
+    LEVEL: 3
     TYPE: controllability
-    PRICE: 2400
+    PRICE: 1700
     BONUS: 0.3
   - CAR_ID: Rarity Car
-    LEVEL: 5
-    TYPE: speed
-    PRICE: 2600
-    BONUS: 28.13
-  - CAR_ID: Rarity Car
-    LEVEL: 5
-    TYPE: boost
-    PRICE: 2600
-    BONUS: 27.19
-  - CAR_ID: Rarity Car
-    LEVEL: 5
+    LEVEL: 4
     TYPE: controllability
-    PRICE: 2600
+    PRICE: 1900
     BONUS: 0.4
   - CAR_ID: Rarity Car
-    LEVEL: 6
-    TYPE: speed
-    PRICE: 2800
-    BONUS: 30.94
-  - CAR_ID: Rarity Car
-    LEVEL: 6
-    TYPE: boost
-    PRICE: 2800
-    BONUS: 30.94
-  - CAR_ID: Rarity Car
-    LEVEL: 6
+    LEVEL: 5
     TYPE: controllability
-    PRICE: 2800
+    PRICE: 2100
     BONUS: 0.5
   - CAR_ID: Rarity Car
-    LEVEL: 7
-    TYPE: speed
-    PRICE: 3000
-    BONUS: 33.75
-  - CAR_ID: Rarity Car
-    LEVEL: 7
-    TYPE: boost
-    PRICE: 3000
-    BONUS: 3.47
-  - CAR_ID: Rarity Car
-    LEVEL: 7
+    LEVEL: 6
     TYPE: controllability
-    PRICE: 3000
+    PRICE: 2300
     BONUS: 0.6
   - CAR_ID: Rarity Car
-    LEVEL: 8
-    TYPE: speed
-    PRICE: 3200
-    BONUS: 34.69
-  - CAR_ID: Rarity Car
-    LEVEL: 8
-    TYPE: boost
-    PRICE: 3200
-    BONUS: 3.47
-  - CAR_ID: Rarity Car
-    LEVEL: 8
+    LEVEL: 7
     TYPE: controllability
-    PRICE: 3200
+    PRICE: 2500
     BONUS: 0.7
   - CAR_ID: Rarity Car
-    LEVEL: 9
-    TYPE: speed
-    PRICE: 3400
-    BONUS: 37.5
-  - CAR_ID: Rarity Car
-    LEVEL: 9
-    TYPE: boost
-    PRICE: 3400
-    BONUS: 3.75
-  - CAR_ID: Rarity Car
-    LEVEL: 9
+    LEVEL: 8
     TYPE: controllability
-    PRICE: 3400
+    PRICE: 2700
     BONUS: 0.8
   - CAR_ID: Rarity Car
-    LEVEL: 10
-    TYPE: speed
-    PRICE: 3600
-    BONUS: 39.38
-  - CAR_ID: Rarity Car
-    LEVEL: 10
-    TYPE: boost
-    PRICE: 3600
-    BONUS: 3.94
+    LEVEL: 9
+    TYPE: controllability
+    PRICE: 2900
+    BONUS: 0.9
   - CAR_ID: Rarity Car
     LEVEL: 10
     TYPE: controllability
-    PRICE: 3600
+    PRICE: 3100
     BONUS: 1
   - CAR_ID: RedBullba
     LEVEL: 2
     TYPE: speed
-    PRICE: 4000
-    BONUS: 16.41
-  - CAR_ID: RedBullba
-    LEVEL: 2
-    TYPE: boost
-    PRICE: 4000
-    BONUS: 3
-  - CAR_ID: RedBullba
-    LEVEL: 2
-    TYPE: controllability
-    PRICE: 4000
-    BONUS: 0.1
-  - CAR_ID: RedBullba
-    LEVEL: 3
-    TYPE: speed
-    PRICE: 4300
-    BONUS: 32.81
-  - CAR_ID: RedBullba
-    LEVEL: 3
-    TYPE: boost
-    PRICE: 4300
-    BONUS: 6
-  - CAR_ID: RedBullba
-    LEVEL: 3
-    TYPE: controllability
-    PRICE: 4300
-    BONUS: 0.2
-  - CAR_ID: RedBullba
-    LEVEL: 4
-    TYPE: speed
-    PRICE: 4600
-    BONUS: 9
-  - CAR_ID: RedBullba
-    LEVEL: 4
-    TYPE: boost
-    PRICE: 4600
-    BONUS: 3.28
-  - CAR_ID: RedBullba
-    LEVEL: 4
-    TYPE: controllability
-    PRICE: 4600
-    BONUS: 0.3
-  - CAR_ID: RedBullba
-    LEVEL: 5
-    TYPE: speed
-    PRICE: 4900
-    BONUS: 49.22
-  - CAR_ID: RedBullba
-    LEVEL: 5
-    TYPE: boost
-    PRICE: 4900
-    BONUS: 12
-  - CAR_ID: RedBullba
-    LEVEL: 5
-    TYPE: controllability
-    PRICE: 4900
-    BONUS: 0.4
-  - CAR_ID: RedBullba
-    LEVEL: 6
-    TYPE: speed
-    PRICE: 5200
-    BONUS: 54.14
-  - CAR_ID: RedBullba
-    LEVEL: 6
-    TYPE: boost
-    PRICE: 5200
+    PRICE: 5000
     BONUS: 15
   - CAR_ID: RedBullba
+    LEVEL: 3
+    TYPE: speed
+    PRICE: 5500
+    BONUS: 21.25
+  - CAR_ID: RedBullba
+    LEVEL: 4
+    TYPE: speed
+    PRICE: 6000
+    BONUS: 27.5
+  - CAR_ID: RedBullba
+    LEVEL: 5
+    TYPE: speed
+    PRICE: 6500
+    BONUS: 33.75
+  - CAR_ID: RedBullba
     LEVEL: 6
-    TYPE: controllability
+    TYPE: speed
+    PRICE: 7000
+    BONUS: 40
+  - CAR_ID: RedBullba
+    LEVEL: 7
+    TYPE: speed
+    PRICE: 7500
+    BONUS: 50
+  - CAR_ID: RedBullba
+    LEVEL: 8
+    TYPE: speed
+    PRICE: 8000
+    BONUS: 60
+  - CAR_ID: RedBullba
+    LEVEL: 9
+    TYPE: speed
+    PRICE: 8500
+    BONUS: 70
+  - CAR_ID: RedBullba
+    LEVEL: 10
+    TYPE: speed
+    PRICE: 9000
+    BONUS: 80
+  - CAR_ID: RedBullba
+    LEVEL: 2
+    TYPE: boost
+    PRICE: 4000
+    BONUS: 4
+  - CAR_ID: RedBullba
+    LEVEL: 3
+    TYPE: boost
+    PRICE: 4400
+    BONUS: 8
+  - CAR_ID: RedBullba
+    LEVEL: 4
+    TYPE: boost
+    PRICE: 4800
+    BONUS: 12
+  - CAR_ID: RedBullba
+    LEVEL: 5
+    TYPE: boost
     PRICE: 5200
-    BONUS: 0.5
+    BONUS: 16
   - CAR_ID: RedBullba
-    LEVEL: 7
-    TYPE: speed
-    PRICE: 5500
-    BONUS: 59.06
+    LEVEL: 6
+    TYPE: boost
+    PRICE: 5600
+    BONUS: 20
   - CAR_ID: RedBullba
     LEVEL: 7
     TYPE: boost
-    PRICE: 5500
-    BONUS: 18
-  - CAR_ID: RedBullba
-    LEVEL: 7
-    TYPE: controllability
-    PRICE: 5500
-    BONUS: 0.6
-  - CAR_ID: RedBullba
-    LEVEL: 8
-    TYPE: speed
-    PRICE: 5800
-    BONUS: 60.7
-  - CAR_ID: RedBullba
-    LEVEL: 8
-    TYPE: boost
-    PRICE: 5800
-    BONUS: 21
-  - CAR_ID: RedBullba
-    LEVEL: 8
-    TYPE: controllability
-    PRICE: 5800
-    BONUS: 0.7
-  - CAR_ID: RedBullba
-    LEVEL: 9
-    TYPE: speed
-    PRICE: 5100
-    BONUS: 65.63
-  - CAR_ID: RedBullba
-    LEVEL: 9
-    TYPE: boost
-    PRICE: 5100
+    PRICE: 6000
     BONUS: 24
   - CAR_ID: RedBullba
-    LEVEL: 9
-    TYPE: controllability
-    PRICE: 5100
-    BONUS: 0.8
+    LEVEL: 8
+    TYPE: boost
+    PRICE: 6400
+    BONUS: 28
   - CAR_ID: RedBullba
-    LEVEL: 10
-    TYPE: speed
-    PRICE: 5400
-    BONUS: 68.91
+    LEVEL: 9
+    TYPE: boost
+    PRICE: 6800
+    BONUS: 32
   - CAR_ID: RedBullba
     LEVEL: 10
     TYPE: boost
-    PRICE: 5400
-    BONUS: 27
+    PRICE: 7200
+    BONUS: 36
+  - CAR_ID: RedBullba
+    LEVEL: 2
+    TYPE: controllability
+    PRICE: 3000
+    BONUS: 0.2
+  - CAR_ID: RedBullba
+    LEVEL: 3
+    TYPE: controllability
+    PRICE: 3300
+    BONUS: 0.3
+  - CAR_ID: RedBullba
+    LEVEL: 4
+    TYPE: controllability
+    PRICE: 3600
+    BONUS: 0.4
+  - CAR_ID: RedBullba
+    LEVEL: 5
+    TYPE: controllability
+    PRICE: 3900
+    BONUS: 0.5
+  - CAR_ID: RedBullba
+    LEVEL: 6
+    TYPE: controllability
+    PRICE: 4200
+    BONUS: 0.6
+  - CAR_ID: RedBullba
+    LEVEL: 7
+    TYPE: controllability
+    PRICE: 4500
+    BONUS: 0.7
+  - CAR_ID: RedBullba
+    LEVEL: 8
+    TYPE: controllability
+    PRICE: 4800
+    BONUS: 0.8
+  - CAR_ID: RedBullba
+    LEVEL: 9
+    TYPE: controllability
+    PRICE: 5100
+    BONUS: 0.9
   - CAR_ID: RedBullba
     LEVEL: 10
     TYPE: controllability
@@ -563,137 +563,137 @@ MonoBehaviour:
   - CAR_ID: RealSportCar
     LEVEL: 2
     TYPE: speed
-    PRICE: 6000
-    BONUS: 32.81
-  - CAR_ID: RealSportCar
-    LEVEL: 2
-    TYPE: boost
-    PRICE: 6000
-    BONUS: 4
-  - CAR_ID: RealSportCar
-    LEVEL: 2
-    TYPE: controllability
-    PRICE: 6000
-    BONUS: 0.1
+    PRICE: 10000
+    BONUS: 20
   - CAR_ID: RealSportCar
     LEVEL: 3
     TYPE: speed
-    PRICE: 6500
-    BONUS: 65.63
-  - CAR_ID: RealSportCar
-    LEVEL: 3
-    TYPE: boost
-    PRICE: 6500
-    BONUS: 8
-  - CAR_ID: RealSportCar
-    LEVEL: 3
-    TYPE: controllability
-    PRICE: 6500
-    BONUS: 0.2
+    PRICE: 11000
+    BONUS: 27.5
   - CAR_ID: RealSportCar
     LEVEL: 4
     TYPE: speed
-    PRICE: 7000
-    BONUS: 82.03
-  - CAR_ID: RealSportCar
-    LEVEL: 4
-    TYPE: boost
-    PRICE: 7000
-    BONUS: 12
-  - CAR_ID: RealSportCar
-    LEVEL: 4
-    TYPE: controllability
-    PRICE: 7000
-    BONUS: 0.3
+    PRICE: 12000
+    BONUS: 35
   - CAR_ID: RealSportCar
     LEVEL: 5
     TYPE: speed
-    PRICE: 7500
-    BONUS: 98.44
-  - CAR_ID: RealSportCar
-    LEVEL: 5
-    TYPE: boost
-    PRICE: 7500
-    BONUS: 16
-  - CAR_ID: RealSportCar
-    LEVEL: 5
-    TYPE: controllability
-    PRICE: 7500
-    BONUS: 0.4
+    PRICE: 13000
+    BONUS: 42.5
   - CAR_ID: RealSportCar
     LEVEL: 6
     TYPE: speed
-    PRICE: 8000
-    BONUS: 108.28
+    PRICE: 14000
+    BONUS: 50
   - CAR_ID: RealSportCar
-    LEVEL: 6
+    LEVEL: 7
+    TYPE: speed
+    PRICE: 15000
+    BONUS: 62.5
+  - CAR_ID: RealSportCar
+    LEVEL: 8
+    TYPE: speed
+    PRICE: 16000
+    BONUS: 75
+  - CAR_ID: RealSportCar
+    LEVEL: 9
+    TYPE: speed
+    PRICE: 17000
+    BONUS: 87.5
+  - CAR_ID: RealSportCar
+    LEVEL: 10
+    TYPE: speed
+    PRICE: 18000
+    BONUS: 100
+  - CAR_ID: RealSportCar
+    LEVEL: 2
     TYPE: boost
     PRICE: 8000
+    BONUS: 5
+  - CAR_ID: RealSportCar
+    LEVEL: 3
+    TYPE: boost
+    PRICE: 8800
+    BONUS: 10
+  - CAR_ID: RealSportCar
+    LEVEL: 4
+    TYPE: boost
+    PRICE: 9600
+    BONUS: 15
+  - CAR_ID: RealSportCar
+    LEVEL: 5
+    TYPE: boost
+    PRICE: 10400
     BONUS: 20
   - CAR_ID: RealSportCar
     LEVEL: 6
+    TYPE: boost
+    PRICE: 11200
+    BONUS: 25
+  - CAR_ID: RealSportCar
+    LEVEL: 7
+    TYPE: boost
+    PRICE: 12000
+    BONUS: 30
+  - CAR_ID: RealSportCar
+    LEVEL: 8
+    TYPE: boost
+    PRICE: 12800
+    BONUS: 35
+  - CAR_ID: RealSportCar
+    LEVEL: 9
+    TYPE: boost
+    PRICE: 13600
+    BONUS: 40
+  - CAR_ID: RealSportCar
+    LEVEL: 10
+    TYPE: boost
+    PRICE: 14400
+    BONUS: 45
+  - CAR_ID: RealSportCar
+    LEVEL: 2
     TYPE: controllability
-    PRICE: 8000
+    PRICE: 6000
+    BONUS: 0.2
+  - CAR_ID: RealSportCar
+    LEVEL: 3
+    TYPE: controllability
+    PRICE: 6600
+    BONUS: 0.3
+  - CAR_ID: RealSportCar
+    LEVEL: 4
+    TYPE: controllability
+    PRICE: 7200
+    BONUS: 0.4
+  - CAR_ID: RealSportCar
+    LEVEL: 5
+    TYPE: controllability
+    PRICE: 7800
     BONUS: 0.5
   - CAR_ID: RealSportCar
-    LEVEL: 7
-    TYPE: speed
-    PRICE: 8500
-    BONUS: 118.13
-  - CAR_ID: RealSportCar
-    LEVEL: 7
-    TYPE: boost
-    PRICE: 8500
-    BONUS: 24
-  - CAR_ID: RealSportCar
-    LEVEL: 7
+    LEVEL: 6
     TYPE: controllability
-    PRICE: 8500
+    PRICE: 8400
     BONUS: 0.6
   - CAR_ID: RealSportCar
-    LEVEL: 8
-    TYPE: speed
-    PRICE: 9000
-    BONUS: 121.41
-  - CAR_ID: RealSportCar
-    LEVEL: 8
-    TYPE: boost
-    PRICE: 9000
-    BONUS: 28
-  - CAR_ID: RealSportCar
-    LEVEL: 8
+    LEVEL: 7
     TYPE: controllability
     PRICE: 9000
     BONUS: 0.7
   - CAR_ID: RealSportCar
-    LEVEL: 9
-    TYPE: speed
-    PRICE: 9500
-    BONUS: 131.25
-  - CAR_ID: RealSportCar
-    LEVEL: 9
-    TYPE: boost
-    PRICE: 9500
-    BONUS: 32
-  - CAR_ID: RealSportCar
-    LEVEL: 9
+    LEVEL: 8
     TYPE: controllability
-    PRICE: 9500
+    PRICE: 9600
     BONUS: 0.8
   - CAR_ID: RealSportCar
-    LEVEL: 10
-    TYPE: speed
-    PRICE: 10000
-    BONUS: 137.81
-  - CAR_ID: RealSportCar
-    LEVEL: 10
-    TYPE: boost
-    PRICE: 10000
-    BONUS: 36
+    LEVEL: 9
+    TYPE: controllability
+    PRICE: 10200
+    BONUS: 0.9
   - CAR_ID: RealSportCar
     LEVEL: 10
     TYPE: controllability
-    PRICE: 10000
+    PRICE: 10800
     BONUS: 1
   carsSettings:
   - Car_ID: DefaultCar
@@ -702,7 +702,7 @@ MonoBehaviour:
     Acceleration_Multiplayer: 6
     MaxSteering_Angle: 45
     Steering_Speed: 0.2
-    Brake_Force: 100000
+    Brake_Force: 500000
     Deceleration_Multiplayer: 3
     Drift_Multiplayer: 1
   - Car_ID: Furururi
@@ -711,7 +711,7 @@ MonoBehaviour:
     Acceleration_Multiplayer: 10
     MaxSteering_Angle: 45
     Steering_Speed: 0.2
-    Brake_Force: 100000
+    Brake_Force: 500000
     Deceleration_Multiplayer: 3
     Drift_Multiplayer: 1
   - Car_ID: Rarity Car
@@ -720,7 +720,7 @@ MonoBehaviour:
     Acceleration_Multiplayer: 35
     MaxSteering_Angle: 45
     Steering_Speed: 0.2
-    Brake_Force: 100000
+    Brake_Force: 500000
     Deceleration_Multiplayer: 3
     Drift_Multiplayer: 1
   - Car_ID: RedBullba
@@ -729,7 +729,7 @@ MonoBehaviour:
     Acceleration_Multiplayer: 70
     MaxSteering_Angle: 45
     Steering_Speed: 0.2
-    Brake_Force: 100000
+    Brake_Force: 500000
     Deceleration_Multiplayer: 3
     Drift_Multiplayer: 1
   - Car_ID: RealSportCar
@@ -738,50 +738,50 @@ MonoBehaviour:
     Acceleration_Multiplayer: 120
     MaxSteering_Angle: 35
     Steering_Speed: 0.2
-    Brake_Force: 100000
+    Brake_Force: 500000
     Deceleration_Multiplayer: 3
     Drift_Multiplayer: 1
   rewards:
   - TRACK_ID: FirstRace
-    AMOUNT_1: 1000
-    AMOUNT_2: 1500
-    AMOUNT_3: 2250
+    AMOUNT_1: 500
+    AMOUNT_2: 1000
+    AMOUNT_3: 2000
   - TRACK_ID: secondRace
-    AMOUNT_1: 2000
-    AMOUNT_2: 3000
-    AMOUNT_3: 4500
+    AMOUNT_1: 600
+    AMOUNT_2: 1200
+    AMOUNT_3: 2400
   - TRACK_ID: thirdRace
-    AMOUNT_1: 3000
-    AMOUNT_2: 4500
-    AMOUNT_3: 6750
+    AMOUNT_1: 700
+    AMOUNT_2: 1400
+    AMOUNT_3: 2800
   - TRACK_ID: fourthRace
-    AMOUNT_1: 4000
-    AMOUNT_2: 6000
-    AMOUNT_3: 9000
+    AMOUNT_1: 800
+    AMOUNT_2: 1600
+    AMOUNT_3: 3200
   - TRACK_ID: fifthRace
-    AMOUNT_1: 5000
-    AMOUNT_2: 8750
-    AMOUNT_3: 16000
+    AMOUNT_1: 900
+    AMOUNT_2: 1800
+    AMOUNT_3: 3600
   - TRACK_ID: sixRace
-    AMOUNT_1: 6000
-    AMOUNT_2: 12000
-    AMOUNT_3: 24000
+    AMOUNT_1: 1000
+    AMOUNT_2: 2000
+    AMOUNT_3: 4000
   - TRACK_ID: seventhRace
-    AMOUNT_1: 7000
-    AMOUNT_2: 15750
-    AMOUNT_3: 37500
+    AMOUNT_1: 1100
+    AMOUNT_2: 2200
+    AMOUNT_3: 4400
   - TRACK_ID: eighthRace
-    AMOUNT_1: 8000
-    AMOUNT_2: 20000
-    AMOUNT_3: 50000
+    AMOUNT_1: 1200
+    AMOUNT_2: 2400
+    AMOUNT_3: 4800
   times:
   - TRACK_ID: FirstRace
     ONE_STAR: 180
-    TWO_STAR: 135
-    THREE_STAR: 145
+    TWO_STAR: 150
+    THREE_STAR: 130
   - TRACK_ID: secondRace
     ONE_STAR: 190
-    TWO_STAR: 140
+    TWO_STAR: 175
     THREE_STAR: 155
   - TRACK_ID: thirdRace
     ONE_STAR: 210
@@ -842,27 +842,27 @@ MonoBehaviour:
     THREE_STAR: 200000
   carPrices:
   - Id: Furururi
-    Price: 10000
+    Price: 2000
   - Id: Rarity Car
-    Price: 20000
+    Price: 5000
   - Id: RedBullba
-    Price: 35000
+    Price: 10000
   - Id: RealSportCar
-    Price: 50000
+    Price: 20000
   mapPrices:
   - Id: FirstRace
-    Price: 100
+    Price: 0
   - Id: secondRace
-    Price: 1500
+    Price: 1000
   - Id: thirdRace
-    Price: 4000
+    Price: 2000
   - Id: fourthRace
-    Price: 7500
+    Price: 4000
   - Id: fifthRace
-    Price: 12500
+    Price: 8000
   - Id: sixRace
-    Price: 17500
+    Price: 12000
   - Id: seventhRace
-    Price: 25000
+    Price: 16000
   - Id: eighthRace
-    Price: 35000
+    Price: 20000

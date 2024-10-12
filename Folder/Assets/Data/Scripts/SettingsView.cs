@@ -34,6 +34,11 @@ public class SettingsView : MonoBehaviour
         languagesValues.value = index;
     }
 
+    public void OpenHowToPlay()
+    {
+        Instantiate(Game.Config.views.GetHowToPlayView);
+    }
+
     private void SetGraphicsValues()
     {
         int graphicsValue = Settings.GraphicsValue;

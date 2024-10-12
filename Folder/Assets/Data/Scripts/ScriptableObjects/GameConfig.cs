@@ -113,6 +113,8 @@ public class Views
     
     [SerializeField] private AdLoaderShower adLoaderShower;
     public AdLoaderShower GetAdLoader => adLoaderShower;
+    [SerializeField] private HowToPlayView howToPlayView;
+    public HowToPlayView GetHowToPlayView => howToPlayView;
 
 }
 

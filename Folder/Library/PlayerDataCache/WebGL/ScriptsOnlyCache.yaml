@@ -7,6 +7,7 @@ ScriptsOnlyBuild:
     - DriftPointsShowComponent
     - FinishCanvas
     - GameConfig
+    - HowToPlayView
     - LapsUIComponent
     - LeaderboardPlayerView
     - LeaderboardView
@@ -36,19 +37,23 @@ ScriptsOnlyBuild:
     - AdLoaderShower
     - CarShower
     - CarUpgradeView
+    - CheckHowToPlay
     - ChooseMapSelectView
     - DriftPointsShowComponent
     - FinishCanvas
     - Game
     - GameConfig
     - GameIniter
+    - HowToPlayView
     - LapsUIComponent
     - LeaderboardPlayerView
     - LeaderboardView
     - LoadingScreenView
+    - LocalizationConfig
     - LocalizationTMProTextUI
     - MapRaceView
     - OpenSettings
+    - OpenVK
     - PauseButtonUIComponent
     - PauseUIComponent
     - PrometeoCarController
@@ -191,6 +196,9 @@ ScriptsOnlyBuild:
     fullTypeName: OpenSettings
     methodName: OpenSettingsWindow
   - assembly: Assembly-CSharp
+    fullTypeName: OpenVK
+    methodName: OpenVKVoid
+  - assembly: Assembly-CSharp
     fullTypeName: WalletView
     methodName: AddMoney
   - assembly: Assembly-CSharp
@@ -278,6 +286,9 @@ ScriptsOnlyBuild:
     fullTypeName: RateWindow
     methodName: Close
   - assembly: Assembly-CSharp
+    fullTypeName: HowToPlayView
+    methodName: Close
+  - assembly: Assembly-CSharp
     fullTypeName: PauseUIComponent
     methodName: RestartGame
   - assembly: Assembly-CSharp
@@ -301,6 +312,9 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: SettingsView
     methodName: Close
+  - assembly: Assembly-CSharp
+    fullTypeName: SettingsView
+    methodName: OpenHowToPlay
   - assembly: Assembly-CSharp
     fullTypeName: FinishCanvas
     methodName: GoHome
@@ -353,123 +367,129 @@ ScriptsOnlyBuild:
     - Class: 111
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 16608}
+      Script: {instanceID: 16646}
     - Class: 114
-      Script: {instanceID: 16610}
-    - Class: 114
-      Script: {instanceID: 16612}
-    - Class: 114
-      Script: {instanceID: 16652}
+      Script: {instanceID: 16648}
     - Class: 114
       Script: {instanceID: 16696}
     - Class: 114
-      Script: {instanceID: 17296}
+      Script: {instanceID: 16732}
     - Class: 114
-      Script: {instanceID: 17730}
+      Script: {instanceID: 16778}
     - Class: 114
-      Script: {instanceID: 17736}
+      Script: {instanceID: 16922}
     - Class: 114
-      Script: {instanceID: 17936}
+      Script: {instanceID: 16982}
     - Class: 114
-      Script: {instanceID: 17964}
+      Script: {instanceID: 16992}
     - Class: 114
-      Script: {instanceID: 18232}
+      Script: {instanceID: 17160}
     - Class: 114
-      Script: {instanceID: 18406}
+      Script: {instanceID: 17344}
     - Class: 114
-      Script: {instanceID: 19012}
+      Script: {instanceID: 17450}
     - Class: 114
-      Script: {instanceID: 19248}
+      Script: {instanceID: 17540}
     - Class: 114
-      Script: {instanceID: 19502}
+      Script: {instanceID: 17806}
     - Class: 114
-      Script: {instanceID: 19910}
+      Script: {instanceID: 17812}
     - Class: 114
-      Script: {instanceID: 20126}
+      Script: {instanceID: 17882}
     - Class: 114
-      Script: {instanceID: 20176}
+      Script: {instanceID: 17910}
     - Class: 114
-      Script: {instanceID: 20184}
+      Script: {instanceID: 17932}
     - Class: 114
-      Script: {instanceID: 20246}
+      Script: {instanceID: 17988}
     - Class: 114
-      Script: {instanceID: 20968}
+      Script: {instanceID: 18030}
     - Class: 114
-      Script: {instanceID: 21300}
+      Script: {instanceID: 18060}
     - Class: 114
-      Script: {instanceID: 21724}
+      Script: {instanceID: 18126}
+    - Class: 114
+      Script: {instanceID: 18344}
+    - Class: 114
+      Script: {instanceID: 18496}
+    - Class: 114
+      Script: {instanceID: 18520}
+    - Class: 114
+      Script: {instanceID: 18588}
+    - Class: 114
+      Script: {instanceID: 18702}
+    - Class: 114
+      Script: {instanceID: 18752}
+    - Class: 114
+      Script: {instanceID: 19092}
+    - Class: 114
+      Script: {instanceID: 19126}
+    - Class: 114
+      Script: {instanceID: 19424}
+    - Class: 114
+      Script: {instanceID: 19572}
+    - Class: 114
+      Script: {instanceID: 19686}
+    - Class: 114
+      Script: {instanceID: 19726}
+    - Class: 114
+      Script: {instanceID: 19734}
+    - Class: 114
+      Script: {instanceID: 19968}
+    - Class: 114
+      Script: {instanceID: 20112}
+    - Class: 114
+      Script: {instanceID: 20142}
+    - Class: 114
+      Script: {instanceID: 20340}
+    - Class: 114
+      Script: {instanceID: 20392}
+    - Class: 114
+      Script: {instanceID: 20400}
+    - Class: 114
+      Script: {instanceID: 20470}
+    - Class: 114
+      Script: {instanceID: 20906}
+    - Class: 114
+      Script: {instanceID: 20914}
+    - Class: 114
+      Script: {instanceID: 21136}
+    - Class: 114
+      Script: {instanceID: 21188}
+    - Class: 114
+      Script: {instanceID: 21246}
+    - Class: 114
+      Script: {instanceID: 21424}
+    - Class: 114
+      Script: {instanceID: 21596}
     - Class: 114
       Script: {instanceID: 22038}
     - Class: 114
-      Script: {instanceID: 22384}
+      Script: {instanceID: 22064}
     - Class: 114
-      Script: {instanceID: 22544}
+      Script: {instanceID: 22366}
     - Class: 114
-      Script: {instanceID: 22632}
+      Script: {instanceID: 22660}
     - Class: 114
-      Script: {instanceID: 23986}
+      Script: {instanceID: 22722}
     - Class: 114
-      Script: {instanceID: 23990}
+      Script: {instanceID: 22736}
     - Class: 114
-      Script: {instanceID: 23998}
+      Script: {instanceID: 22906}
     - Class: 114
-      Script: {instanceID: 24010}
+      Script: {instanceID: 22922}
     - Class: 114
-      Script: {instanceID: 24090}
+      Script: {instanceID: 23000}
     - Class: 114
-      Script: {instanceID: 24094}
+      Script: {instanceID: 23002}
     - Class: 114
-      Script: {instanceID: 24106}
+      Script: {instanceID: 23026}
     - Class: 114
-      Script: {instanceID: 24114}
+      Script: {instanceID: 23402}
     - Class: 114
-      Script: {instanceID: 24130}
+      Script: {instanceID: 23438}
     - Class: 114
-      Script: {instanceID: 24170}
-    - Class: 114
-      Script: {instanceID: 24202}
-    - Class: 114
-      Script: {instanceID: 24234}
-    - Class: 114
-      Script: {instanceID: 24278}
-    - Class: 114
-      Script: {instanceID: 24284}
-    - Class: 114
-      Script: {instanceID: 24328}
-    - Class: 114
-      Script: {instanceID: 24336}
-    - Class: 114
-      Script: {instanceID: 24364}
-    - Class: 114
-      Script: {instanceID: 24392}
-    - Class: 114
-      Script: {instanceID: 24400}
-    - Class: 114
-      Script: {instanceID: 24440}
-    - Class: 114
-      Script: {instanceID: 24460}
-    - Class: 114
-      Script: {instanceID: 24476}
-    - Class: 114
-      Script: {instanceID: 24484}
-    - Class: 114
-      Script: {instanceID: 24492}
-    - Class: 114
-      Script: {instanceID: 24520}
-    - Class: 114
-      Script: {instanceID: 24552}
-    - Class: 114
-      Script: {instanceID: 24588}
-    - Class: 114
-      Script: {instanceID: 24622}
-    - Class: 114
-      Script: {instanceID: 24626}
-    - Class: 114
-      Script: {instanceID: 24696}
-    - Class: 114
-      Script: {instanceID: 24708}
-    - Class: 114
-      Script: {instanceID: 24728}
+      Script: {instanceID: 23544}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -522,23 +542,23 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 16652}
+      Script: {instanceID: 16646}
     - Class: 114
       Script: {instanceID: 16696}
     - Class: 114
-      Script: {instanceID: 17730}
+      Script: {instanceID: 17806}
     - Class: 114
-      Script: {instanceID: 17936}
+      Script: {instanceID: 17900}
     - Class: 114
-      Script: {instanceID: 20176}
+      Script: {instanceID: 18030}
     - Class: 114
-      Script: {instanceID: 21300}
+      Script: {instanceID: 19726}
     - Class: 114
-      Script: {instanceID: 22632}
+      Script: {instanceID: 20392}
     - Class: 114
-      Script: {instanceID: 24158}
+      Script: {instanceID: 21596}
     - Class: 114
-      Script: {instanceID: 24284}
+      Script: {instanceID: 23002}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -591,21 +611,21 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 16652}
+      Script: {instanceID: 16646}
     - Class: 114
-      Script: {instanceID: 17730}
+      Script: {instanceID: 17806}
     - Class: 114
-      Script: {instanceID: 17936}
+      Script: {instanceID: 18030}
     - Class: 114
-      Script: {instanceID: 21300}
+      Script: {instanceID: 19126}
     - Class: 114
-      Script: {instanceID: 23986}
+      Script: {instanceID: 19572}
     - Class: 114
-      Script: {instanceID: 24230}
+      Script: {instanceID: 19726}
     - Class: 114
-      Script: {instanceID: 24284}
+      Script: {instanceID: 21546}
     - Class: 114
-      Script: {instanceID: 24460}
+      Script: {instanceID: 21596}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -619,28 +639,22 @@ ScriptsOnlyBuild:
   scriptHashData:
   - hash:
       serializedVersion: 2
-      Hash: ca4c1f16c29e7a5fde24cf7ae9568e64
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: PrometeoCarController
-  - hash:
-      serializedVersion: 2
-      Hash: 7957d45ff7d8a66af25963252b944987
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: ChooseMapSelectView
-  - hash:
-      serializedVersion: 2
-      Hash: b624244c716c150ca063f14446afbf22
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: RewardAfterRaceView
-  - hash:
-      serializedVersion: 2
       Hash: 540882762544409cc4530e60db00e951
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: CanvasScaler
+  - hash:
+      serializedVersion: 2
+      Hash: b747f5d40674055dd70e18552f1b0447
+    assemblyName: UnityEngine.UI
+    namespaceName: UnityEngine.UI
+    className: Mask
+  - hash:
+      serializedVersion: 2
+      Hash: 9da17c1ffcfc464b5cf2e7ed20c71a00
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: _NaughtyScriptableObject
   - hash:
       serializedVersion: 2
       Hash: 55060a7bf226ac385ce19ebd450f199f
@@ -649,16 +663,34 @@ ScriptsOnlyBuild:
     className: PanelRaycaster
   - hash:
       serializedVersion: 2
+      Hash: 43e97047115ed5b14d19af016445c506
+    assemblyName: Assembly-CSharp
+    namespaceName: PathCreation.Examples
+    className: PathSpawner
+  - hash:
+      serializedVersion: 2
       Hash: dd9dda1dfd39e605c49e72003342ef5d
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: Image
   - hash:
       serializedVersion: 2
+      Hash: f4a6691cfa5b19d99350163e584abf8c
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: OpenVK
+  - hash:
+      serializedVersion: 2
       Hash: d1a481a481fcf54624648eb5ad51b613
     assemblyName: GamePush
     namespaceName: GamePush
     className: GP_Custom
+  - hash:
+      serializedVersion: 2
+      Hash: a0880f01f09893a90c2af57ce3258f04
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: MapRaceView
   - hash:
       serializedVersion: 2
       Hash: f45600bcc886206dd55a3208474aad61
@@ -691,6 +723,12 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
+      Hash: 8b51e13515776800b6c7cdf2e490c80f
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: TrackWay
+  - hash:
+      serializedVersion: 2
       Hash: f778e23b6ff26b8de4721be0eb1fa240
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -703,16 +741,64 @@ ScriptsOnlyBuild:
     className: GP_ConsoleController
   - hash:
       serializedVersion: 2
+      Hash: d8cd42c0db39dfccdc004b86e8085737
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: CameraFollow
+  - hash:
+      serializedVersion: 2
       Hash: f854af586011dd194574f89546642e29
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnMouseExitMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 7f07c7e52142b7893b21d7c1c172ae46
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: LapsUIComponent
+  - hash:
+      serializedVersion: 2
+      Hash: 5db805991de0a462cdc0bcbdd3245e5e
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: CheckHowToPlay
+  - hash:
+      serializedVersion: 2
       Hash: 73efc4e509e700e4a4175fb8c8ca05b5
     assemblyName: GamePush
     namespaceName: GamePush
     className: GP_Logger
+  - hash:
+      serializedVersion: 2
+      Hash: ff2e2d3d0433a886d20a4e4d1e843f89
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: ResizableTextAreaTest
+  - hash:
+      serializedVersion: 2
+      Hash: 744141454f1fbc132ad659fc1a05f3fe
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: StatsSettings
+  - hash:
+      serializedVersion: 2
+      Hash: fa459266c334c02b81f5733722419453
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: OnValueChangedTest
+  - hash:
+      serializedVersion: 2
+      Hash: e495c7e3373c78aee0fa0b1fff9b3f45
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: SpeedometrUIComponent
+  - hash:
+      serializedVersion: 2
+      Hash: 376ffdbb4af162b147f66f709f1200ec
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: _TestScriptableObjectA
   - hash:
       serializedVersion: 2
       Hash: b12640dfdb5966813e9dd838893e6c4a
@@ -739,6 +825,12 @@ ScriptsOnlyBuild:
     className: UnityOnPointerUpMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 6a14a4ebf41b36d2b98ae72666f53f92
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: SortingLayerTest
+  - hash:
+      serializedVersion: 2
       Hash: 7e93247d600e115dac0cdd880de94e99
     assemblyName: UnityEngine.TestRunner
     namespaceName: UnityEngine.TestTools.TestRunner
@@ -751,10 +843,22 @@ ScriptsOnlyBuild:
     className: UnityOnJointBreakMessageListener
   - hash:
       serializedVersion: 2
+      Hash: f50c6908c1e6ff9dc10ab8aca311ca4c
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: PrometeoTouchInput
+  - hash:
+      serializedVersion: 2
       Hash: 1ab136900c0edaeeb49424c852595030
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: RawImage
+  - hash:
+      serializedVersion: 2
+      Hash: b624244c716c150ca063f14446afbf22
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: RewardAfterRaceView
   - hash:
       serializedVersion: 2
       Hash: fac0ee1469c15b96cbb4d79330095eef
@@ -767,6 +871,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnBecameVisibleMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: f1e039d0ecaeff6872cd037d3c6314a5
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: BoxGroupTest
+  - hash:
+      serializedVersion: 2
+      Hash: bc9627cd7a922488409b4195a4d515a6
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: ValidateInputTest
   - hash:
       serializedVersion: 2
       Hash: e987953190eb4c12cf19df790566dc2c
@@ -811,10 +927,52 @@ ScriptsOnlyBuild:
     className: GP_Fullscreen
   - hash:
       serializedVersion: 2
+      Hash: 7957d45ff7d8a66af25963252b944987
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ChooseMapSelectView
+  - hash:
+      serializedVersion: 2
+      Hash: 3e1a5a05eaffe856c8dd14221b119359
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: LoadingScreenView
+  - hash:
+      serializedVersion: 2
+      Hash: 025ea4e3e221356b751981a9403de09b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: WrongWayUIComponent
+  - hash:
+      serializedVersion: 2
+      Hash: df36ac82c44d51330bcc5c9902ef5066
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: OpenSettings
+  - hash:
+      serializedVersion: 2
+      Hash: 428502cf07793cbdcdf07034589e6c92
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: TreeRotator
+  - hash:
+      serializedVersion: 2
+      Hash: b6480ed629ac54f1bf9986233adc0b65
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: LocalizationConfig
+  - hash:
+      serializedVersion: 2
       Hash: fce9b835d1e8b08e7ecea8da19f21986
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: CoroutineRunner
+  - hash:
+      serializedVersion: 2
+      Hash: fb6af743687b621fbd6b51261b6fe316
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: RequiredTest
   - hash:
       serializedVersion: 2
       Hash: 6ddf94363c6ce4b02d9fdd51290cb0f9
@@ -841,6 +999,12 @@ ScriptsOnlyBuild:
     className: SettingsView
   - hash:
       serializedVersion: 2
+      Hash: e1316bceccdc3c5bd613cc3f468fa70d
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: ShowAssetPreviewTest
+  - hash:
+      serializedVersion: 2
       Hash: 3b5263a98bcc71d9a9d1d78a31b34ced
     assemblyName: Unity.TextMeshPro
     namespaceName: TMPro
@@ -863,6 +1027,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnButtonClickMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 1ca7cbbcc43d34dc48febcecde1550aa
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: UpgradeCardView
   - hash:
       serializedVersion: 2
       Hash: e23d2210701e34e6850023cabe554c1f
@@ -925,10 +1095,22 @@ ScriptsOnlyBuild:
     className: UnityOnTransformParentChangedMessageListener
   - hash:
       serializedVersion: 2
+      Hash: c347ff0cc5e7f94dba531e6f5ad20eae
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: CarShower
+  - hash:
+      serializedVersion: 2
       Hash: d41ab9b5ea92474f9c0a6937a0607ce1
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: ContentSizeFitter
+  - hash:
+      serializedVersion: 2
+      Hash: 150fa11e6fba861ecfd7119c47a07012
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: ExpandableTest
   - hash:
       serializedVersion: 2
       Hash: c6369b4cc3be620d6c9300e920bc3d52
@@ -937,10 +1119,22 @@ ScriptsOnlyBuild:
     className: VariablesAsset
   - hash:
       serializedVersion: 2
+      Hash: 21c9bef235e59ba5f00010accda2adfb
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: SelectCarView
+  - hash:
+      serializedVersion: 2
       Hash: 7bdff9e91edfd9600f92a185def7e34a
     assemblyName: Unity.VisualScripting.Flow
     namespaceName: Unity.VisualScripting
     className: ScriptMachine
+  - hash:
+      serializedVersion: 2
+      Hash: a39523866ea5739ad1c334a1cfc1578e
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: ButtonTest
   - hash:
       serializedVersion: 2
       Hash: 43ebd945b04bced376c791411cf5a289
@@ -955,10 +1149,34 @@ ScriptsOnlyBuild:
     className: PlayerQuitHandler
   - hash:
       serializedVersion: 2
+      Hash: 281448595e4aea92d1f6eb30a951b6f4
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: _NaughtyComponent
+  - hash:
+      serializedVersion: 2
+      Hash: 8485921f0a306535ef01054fecebdb0f
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: SoundsConfig
+  - hash:
+      serializedVersion: 2
       Hash: cf32d98954e63b8e30e9334b152e9b8e
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.EventSystems
     className: BaseInput
+  - hash:
+      serializedVersion: 2
+      Hash: 821cbcd018d1c05458b2cc2551f468b4
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: AdBlockView
+  - hash:
+      serializedVersion: 2
+      Hash: 80a7188e3cb836d78da7d8dc63184a72
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: PauseButtonUIComponent
   - hash:
       serializedVersion: 2
       Hash: e6f8333cc8a800e2866870a5ef7efc35
@@ -979,6 +1197,12 @@ ScriptsOnlyBuild:
     className: AnimationTrack
   - hash:
       serializedVersion: 2
+      Hash: 08b3033917c5016c6759c612e2e2dbc2
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: TagTest
+  - hash:
+      serializedVersion: 2
       Hash: 6217b1287eca7eed313cf0b864249a30
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -997,6 +1221,12 @@ ScriptsOnlyBuild:
     className: ScriptGraphAsset
   - hash:
       serializedVersion: 2
+      Hash: fd0c11e0011deb7e45ad58418ae8aec8
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: ReadOnlyTest
+  - hash:
+      serializedVersion: 2
       Hash: fb79e95da8891fc7ac6c36ca6967af23
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
@@ -1007,6 +1237,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnPointerExitMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: ac3f8c64d01953620607187972e27cc3
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: AdLoaderShower
   - hash:
       serializedVersion: 2
       Hash: 71e18e209249abe738fd3bcf845a8be5
@@ -1021,10 +1257,10 @@ ScriptsOnlyBuild:
     className: GP_Analytics
   - hash:
       serializedVersion: 2
-      Hash: b747f5d40674055dd70e18552f1b0447
-    assemblyName: UnityEngine.UI
-    namespaceName: UnityEngine.UI
-    className: Mask
+      Hash: ddf019087f24ede7db9d040925c6985b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: GameIniter
   - hash:
       serializedVersion: 2
       Hash: 4718916586b3818eb69bf65df61f0f3a
@@ -1099,10 +1335,22 @@ ScriptsOnlyBuild:
     className: DictionaryAsset
   - hash:
       serializedVersion: 2
+      Hash: 1fd64d7c9dee4da6b1b501a4f1842ad7
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: TrackPart
+  - hash:
+      serializedVersion: 2
       Hash: e7e95903ca66d58e1a7cbd71f824e16d
     assemblyName: Unity.TextMeshPro
     namespaceName: TMPro
     className: TMP_SubMeshUI
+  - hash:
+      serializedVersion: 2
+      Hash: 9e28546ae252acc281e19c642e646c80
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: ShowIfTest
   - hash:
       serializedVersion: 2
       Hash: 9078325c2a6f6a2d9612ade897511860
@@ -1121,6 +1369,18 @@ ScriptsOnlyBuild:
     assemblyName: GamePush
     namespaceName: GamePush
     className: GP_Images
+  - hash:
+      serializedVersion: 2
+      Hash: 328313117ed2299e14dd78a38af2e9c3
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Game
+  - hash:
+      serializedVersion: 2
+      Hash: 23f99d6b78db4a224847644d4a3ce681
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: LeaderboardPlayerView
   - hash:
       serializedVersion: 2
       Hash: d8aea2aeb3216945dce63db9c0f5065f
@@ -1153,6 +1413,18 @@ ScriptsOnlyBuild:
     className: GP_PaymentsStub
   - hash:
       serializedVersion: 2
+      Hash: 34bffb3ad451ae773b811f23640979f0
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: CurveRangeTest
+  - hash:
+      serializedVersion: 2
+      Hash: a620474885e06e2ecd97904c1f545583
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: HowToPlayView
+  - hash:
+      serializedVersion: 2
       Hash: 54d1c26b9e9736330ef29d78633e1f22
     assemblyName: GamePush
     namespaceName: GamePush
@@ -1171,6 +1443,12 @@ ScriptsOnlyBuild:
     className: SceneVariables
   - hash:
       serializedVersion: 2
+      Hash: 54e799d6baf4a9c0185527d9f7f7da5a
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: SceneTest
+  - hash:
+      serializedVersion: 2
       Hash: e88d71ef93aba4e7faf243430f6a10ce
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -1181,6 +1459,18 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: GridLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: 6105ad3baac2e55ed464ab986e49e4e7
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: StartRace
+  - hash:
+      serializedVersion: 2
+      Hash: 6cf47bced8ac20b49ed69cabfeec707f
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: HideIfTest
   - hash:
       serializedVersion: 2
       Hash: 86e60a70eb4b63665afa1999591f345d
@@ -1267,6 +1557,12 @@ ScriptsOnlyBuild:
     className: HorizontalLayoutGroup
   - hash:
       serializedVersion: 2
+      Hash: fedbf06ebc14f29e14df3d715572d47a
+    assemblyName: Assembly-CSharp
+    namespaceName: PathCreation.Examples
+    className: GeneratePathExample
+  - hash:
+      serializedVersion: 2
       Hash: 191cd500c627cd6682ef6f70b8e47f2c
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -1285,10 +1581,22 @@ ScriptsOnlyBuild:
     className: TMP_FontAsset
   - hash:
       serializedVersion: 2
+      Hash: c4f2fd5a2e866f024314d06066baabc3
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: MinMaxSliderTest
+  - hash:
+      serializedVersion: 2
       Hash: c58560fdb6d207d2c80d131b9f27465b
     assemblyName: GamePush
     namespaceName: GamePush
     className: GP_Uniques
+  - hash:
+      serializedVersion: 2
+      Hash: 9d35d2ab4679af00276ff941ee08f1bd
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: AdShowerGarage
   - hash:
       serializedVersion: 2
       Hash: d82086405f46de14829f6b4bcbdd8fc9
@@ -1339,6 +1647,36 @@ ScriptsOnlyBuild:
     className: StateGraphAsset
   - hash:
       serializedVersion: 2
+      Hash: 314525075314324b87c4e2ac674c7591
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: RewardView
+  - hash:
+      serializedVersion: 2
+      Hash: 76eecd5e8b8dde3316b609df12b021b1
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: MinMaxValueTest
+  - hash:
+      serializedVersion: 2
+      Hash: 2b0149eb87a4719dbc6794e96c9f8e6b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: GameConfig
+  - hash:
+      serializedVersion: 2
+      Hash: 55ef7900f0768bcf29f7d9c87e06118f
+    assemblyName: PathCreator
+    namespaceName: PathCreation
+    className: PathCreator
+  - hash:
+      serializedVersion: 2
+      Hash: 8b85f78ebf2a83f8498f2a896328ca64
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: PauseUIComponent
+  - hash:
+      serializedVersion: 2
       Hash: ef38c1407dba8c1f5d69f5db61a694fe
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -1349,6 +1687,18 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: AspectRatioFitter
+  - hash:
+      serializedVersion: 2
+      Hash: cc5493364c224105345a7f4a33da0ae0
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: CarUpgradeView
+  - hash:
+      serializedVersion: 2
+      Hash: afdd0da156313f1fe114dd3dff02df07
+    assemblyName: Assembly-CSharp
+    namespaceName: PathCreation.Examples
+    className: PathPlacer
   - hash:
       serializedVersion: 2
       Hash: 9637dcdf3068a91dfe653e61bb82f13d
@@ -1363,6 +1713,12 @@ ScriptsOnlyBuild:
     className: GP_LeaderboardScoped
   - hash:
       serializedVersion: 2
+      Hash: 6e3a5ecfb8fe5966dd72a1c3d94e0f34
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: LocalizationTMProTextUI
+  - hash:
+      serializedVersion: 2
       Hash: 87115bd295699d98e18b7aeaf63d6b82
     assemblyName: GamePush
     namespaceName: GamePush
@@ -1373,6 +1729,24 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnMouseUpAsButtonMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 0d37d412fd563c3868dbc51aee4fef98
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: EnumFlagsTest
+  - hash:
+      serializedVersion: 2
+      Hash: 4156f8fa315b011ff80eba41f668d64b
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: HorizontalLineTest
+  - hash:
+      serializedVersion: 2
+      Hash: 13076bedc0ea23b24937fe4ddd1ff7fb
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: TrackSaveAndLoad
   - hash:
       serializedVersion: 2
       Hash: 4f353524ce6564e40764f1ea080b2d85
@@ -1411,6 +1785,12 @@ ScriptsOnlyBuild:
     className: MarkerTrack
   - hash:
       serializedVersion: 2
+      Hash: 75f43d219343e08c80ca72458a3a36d4
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: InfoBoxTest
+  - hash:
+      serializedVersion: 2
       Hash: 672716ae97f6ddb615fa5ac3ec9da349
     assemblyName: UnityEngine.TestRunner
     namespaceName: UnityEngine.TestTools
@@ -1421,6 +1801,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro
     namespaceName: TMPro
     className: TextContainer
+  - hash:
+      serializedVersion: 2
+      Hash: 58c47a6c3ad59391861d887dc1d04365
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ApplicationSettings
   - hash:
       serializedVersion: 2
       Hash: f669be52680c88846b2093fd41d1e06e
@@ -1447,10 +1833,22 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
+      Hash: c02da3f79cfdf7ba01b6553f860a96cf
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: DisableIfTest
+  - hash:
+      serializedVersion: 2
       Hash: 4878e735441f4041539853759559c86f
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: VerticalLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: a6ec579d74474e5f19e2b6653bf31b36
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: RateWindow
   - hash:
       serializedVersion: 2
       Hash: c4b85a67513b4f0cf7b5fb2d5ded04b0
@@ -1493,6 +1891,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: PositionAsUV1
+  - hash:
+      serializedVersion: 2
+      Hash: 0bd2baafaa35c7b73edd73e01e081f40
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: DropdownTest
   - hash:
       serializedVersion: 2
       Hash: 6a0b5b415c00f783202fd1ae2d556cb2
@@ -1543,6 +1947,18 @@ ScriptsOnlyBuild:
     className: UnityOnSubmitMessageListener
   - hash:
       serializedVersion: 2
+      Hash: f8cda422f9708bc31ca90f8d39bc7d13
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: _TestScriptableObjectB
+  - hash:
+      serializedVersion: 2
+      Hash: ec77028acbabfd35f109834da67ce1a6
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: ShowNativePropertyTest
+  - hash:
+      serializedVersion: 2
       Hash: 5ebc58ec194dd44630b25fcc270ad4af
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
@@ -1573,10 +1989,40 @@ ScriptsOnlyBuild:
     className: UnityOnMoveMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 31afce086229d5cd0620e65766d868d4
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: TimerRaceComponent
+  - hash:
+      serializedVersion: 2
+      Hash: a10560e0480d1331c54e3306e18c7d03
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: AnimatorParamTest
+  - hash:
+      serializedVersion: 2
+      Hash: fbb5759bcce95968c994e00470d7637e
+    assemblyName: Assembly-CSharp
+    namespaceName: PathCreation.Examples
+    className: PathFollower
+  - hash:
+      serializedVersion: 2
       Hash: d0392b7f3f52d5af537ade186b4f51f1
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
     className: ControlTrack
+  - hash:
+      serializedVersion: 2
+      Hash: db077ef3a37fbdf326d40fb5a274d6b8
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: ReorderableListTest
+  - hash:
+      serializedVersion: 2
+      Hash: cd03166ae5766b40e412daae54218cc5
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: LeaderboardView
   - hash:
       serializedVersion: 2
       Hash: d5cd7f207e91ca8336c65a577a6fb2a0
@@ -1585,16 +2031,46 @@ ScriptsOnlyBuild:
     className: ScrollRect
   - hash:
       serializedVersion: 2
+      Hash: 94a1493fbe1dcde97c755df3570ad859
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: ShowNonSerializedFieldTest
+  - hash:
+      serializedVersion: 2
       Hash: 0b3c81f600934eccf802bb0e5e46fce7
     assemblyName: GamePush
     namespaceName: GamePush
     className: GP_Variables
   - hash:
       serializedVersion: 2
+      Hash: 8055b0dc318546409a7fc5d6d0083990
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: EnableIfTest
+  - hash:
+      serializedVersion: 2
+      Hash: 7882d929b95f605304702ef98742525b
+    assemblyName: PathCreator
+    namespaceName: PathCreation
+    className: GlobalDisplaySettings
+  - hash:
+      serializedVersion: 2
+      Hash: cd7e84625f75adf5b9a5cb2ad5392479
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: LayerTest
+  - hash:
+      serializedVersion: 2
       Hash: d86c1ffb6635da296ab11b5636925063
     assemblyName: GamePush.Data
     namespaceName: GamePush.Data
     className: SavedDataSO
+  - hash:
+      serializedVersion: 2
+      Hash: bd2f8d08842914ade1d761e01b5905db
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: TouchInputView
   - hash:
       serializedVersion: 2
       Hash: 6c084e2651ff567befb719598592f91f
@@ -1615,16 +2091,34 @@ ScriptsOnlyBuild:
     className: UnityOnMouseOverMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 45bd785c31d9a7fff4a7df75e2bf0e61
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: DriftPointsShowComponent
+  - hash:
+      serializedVersion: 2
       Hash: fd00819c70d997d0563d0b6004946907
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: SoundPlayer
   - hash:
       serializedVersion: 2
+      Hash: 9db9caa0451915c13121285c93d596e1
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: WalletView
+  - hash:
+      serializedVersion: 2
       Hash: 2c583ad0ac85d03e8700dd05fdcb46cb
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: Variables
+  - hash:
+      serializedVersion: 2
+      Hash: 061eea5e5b990e61b9cc6e4751e277dc
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: LabelTest
   - hash:
       serializedVersion: 2
       Hash: 777e817285c1b7ad746490f66f32c910
@@ -1639,6 +2133,12 @@ ScriptsOnlyBuild:
     className: StateMachine
   - hash:
       serializedVersion: 2
+      Hash: 00a68f05c3967ef4ef3740e10b6dd2fd
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: ProgressBarTest
+  - hash:
+      serializedVersion: 2
       Hash: 568292fb7ea6c4f7a667e5ff76bc7e85
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -1649,6 +2149,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro
     namespaceName: TMPro
     className: TMP_ScrollbarEventHandler
+  - hash:
+      serializedVersion: 2
+      Hash: b99d5e315638fa37d01f021575d76810
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: InputAxisTest
   - hash:
       serializedVersion: 2
       Hash: 5e56989da2be52d68a3dd862a7a4f472
@@ -1669,10 +2175,22 @@ ScriptsOnlyBuild:
     className: GP_GamesCollections
   - hash:
       serializedVersion: 2
+      Hash: 3f3470429cb2cd59ccef81dffa4d739a
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: LocalizationCollector
+  - hash:
+      serializedVersion: 2
       Hash: ff76cf6cf52b4db7b95af6ffadca9288
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
     className: SignalEmitter
+  - hash:
+      serializedVersion: 2
+      Hash: c75b7d3cccbcfe41e9227ee183646fbd
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: FinishCanvas
   - hash:
       serializedVersion: 2
       Hash: 9d370b1e6f717b340227c1552e486c06
@@ -1681,10 +2199,22 @@ ScriptsOnlyBuild:
     className: GP_Game
   - hash:
       serializedVersion: 2
+      Hash: ca4c1f16c29e7a5fde24cf7ae9568e64
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: PrometeoCarController
+  - hash:
+      serializedVersion: 2
       Hash: 02a47340661d2ea7c6d30e292cfef403
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnToggleValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: a82bbf9a3c089553ac9643963f21c4eb
+    assemblyName: Assembly-CSharp
+    namespaceName: PathCreation.Examples
+    className: RoadMeshCreator
   - hash:
       serializedVersion: 2
       Hash: 8bf800a764665b085fe469e8aea7f167
@@ -1699,10 +2229,28 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   - hash:
       serializedVersion: 2
+      Hash: 63a48e65488d65491cf0a525571e23cb
+    assemblyName: Assembly-CSharp
+    namespaceName: PathCreation.Examples
+    className: CylinderMeshCreator
+  - hash:
+      serializedVersion: 2
+      Hash: d708ec54488bc801983e137b5e69833b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: StatsConfig
+  - hash:
+      serializedVersion: 2
       Hash: 00eef92bf387da2c9009267123d9d674
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnTriggerExit2DMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 4ddc6f279dda7baa5a21ec9f8a14217b
+    assemblyName: NaughtyAttributes.Test
+    namespaceName: NaughtyAttributes.Test
+    className: FoldoutTest
   - hash:
       serializedVersion: 2
       Hash: 66f2d7b12f931575150be3e135b25085
@@ -1715,516 +2263,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: 1fd64d7c9dee4da6b1b501a4f1842ad7
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: TrackPart
-  - hash:
-      serializedVersion: 2
-      Hash: 45bd785c31d9a7fff4a7df75e2bf0e61
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: DriftPointsShowComponent
-  - hash:
-      serializedVersion: 2
-      Hash: 6105ad3baac2e55ed464ab986e49e4e7
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: StartRace
-  - hash:
-      serializedVersion: 2
-      Hash: bd2f8d08842914ade1d761e01b5905db
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: TouchInputView
-  - hash:
-      serializedVersion: 2
-      Hash: e1316bceccdc3c5bd613cc3f468fa70d
-    assemblyName: NaughtyAttributes.Test
-    namespaceName: NaughtyAttributes.Test
-    className: ShowAssetPreviewTest
-  - hash:
-      serializedVersion: 2
-      Hash: b99d5e315638fa37d01f021575d76810
-    assemblyName: NaughtyAttributes.Test
-    namespaceName: NaughtyAttributes.Test
-    className: InputAxisTest
-  - hash:
-      serializedVersion: 2
-      Hash: 428502cf07793cbdcdf07034589e6c92
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: TreeRotator
-  - hash:
-      serializedVersion: 2
-      Hash: 94a1493fbe1dcde97c755df3570ad859
-    assemblyName: NaughtyAttributes.Test
-    namespaceName: NaughtyAttributes.Test
-    className: ShowNonSerializedFieldTest
-  - hash:
-      serializedVersion: 2
-      Hash: afdd0da156313f1fe114dd3dff02df07
-    assemblyName: Assembly-CSharp
-    namespaceName: PathCreation.Examples
-    className: PathPlacer
-  - hash:
-      serializedVersion: 2
-      Hash: c75b7d3cccbcfe41e9227ee183646fbd
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: FinishCanvas
-  - hash:
-      serializedVersion: 2
-      Hash: 23f99d6b78db4a224847644d4a3ce681
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: LeaderboardPlayerView
-  - hash:
-      serializedVersion: 2
-      Hash: e495c7e3373c78aee0fa0b1fff9b3f45
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: SpeedometrUIComponent
-  - hash:
-      serializedVersion: 2
-      Hash: 6e3a5ecfb8fe5966dd72a1c3d94e0f34
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: LocalizationTMProTextUI
-  - hash:
-      serializedVersion: 2
-      Hash: a82bbf9a3c089553ac9643963f21c4eb
-    assemblyName: Assembly-CSharp
-    namespaceName: PathCreation.Examples
-    className: RoadMeshCreator
-  - hash:
-      serializedVersion: 2
-      Hash: f8cda422f9708bc31ca90f8d39bc7d13
-    assemblyName: NaughtyAttributes.Test
-    namespaceName: NaughtyAttributes.Test
-    className: _TestScriptableObjectB
-  - hash:
-      serializedVersion: 2
-      Hash: 31afce086229d5cd0620e65766d868d4
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: TimerRaceComponent
-  - hash:
-      serializedVersion: 2
-      Hash: fbb5759bcce95968c994e00470d7637e
-    assemblyName: Assembly-CSharp
-    namespaceName: PathCreation.Examples
-    className: PathFollower
-  - hash:
-      serializedVersion: 2
-      Hash: 3e1a5a05eaffe856c8dd14221b119359
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: LoadingScreenView
-  - hash:
-      serializedVersion: 2
-      Hash: 1ca7cbbcc43d34dc48febcecde1550aa
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: UpgradeCardView
-  - hash:
-      serializedVersion: 2
-      Hash: fd0c11e0011deb7e45ad58418ae8aec8
-    assemblyName: NaughtyAttributes.Test
-    namespaceName: NaughtyAttributes.Test
-    className: ReadOnlyTest
-  - hash:
-      serializedVersion: 2
-      Hash: 150fa11e6fba861ecfd7119c47a07012
-    assemblyName: NaughtyAttributes.Test
-    namespaceName: NaughtyAttributes.Test
-    className: ExpandableTest
-  - hash:
-      serializedVersion: 2
-      Hash: 061eea5e5b990e61b9cc6e4751e277dc
-    assemblyName: NaughtyAttributes.Test
-    namespaceName: NaughtyAttributes.Test
-    className: LabelTest
-  - hash:
-      serializedVersion: 2
-      Hash: bc9627cd7a922488409b4195a4d515a6
-    assemblyName: NaughtyAttributes.Test
-    namespaceName: NaughtyAttributes.Test
-    className: ValidateInputTest
-  - hash:
-      serializedVersion: 2
-      Hash: fedbf06ebc14f29e14df3d715572d47a
-    assemblyName: Assembly-CSharp
-    namespaceName: PathCreation.Examples
-    className: GeneratePathExample
-  - hash:
-      serializedVersion: 2
-      Hash: cd03166ae5766b40e412daae54218cc5
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: LeaderboardView
-  - hash:
-      serializedVersion: 2
-      Hash: 76eecd5e8b8dde3316b609df12b021b1
-    assemblyName: NaughtyAttributes.Test
-    namespaceName: NaughtyAttributes.Test
-    className: MinMaxValueTest
-  - hash:
-      serializedVersion: 2
-      Hash: 13076bedc0ea23b24937fe4ddd1ff7fb
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: TrackSaveAndLoad
-  - hash:
-      serializedVersion: 2
-      Hash: 025ea4e3e221356b751981a9403de09b
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: WrongWayUIComponent
-  - hash:
-      serializedVersion: 2
-      Hash: 34bffb3ad451ae773b811f23640979f0
-    assemblyName: NaughtyAttributes.Test
-    namespaceName: NaughtyAttributes.Test
-    className: CurveRangeTest
-  - hash:
-      serializedVersion: 2
-      Hash: 9da17c1ffcfc464b5cf2e7ed20c71a00
-    assemblyName: NaughtyAttributes.Test
-    namespaceName: NaughtyAttributes.Test
-    className: _NaughtyScriptableObject
-  - hash:
-      serializedVersion: 2
-      Hash: a39523866ea5739ad1c334a1cfc1578e
-    assemblyName: NaughtyAttributes.Test
-    namespaceName: NaughtyAttributes.Test
-    className: ButtonTest
-  - hash:
-      serializedVersion: 2
-      Hash: ec77028acbabfd35f109834da67ce1a6
-    assemblyName: NaughtyAttributes.Test
-    namespaceName: NaughtyAttributes.Test
-    className: ShowNativePropertyTest
-  - hash:
-      serializedVersion: 2
-      Hash: c347ff0cc5e7f94dba531e6f5ad20eae
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: CarShower
-  - hash:
-      serializedVersion: 2
-      Hash: 328313117ed2299e14dd78a38af2e9c3
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: Game
-  - hash:
-      serializedVersion: 2
-      Hash: cd7e84625f75adf5b9a5cb2ad5392479
-    assemblyName: NaughtyAttributes.Test
-    namespaceName: NaughtyAttributes.Test
-    className: LayerTest
-  - hash:
-      serializedVersion: 2
-      Hash: 7882d929b95f605304702ef98742525b
-    assemblyName: PathCreator
-    namespaceName: PathCreation
-    className: GlobalDisplaySettings
-  - hash:
-      serializedVersion: 2
-      Hash: 821cbcd018d1c05458b2cc2551f468b4
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: AdBlockView
-  - hash:
-      serializedVersion: 2
-      Hash: 00a68f05c3967ef4ef3740e10b6dd2fd
-    assemblyName: NaughtyAttributes.Test
-    namespaceName: NaughtyAttributes.Test
-    className: ProgressBarTest
-  - hash:
-      serializedVersion: 2
-      Hash: 43e97047115ed5b14d19af016445c506
-    assemblyName: Assembly-CSharp
-    namespaceName: PathCreation.Examples
-    className: PathSpawner
-  - hash:
-      serializedVersion: 2
-      Hash: 21c9bef235e59ba5f00010accda2adfb
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: SelectCarView
-  - hash:
-      serializedVersion: 2
-      Hash: 58c47a6c3ad59391861d887dc1d04365
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: ApplicationSettings
-  - hash:
-      serializedVersion: 2
-      Hash: 9db9caa0451915c13121285c93d596e1
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: WalletView
-  - hash:
-      serializedVersion: 2
-      Hash: a0880f01f09893a90c2af57ce3258f04
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: MapRaceView
-  - hash:
-      serializedVersion: 2
-      Hash: 63a48e65488d65491cf0a525571e23cb
-    assemblyName: Assembly-CSharp
-    namespaceName: PathCreation.Examples
-    className: CylinderMeshCreator
-  - hash:
-      serializedVersion: 2
-      Hash: 54e799d6baf4a9c0185527d9f7f7da5a
-    assemblyName: NaughtyAttributes.Test
-    namespaceName: NaughtyAttributes.Test
-    className: SceneTest
-  - hash:
-      serializedVersion: 2
-      Hash: d708ec54488bc801983e137b5e69833b
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: StatsConfig
-  - hash:
-      serializedVersion: 2
-      Hash: 0bd2baafaa35c7b73edd73e01e081f40
-    assemblyName: NaughtyAttributes.Test
-    namespaceName: NaughtyAttributes.Test
-    className: DropdownTest
-  - hash:
-      serializedVersion: 2
-      Hash: 314525075314324b87c4e2ac674c7591
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: RewardView
-  - hash:
-      serializedVersion: 2
-      Hash: 744141454f1fbc132ad659fc1a05f3fe
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: StatsSettings
-  - hash:
-      serializedVersion: 2
-      Hash: 376ffdbb4af162b147f66f709f1200ec
-    assemblyName: NaughtyAttributes.Test
-    namespaceName: NaughtyAttributes.Test
-    className: _TestScriptableObjectA
-  - hash:
-      serializedVersion: 2
-      Hash: d3b1dc3c42a617401ad9a75219e956e8
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: GameConfig
-  - hash:
-      serializedVersion: 2
-      Hash: f1e039d0ecaeff6872cd037d3c6314a5
-    assemblyName: NaughtyAttributes.Test
-    namespaceName: NaughtyAttributes.Test
-    className: BoxGroupTest
-  - hash:
-      serializedVersion: 2
-      Hash: ddf019087f24ede7db9d040925c6985b
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: GameIniter
-  - hash:
-      serializedVersion: 2
-      Hash: db077ef3a37fbdf326d40fb5a274d6b8
-    assemblyName: NaughtyAttributes.Test
-    namespaceName: NaughtyAttributes.Test
-    className: ReorderableListTest
-  - hash:
-      serializedVersion: 2
-      Hash: 3f3470429cb2cd59ccef81dffa4d739a
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: LocalizationCollector
-  - hash:
-      serializedVersion: 2
-      Hash: 80a7188e3cb836d78da7d8dc63184a72
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: PauseButtonUIComponent
-  - hash:
-      serializedVersion: 2
-      Hash: 8b51e13515776800b6c7cdf2e490c80f
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: TrackWay
-  - hash:
-      serializedVersion: 2
-      Hash: 7f07c7e52142b7893b21d7c1c172ae46
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: LapsUIComponent
-  - hash:
-      serializedVersion: 2
-      Hash: 4ddc6f279dda7baa5a21ec9f8a14217b
-    assemblyName: NaughtyAttributes.Test
-    namespaceName: NaughtyAttributes.Test
-    className: FoldoutTest
-  - hash:
-      serializedVersion: 2
-      Hash: f50c6908c1e6ff9dc10ab8aca311ca4c
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: PrometeoTouchInput
-  - hash:
-      serializedVersion: 2
-      Hash: 0d37d412fd563c3868dbc51aee4fef98
-    assemblyName: NaughtyAttributes.Test
-    namespaceName: NaughtyAttributes.Test
-    className: EnumFlagsTest
-  - hash:
-      serializedVersion: 2
-      Hash: 08b3033917c5016c6759c612e2e2dbc2
-    assemblyName: NaughtyAttributes.Test
-    namespaceName: NaughtyAttributes.Test
-    className: TagTest
-  - hash:
-      serializedVersion: 2
-      Hash: a10560e0480d1331c54e3306e18c7d03
-    assemblyName: NaughtyAttributes.Test
-    namespaceName: NaughtyAttributes.Test
-    className: AnimatorParamTest
-  - hash:
-      serializedVersion: 2
-      Hash: a6ec579d74474e5f19e2b6653bf31b36
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: RateWindow
-  - hash:
-      serializedVersion: 2
-      Hash: ff2e2d3d0433a886d20a4e4d1e843f89
-    assemblyName: NaughtyAttributes.Test
-    namespaceName: NaughtyAttributes.Test
-    className: ResizableTextAreaTest
-  - hash:
-      serializedVersion: 2
-      Hash: 6cf47bced8ac20b49ed69cabfeec707f
-    assemblyName: NaughtyAttributes.Test
-    namespaceName: NaughtyAttributes.Test
-    className: HideIfTest
-  - hash:
-      serializedVersion: 2
-      Hash: 4156f8fa315b011ff80eba41f668d64b
-    assemblyName: NaughtyAttributes.Test
-    namespaceName: NaughtyAttributes.Test
-    className: HorizontalLineTest
-  - hash:
-      serializedVersion: 2
-      Hash: cc5493364c224105345a7f4a33da0ae0
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: CarUpgradeView
-  - hash:
-      serializedVersion: 2
-      Hash: 281448595e4aea92d1f6eb30a951b6f4
-    assemblyName: NaughtyAttributes.Test
-    namespaceName: NaughtyAttributes.Test
-    className: _NaughtyComponent
-  - hash:
-      serializedVersion: 2
-      Hash: fb6af743687b621fbd6b51261b6fe316
-    assemblyName: NaughtyAttributes.Test
-    namespaceName: NaughtyAttributes.Test
-    className: RequiredTest
-  - hash:
-      serializedVersion: 2
-      Hash: 75f43d219343e08c80ca72458a3a36d4
-    assemblyName: NaughtyAttributes.Test
-    namespaceName: NaughtyAttributes.Test
-    className: InfoBoxTest
-  - hash:
-      serializedVersion: 2
-      Hash: b6480ed629ac54f1bf9986233adc0b65
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: LocalizationConfig
-  - hash:
-      serializedVersion: 2
-      Hash: 8485921f0a306535ef01054fecebdb0f
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: SoundsConfig
-  - hash:
-      serializedVersion: 2
-      Hash: c4f2fd5a2e866f024314d06066baabc3
-    assemblyName: NaughtyAttributes.Test
-    namespaceName: NaughtyAttributes.Test
-    className: MinMaxSliderTest
-  - hash:
-      serializedVersion: 2
-      Hash: c02da3f79cfdf7ba01b6553f860a96cf
-    assemblyName: NaughtyAttributes.Test
-    namespaceName: NaughtyAttributes.Test
-    className: DisableIfTest
-  - hash:
-      serializedVersion: 2
-      Hash: 6a14a4ebf41b36d2b98ae72666f53f92
-    assemblyName: NaughtyAttributes.Test
-    namespaceName: NaughtyAttributes.Test
-    className: SortingLayerTest
-  - hash:
-      serializedVersion: 2
-      Hash: 55ef7900f0768bcf29f7d9c87e06118f
-    assemblyName: PathCreator
-    namespaceName: PathCreation
-    className: PathCreator
-  - hash:
-      serializedVersion: 2
-      Hash: 8055b0dc318546409a7fc5d6d0083990
-    assemblyName: NaughtyAttributes.Test
-    namespaceName: NaughtyAttributes.Test
-    className: EnableIfTest
-  - hash:
-      serializedVersion: 2
-      Hash: 9d35d2ab4679af00276ff941ee08f1bd
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: AdShowerGarage
-  - hash:
-      serializedVersion: 2
-      Hash: ac3f8c64d01953620607187972e27cc3
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: AdLoaderShower
-  - hash:
-      serializedVersion: 2
-      Hash: 9e28546ae252acc281e19c642e646c80
-    assemblyName: NaughtyAttributes.Test
-    namespaceName: NaughtyAttributes.Test
-    className: ShowIfTest
-  - hash:
-      serializedVersion: 2
-      Hash: 8b85f78ebf2a83f8498f2a896328ca64
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: PauseUIComponent
-  - hash:
-      serializedVersion: 2
-      Hash: d8cd42c0db39dfccdc004b86e8085737
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: CameraFollow
-  - hash:
-      serializedVersion: 2
-      Hash: df36ac82c44d51330bcc5c9902ef5066
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: OpenSettings
-  - hash:
-      serializedVersion: 2
-      Hash: fa459266c334c02b81f5733722419453
-    assemblyName: NaughtyAttributes.Test
-    namespaceName: NaughtyAttributes.Test
-    className: OnValueChangedTest
   platform: 20
   scenePathNames:
   - Assets/Data/Scenes/GarageScene.unity

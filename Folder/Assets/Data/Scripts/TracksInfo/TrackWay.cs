@@ -6,13 +6,14 @@ public class TrackWay : MonoBehaviour
     public int NumberWay => numberWay;
 
     public System.Action<int> OnColliderTouched;
-    public System.Action<int> OnFixedUpdate;
+    public System.Action<int> OnTouchColliderCalculate;
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.transform.TryGetComponent(out PrometeoCarController car))
         {
             OnColliderTouched?.Invoke(NumberWay);
+            OnTouchColliderCalculate?.Invoke(NumberWay);
         }
     }
 
@@ -29,8 +30,4 @@ public class TrackWay : MonoBehaviour
         numberWay = savable.WayIndex;
     }
 
-    public void FixedUpdate()
-    {
-        OnFixedUpdate?.Invoke(NumberWay);
-    }
 }

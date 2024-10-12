@@ -95,6 +95,7 @@
     <Compile Include="Assets\Data\Scripts\Visual\StartScene\WalletView.cs" />
     <Compile Include="Assets\Data\Scripts\RateGame\RateWindow.cs" />
     <Compile Include="Assets\PathCreator\Examples\Scripts\PathFollower.cs" />
+    <Compile Include="Assets\Data\Scripts\HowToPlayView.cs" />
     <Compile Include="Assets\Data\Scripts\TracksInfo\TrackPart.cs" />
     <Compile Include="Assets\Data\Scripts\Visual\RaceUIComponents\DriftPointsShowComponent.cs" />
     <Compile Include="Assets\Data\Scripts\Visual\RaceUIComponents\WrongWayUIComponent.cs" />
@@ -106,11 +107,13 @@
     <Compile Include="Assets\Data\Scripts\Rewards\RewardAfterRace.cs" />
     <Compile Include="Assets\Data\Scripts\TracksInfo\TrackWay.cs" />
     <Compile Include="Assets\Data\Scripts\RateGame\RateGame.cs" />
+    <Compile Include="Assets\Data\Scripts\OpenVK.cs" />
     <Compile Include="Assets\Data\Scripts\OpenSettings.cs" />
     <Compile Include="Assets\Data\Scripts\Visual\StartScene\UpgradeCardView.cs" />
     <Compile Include="Assets\Data\Scripts\Visual\RaceUIComponents\SpeedometrUIComponent.cs" />
     <Compile Include="Assets\PathCreator\Examples\Scripts\GeneratePathExample.cs" />
     <Compile Include="Assets\PathCreator\Examples\Scripts\RoadMeshCreator.cs" />
+    <Compile Include="Assets\Data\Scripts\CheckHowToPlay.cs" />
     <Compile Include="Assets\Data\Scripts\TracksInfo\TreeRotator.cs" />
     <Compile Include="Assets\Data\Scripts\GameIniter.cs" />
     <Compile Include="Assets\Data\Scripts\Visual\RaceUIComponents\LapsUIComponent.cs" />

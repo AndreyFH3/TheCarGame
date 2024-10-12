@@ -12,14 +12,22 @@ public abstract class RaceController
     public abstract float RaceTime { get; }
     public List<TrackWay> TrackWays { get; protected set; }
     public float distanceToNextCheckPoint { get; protected set; } = float.MaxValue;
+    public float distanceWrongDirection { get; protected set; } 
+    public float distanceBetweenWrongAndLastCorrect { get; protected set; } 
     public int lastPointIndex { get; protected set; } = -1;
     
     public System.Action OnFinish;
     public System.Action<bool> OnPlayerWrongWay;
 
-    public bool isWrongWay { get; protected set; } = false;
-    public float TimeWrongDistance { get; protected set; } = 5f;
-    public float timeWrongDistance = 5f;
+    public bool isWrongWay { get; protected set; } = true;
+    public float TimeWrongDistance { get; protected set; } = 10f;
+    public float timeWrongDistance = 0f;
+
+    public float TimeCorrectInWrongDistance { get; protected set; } = 3f;
+    public float timeCorrectInWrongDistance = 0f;
+
+    protected int lastPassedPoint = -1;
+    protected int lastWrongPassedPoint = -1;
 
     public PrometeoCarController CarController { get; protected set; }
     public DefaultRaceSettings RaceSettings => settings;
@@ -30,15 +38,13 @@ public abstract class RaceController
         CarController = carController; 
         TrackWays = countedCollider; 
         this.settings = settings;
-
-        TrackWays.ForEach(x => x.OnFixedUpdate += CalculatePosition);
+        lastPassedPoint = TrackWays.Count - 1;
+        TrackWays.ForEach(x => x.OnTouchColliderCalculate += CalculatePosition);
 
         var characteristics = Game.Player.GetCarCharacteristics(settings.carId);
         CarController.maxSpeed += (int)characteristics.Characteristics.ToList().Find(x => x.Type == CharacteristicType.speed).CalculatedPower;
-        CarController.accelerationMultiplier+= (int)characteristics.Characteristics.ToList().Find(x => x.Type == CharacteristicType.boost).CalculatedPower;
+        CarController.accelerationMultiplier += (int)characteristics.Characteristics.ToList().Find(x => x.Type == CharacteristicType.boost).CalculatedPower;
         CarController.handbrakeDriftMultiplier = characteristics.Characteristics.ToList().Find(x => x.Type == CharacteristicType.controllability).CalculatedPower;
-        //CarController.brakeForce += (int)characteristics.Characteristics.ToList().Find(x => x.Type == CharacteristicType.controllability).CalculatedPower;
-        //CarController.maxSteeringAngle += (int)characteristics.Characteristics.ToList().Find(x => x.Type == CharacteristicType.controllability).CalculatedPower;
     }
     
     public void StartRace()
@@ -75,6 +81,22 @@ public abstract class RaceController
 
     private void CalculatePosition(int counted)
     {
+        var isCorrectNow = true;
+        if(IsMovingForward(counted))
+        {
+            isWrongWay = false;
+        }
+        else
+        {
+            isWrongWay = true;
+
+            if (lastWrongPassedPoint - 1 == counted || counted == TrackWays.Count)
+            {
+                isCorrectNow = false;
+            }
+            lastWrongPassedPoint = counted;
+        }   
+        /*
         if (lastPointIndex != counted)
         {
             lastPointIndex = counted;
@@ -91,20 +113,50 @@ public abstract class RaceController
             distanceToNextCheckPoint = distance;
             Debug.Log(isWrongWay);
         }
+
         else
         {
-            if (distance + 50 >= distanceToNextCheckPoint)
+            if (distance + 200 >= distanceToNextCheckPoint)
             {
                 timeWrongDistance += Time.fixedDeltaTime;
             }
             if(timeWrongDistance >= TimeWrongDistance)
             {
+                distanceWrongDirection = distance;
+                if(distanceBetweenWrongAndLastCorrect > distanceWrongDirection - distanceToNextCheckPoint)
+                {
+                    timeCorrectInWrongDistance += Time.deltaTime;
+                    if(timeCorrectInWrongDistance >= TimeCorrectInWrongDistance)
+                    {
+                        distanceToNextCheckPoint = distance;
+                        timeCorrectInWrongDistance = 0;
+                    }
+                }
+
+                distanceBetweenWrongAndLastCorrect = distanceWrongDirection - distanceToNextCheckPoint;
                 isWrongWay = true;
                 Debug.Log(isWrongWay);
             }
         } 
-    
-        OnPlayerWrongWay?.Invoke(isWrongWay);
+    */
+        OnPlayerWrongWay?.Invoke(!isCorrectNow);
+        bool IsMovingForward(int currentCheckpointIndex)
+        {
+            // Если текущая точка больше последней, то двигаемся вперед
+            if (currentCheckpointIndex == lastPassedPoint)
+            {
+                return true;
+            }
+
+            // Если текущая точка - 0, а последняя точка - это последний чекпоинт, то игрок завершает круг
+            if (currentCheckpointIndex == TrackWays.Count && lastPassedPoint == 0)
+            {
+                return true;
+            }
+
+            // В остальных случаях игрок движется назад
+            return false;
+        }
     }
 
 
@@ -119,7 +171,7 @@ public class CircleRaceController : RaceController
     public override RaceType RaceType { get; } = RaceType.defaultRace;
     public override float RaceTime  => Time.time - StartTime;
     private int laps = 1;
-    private int passedLaps = 1;
+    private int passedLaps = 0;
     public int Laps => laps;
     private TrackInfo times;
     protected CircleRaceSettings Settings => (CircleRaceSettings)settings;
@@ -137,23 +189,16 @@ public class CircleRaceController : RaceController
         for (int i = 0; i < TrackWays.Count; i++)
         {
             TrackWays[i].OnColliderTouched += OnControlPointPassed;
-            TrackWays[i].gameObject.SetActive(false);
         }
         times = Game.Config.statsConfig.GetTrackTimes(Settings.trackId);
-        TrackWays[0].gameObject.SetActive(true);
         laps = Settings.cirlces;
     }
 
     public override void OnControlPointPassed(int ind)
     {
-        if (ind <= 0) 
-            ind = 1;
-        
-        else if (ind >= TrackWays.Count) 
+        if (lastPassedPoint + 1 == TrackWays.Count)
         {
-            TrackWays[TrackWays.Count - 1].gameObject.SetActive(false);
-            TrackWays[0].gameObject.SetActive(true);
-
+            lastPassedPoint = 0;
             if (passedLaps >= laps)
             {
                 Finish();
@@ -163,12 +208,12 @@ public class CircleRaceController : RaceController
             {
                 passedLaps++;
                 OnLapPassed?.Invoke(passedLaps);
-                ind = 1;
             }
         }
-
-        TrackWays[ind - 1].gameObject.SetActive(false);
-        TrackWays[ind].gameObject.SetActive(true);
+        else if (lastPassedPoint + 1 == ind)
+        {
+            lastPassedPoint = ind;
+        }
     }
 
     protected override void Finish()
@@ -219,10 +264,8 @@ public class DriftRaceController : RaceController
         for (int i = 0; i < TrackWays.Count; i++)
         {
             TrackWays[i].OnColliderTouched += OnControlPointPassed;
-            TrackWays[i].gameObject.SetActive(false);
         }
         trackInfo = Game.Config.statsConfig.GetTrackPoints(Settings.trackId);
-        TrackWays[0].gameObject.SetActive(true);
         laps = Settings.cirlces;
     }
 
@@ -263,13 +306,12 @@ public class DriftRaceController : RaceController
 
     public override void OnControlPointPassed(int ind)
     {
-        if (ind <= 0)
-            ind = 1;
+        if (ind < 0)
+            ind = 0;
 
         else if (ind >= TrackWays.Count)
         {
-            TrackWays[TrackWays.Count - 1].gameObject.SetActive(false);
-            TrackWays[0].gameObject.SetActive(true);
+            //вот тут надо как то переделать систему подсчета
 
             if (passedLaps >= laps)
             {
@@ -280,12 +322,10 @@ public class DriftRaceController : RaceController
             {
                 passedLaps++;
                 OnLapPassed?.Invoke(passedLaps);
-                ind = 1;
+                ind = 0;
             }
         }
-
-        TrackWays[ind - 1].gameObject.SetActive(false);
-        TrackWays[ind].gameObject.SetActive(true);
+        lastPassedPoint = ind;
     }
 }
 

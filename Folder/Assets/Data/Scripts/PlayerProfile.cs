@@ -27,6 +27,7 @@ public class PlayerProfile
     public RateGame rate = new RateGame();
 
     [SerializeField] private bool isInited = false;
+    [SerializeField] public bool isShowedHowTo = false;
     public bool IsInited => isInited;
     public CarCharacteristics GetCarCharacteristics(string carId) => characteristicsCar.Find(x => x.Id == carId);
     public void Init()

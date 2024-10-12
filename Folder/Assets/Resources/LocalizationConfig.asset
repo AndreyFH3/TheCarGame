@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5df9ab0b98513944dbddffd1142a3203, type: 3}
   m_Name: LocalizationConfig
   m_EditorClassIdentifier: 
-  currentLanguage: 21
+  currentLanguage: 10
   defaultLanguage: 30
   notFoundPreffix: 
   showKeysInsteadLocalizationInEditor: 0
@@ -58,6 +58,8 @@ MonoBehaviour:
   - FRENCH
   - ITALIAN
   - BRAKE
+  - HOW_TO_PLAY_TITLE
+  - HOW_TO_PLAY_DESCRIPTION
   locales:
   - language: 30
     title: 
@@ -108,6 +110,35 @@ MonoBehaviour:
     - "Fran\xE7ais"
     - Italiano
     - "\u0422\u043E\u0440\u043C\u043E\u0437"
+    - "\u041A\u0430\u043A \u0438\u0433\u0440\u0430\u0442\u044C?"
+    - "\u041F\u0435\u0440\u0432\u044B\u043C \u0434\u0435\u043B\u043E\u043C \u043D\u0443\u0436\u043D\u043E
+      \u0432\u044B\u0431\u0440\u0430\u0442\u044C \u043C\u0430\u0448\u0438\u043D\u0443.
+      \u041F\u043E\u0441\u043B\u0435 \u044D\u0442\u043E\u0433\u043E \u0432\u044B\u0431\u0440\u0430\u0442\u044C
+      \u043A\u0430\u0440\u0442\u043A\u0443. \u041F\u0440\u0438 \u043F\u0440\u043E\u0445\u043E\u0436\u0434\u0435\u043D\u0438\u0438
+      \u0437\u0430\u0435\u0437\u0434\u043E\u0432 \u0437\u0430\u0440\u0430\u0431\u0430\u0442\u044B\u0432\u0430\u044E\u0442\u0441\u044F
+      \u0434\u0435\u043D\u044C\u0433\u0438, \u043A\u043E\u0442\u043E\u0440\u044B\u0435
+      \u043C\u043E\u0436\u043D\u043E \u043F\u043E\u0442\u0440\u0430\u0442\u0438\u0442\u044C
+      \u043D\u0430 \u0443\u043B\u0443\u0447\u0448\u0435\u043D\u0438\u044F \u043C\u0430\u0448\u0438\u043D
+      \u0438\u043B\u0438 \u043F\u043E\u043A\u0443\u043F\u043A\u0438 \u043A\u0430\u0440\u0442
+      \u0438\u043B\u0438 \u043C\u0430\u0448\u0438\u043D.\n\n\u041F\u0440\u0438 \u0435\u0437\u0434\u0435
+      \u0432 \u043D\u0435\u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u043E\u043C
+      \u043D\u0430\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u0438 \u043F\u043E\u0434\u0441\u0447\u0435\u0442
+      \u043E\u0447\u043A\u043E\u0432 \u0432 \u0434\u0440\u0438\u0444\u0442-\u0440\u0435\u0436\u0438\u043C\u0435
+      \u043D\u0430\u0447\u043D\u0435\u0442\u0441\u044F \u043F\u0440\u0438 \u0434\u043E\u0441\u0442\u0438\u0436\u0435\u043D\u0438\u0438
+      \u043C\u0435\u0441\u0442\u0430, \u043E\u0442\u043A\u0443\u0434\u0430 \u043D\u0430\u0447\u0430\u043B\u043E\u0441\u044C
+      \u0434\u0432\u0438\u0436\u0435\u043D\u0438\u0435 \u0432 \u043D\u0435\u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u043E\u043C
+      \u043D\u0430\u043F\u0440\u0430\u0432\u043B\u0435\u043D\u0438\u0438.\n\n\u0412\u043F\u0435\u0440\u0435\u0434
+      - \u0441\u0442\u0440\u0435\u043B\u043A\u0430 \u0432\u0432\u0435\u0440\u0445
+      \u043D\u0430 \u0442\u0435\u043B\u0435\u0444\u043E\u043D\u0435 /W \u043D\u0430
+      \u041F\u041A\n\u041D\u0430\u0437\u0430\u0434 - \u0421\u0442\u0440\u0435\u043B\u043A\u0430
+      \u0432\u043D\u0438\u0437 \u043D\u0430 \u0442\u0435\u043B\u0435\u0444\u043E\u043D\u0435
+      /S \u043D\u0430 \u041F\u041A\n\u041F\u0440\u0430\u0432\u043E - \u0441\u0442\u0440\u0435\u043B\u043A\u0430
+      \u0432\u043F\u0440\u0430\u0432\u043E \u043D\u0430 \u0442\u0435\u043B\u0435\u0444\u043E\u043D\u0435
+      / A \u043D\u0430 \u041F\u041A\n\u0412\u043B\u0435\u0432\u043E - \u0441\u0442\u0440\u0435\u043B\u043A\u0430
+      \u0432\u043B\u0435\u0432\u043E \u043D\u0430 \u0442\u0435\u043B\u0435\u0444\u043E\u043D\u0435
+      /D \u043D\u0430 \u041F\u041A\n\u0422\u043E\u0440\u043C\u043E\u0437 - \u043A\u043D\u043E\u043F\u043A\u0430
+      Break \u043D\u0430 \u0442\u0435\u043B\u0435\u0444\u043E\u043D\u0435/ space
+      \u043D\u0430 \u041F\u041A"
     enabled: 0
   - language: 10
     title: 
@@ -153,6 +184,29 @@ MonoBehaviour:
     - "Fran\xE7ais"
     - Italiano
     - Brake
+    - How to play?
+    - 'The first thing you need to do is choose a car. After that, select a card.
+      As you complete races, you earn money that can be spent on upgrading cars or
+      purchasing cards or cars.
+
+
+      When driving in the wrong direction, drift
+      scoring will begin when you reach the point where you started driving in the
+      wrong direction.
+
+
+      Forward - up arrow on phone / W on PC
+
+      Back
+      - Down arrow on phone / S on PC
+
+      Right - right arrow on phone / A on
+      PC
+
+      Left - left arrow on phone / D on PC
+
+      Brake - Break button
+      on the phone / space on the PC'
     enabled: 0
   - language: 37
     title: 
@@ -198,6 +252,16 @@ MonoBehaviour:
     - "Fran\xE7ais"
     - Italiano
     - Tormoz
+    - "N\xE4dip o\xFDnamaly?"
+    - "Ilki bilen ma\u015Fyn sa\xFDlamak. Ondan so\u0148 karto\xE7ka sa\xFDla\u0148.
+      Acesary\u015Flary tamamlany\u0148yzda, awtoulaglary d\xF6wrebapla\u015Fdyrmak
+      \xFDa-da karto\xE7ka \xFDa-da awtoulag satyn almak \xFC\xE7in sarp edip boljak
+      pul gazanarsy\u0148yz.\n\nN\xE4dogry ugurda s\xFCreni\u0148izde, n\xE4dogry
+      ugurda s\xFCr\xFCp ba\u015Flany\u0148yzdan so\u0148 drift ballary ba\u015Flar.\n\n\xD6\u0148e
+      - telefonda / W-da \xFDokary ok\nYzyna - Komp\xFDuterde telefonda / S-de a\u015Fak
+      ok\nSagda - telefonda sag ok / A komp\xFDuterde\n\xC7ep - komp\xFDuterde /
+      D telefonda \xE7ep ok\nTormoz - Telefonda / komp\xFDuterd\xE4ki bo\u015Fluk
+      d\xFCwmesi"
     enabled: 0
   - language: 15
     title: 
@@ -243,6 +307,17 @@ MonoBehaviour:
     - "Fran\xE7ais"
     - Italiano
     - Bremse
+    - Wie wird gespielt?
+    - "Als erstes m\xFCssen Sie sich f\xFCr ein Auto entscheiden. W\xE4hlen Sie anschlie\xDFend
+      eine Karte aus. Wenn Sie Rennen absolvieren, verdienen Sie Geld, das Sie f\xFCr
+      die Aufr\xFCstung von Autos oder den Kauf von Karten oder Autos ausgeben k\xF6nnen.\n\nWenn
+      Sie in die falsche Richtung fahren, beginnt die Driftwertung, sobald Sie den
+      Punkt erreicht haben, an dem Sie begonnen haben, in die falsche Richtung zu
+      fahren.\n\nVorw\xE4rts \u2013 Pfeil nach oben auf dem Telefon / W auf dem PC\nZur\xFCck
+      \u2013 Pfeil nach unten auf dem Telefon / S auf dem PC\nRechts \u2013 Pfeil
+      nach rechts auf dem Telefon / A auf dem PC\nLinks \u2013 Pfeil nach links auf
+      dem Telefon / D auf dem PC\nBremse \u2013 Pause-Taste am Telefon / Leertaste
+      am PC"
     enabled: 0
   - language: 14
     title: 
@@ -288,6 +363,17 @@ MonoBehaviour:
     - "Fran\xE7ais"
     - Italiano
     - Frein
+    - Comment jouer ?
+    - "La premi\xE8re chose \xE0 faire est de choisir une voiture. Apr\xE8s cela,
+      s\xE9lectionnez une carte. En terminant des courses, vous gagnez de l'argent
+      qui peut \xEAtre d\xE9pens\xE9 pour am\xE9liorer les voitures ou acheter des
+      cartes ou des voitures.\n\nLorsque vous conduisez dans la mauvaise direction,
+      le score de d\xE9rive commencera lorsque vous atteindrez le point o\xF9 vous
+      avez commenc\xE9 \xE0 conduire dans la mauvaise direction.\n\nSuivant - fl\xE8che
+      vers le haut sur le t\xE9l\xE9phone / W sur PC\nRetour - Fl\xE8che vers le
+      bas sur le t\xE9l\xE9phone / S sur PC\nDroite - fl\xE8che droite sur t\xE9l\xE9phone
+      / A sur PC\nGauche - fl\xE8che gauche sur t\xE9l\xE9phone / D sur PC\nFrein
+      - Bouton pause sur le t\xE9l\xE9phone / espace sur le PC"
     enabled: 0
   - language: 21
     title: 
@@ -333,4 +419,14 @@ MonoBehaviour:
     - "Fran\xE7ais"
     - Italiano
     - Freno
+    - Come si gioca?
+    - "La prima cosa che devi fare \xE8 scegliere un'auto. Successivamente, seleziona
+      una carta. Man mano che completi le gare, guadagni denaro che pu\xF2 essere
+      speso per migliorare le auto o acquistare carte o auto.\n\nQuando guidi nella
+      direzione sbagliata, il punteggio della deriva inizier\xE0 quando raggiungi
+      il punto in cui hai iniziato a guidare nella direzione sbagliata.\n\nAvanti
+      - freccia su sul telefono / W sul PC\nIndietro: freccia gi\xF9 sul telefono/S
+      sul PC\nFreccia destra - destra sul telefono / A sul PC\nFreccia sinistra -
+      sinistra sul telefono / D sul PC\nFreno: pulsante di interruzione sul telefono/spazio
+      sul PC"
     enabled: 0

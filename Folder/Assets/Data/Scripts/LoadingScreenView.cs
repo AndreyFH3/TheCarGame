@@ -24,7 +24,6 @@ public class LoadingScreenView : MonoBehaviour
             { 
                 SceneManager.LoadScene(SceneNames.GARAGE_SCENE_SCENE);
                 GP_Game.GameReady();
-                GP_Ads.ShowFullscreen();
             }
         }
         else
